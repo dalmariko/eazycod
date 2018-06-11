@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    /*сброс отступа сверху*/
+}
+
+.listReset {
+    /*сброс настроек позиционирования*/
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.menu {
+    font-size: 0;
+    /*сброс УЗЛА для удаления отступа*/
+}
+
+.menu__item {
+    display: inline-block;
+    width: 20%;
+    background-color: #4CAF50;
+    text-align: center;
+    font-size: 16px;
+    /*назначение размера шрифта после сброса УЗЛА*/
+}
+
+.menu__item:hover {
+    background-color: rgba(76, 175, 80, 0.64);
+}
+
+.menu__item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.credoSection {
+    font-size: 0;
+}
+
+.credoSection>section {
+    width: 33.3333%;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.credo__items a {
+    padding-left: 15px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.credo__items a:hover {
+    color: #000;
+}
+
+.ferstSection,
+.secondSection {
+    box-sizing: border-box;
+    vertical-align: top;
+    height: 250px;
+}
+
+.ferstSection {
+    background-color: #534caf;
+}
+
+.ferstSection:hover {
+    background-color: rgba(83, 76, 175, 0.38823529411764707);
+}
+
+.secondSection {
+    background-color: #af564c;
+}
+
+.secondSection:hover {
+    background-color: rgba(175, 86, 76, 0.49);
+}
