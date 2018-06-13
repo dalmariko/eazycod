@@ -1,17 +1,53 @@
 * {
     font-size: 16px;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.headMain,
-.headMain section {
+.navigation {
+    margin-bottom: 5px;
+}
+
+.listReset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.menu {
+    padding: 15px;
+    font-size: 0;
+    border: 2px solid red;
+}
+
+.menu li {
+    display: inline-block;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    border-right: 2px solid red;
+    list-style: none;
+}
+
+.menu a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.menu li:last-of-type {
+    border-right:  none;
+}
+
+
+
+
+.headMain{
     font-size: 0
 }
 
 .master {
     display: inline-block;
     width: 33.33333%;
-    box-sizing: border-box;
     font-size: 1rem;
     vertical-align: top;
 }
@@ -27,7 +63,7 @@
 }
 
 .therd {
-    width: 20%;
+    width: 80%;
     margin-top: 10px;
     padding: 30px;
     margin-left: auto;
@@ -50,48 +86,5 @@
 
 
 
-
-
-section  {
-    display: block;
-    margin-top: 150px;
-    width: 65%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.listReset {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-
-ul.unmarck{
-    display: inline;
-    padding: 28px;
-    background-color: #20B2AA;
-    border: 2px solid;
-    box-sizing: border-box;
-}
-
-.unmarck li {
-    display: inline;
-    padding: 20px;
-    border-right: 1px solid red;
-    box-sizing: border-box;
-}
-
-.unmarck li:last-of-type {
-    border-right: none;
-}
-
-
-.unmarck a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: #000;
-}
 
 
