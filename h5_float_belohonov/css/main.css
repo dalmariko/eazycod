@@ -11,29 +11,20 @@ body {
 .header {
     display: inline-block;
     width: 100%;
+    border-bottom: 1px solid red; 
 }
 
-
-.master {
-    display: inline-block;
+.header:after {
+display: table;
+content: '';
+clear: both;
 }
+ 
 
-.left {
-    margin-right: 58%; 
-}
-
-.right {
-    margin-right: 5%; 
-}
-
-
-.left,.right{
-    vertical-align: middle;
-}
 
 .logo {
-    display: block;
-    width: 70px;
+float: left;
+width: 70px;
 }
 
 .logo img {
@@ -46,20 +37,29 @@ body {
 }
 
 
+.listReset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .menu {
-    display: block;
+    float: right;
+    margin: 4% 6%;
     font-size: 0;
 }
 
 .menu li {
     display: inline-block;
     font-size: 16px;
+    list-style: none;
 }
 
 .menu a {
     padding: 6px 12px;
     color: red;
     text-transform: capitalize;
+    text-decoration: none;
 }
 
 .menu li:last-of-type a {
@@ -69,6 +69,7 @@ body {
 
 .background {
     display: block;
+    margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -99,191 +100,3 @@ body {
     box-sizing: border-box;
     background-color: #d44518;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-header {
-    display: inline-block;
-}
-
-.listReset {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.header__menu{
-    width: 50%;
-    border:1px solid red;
-}
-
-.menu  li {
-    display: inline;
-    list-style: none;
-}
-
-.menu a {
-    text-decoration: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
