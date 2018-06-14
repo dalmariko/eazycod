@@ -5,12 +5,12 @@
 
 body {
      margin: 0;
+     background-color: #ebf1eb;
 }
 
 .header {
     display: inline-block;
     width: 100%;
-    border-bottom: 2px solid red;
 }
 
 
@@ -19,11 +19,11 @@ body {
 }
 
 .left {
-margin-right: 60%;
+    margin-right: 58%; 
 }
 
 .right {
-margin-left: 5%;
+    margin-right: 5%; 
 }
 
 
@@ -38,36 +38,67 @@ margin-left: 5%;
 
 .logo img {
     width: 100%;
+    margin-top: 20%;
+    margin-left: 30%;
+    margin-bottom: 1%;
     border:2px solid red;
     border-radius: 50%; 
 }
 
 
-.menu{
+.menu {
     display: block;
+    font-size: 0;
 }
 
 .menu li {
     display: inline-block;
+    font-size: 16px;
+}
+
+.menu a {
+    padding: 6px 12px;
+    color: red;
+    text-transform: capitalize;
+}
+
+.menu li:last-of-type a {
+    color: green;
+}
+
+
+.background {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 31, 128, 0.5294117647058824);
+}
+
+
+.background__block{
+    display: inline-block;
+    font-size: 0;
+}
+
+.text__inBlock {
+    width: 60%;
+    padding: 5px;
+    margin: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.form__inBlock {
+    width: 35%;
+    font-size: 16px;
+    padding: 120px;
+    margin: 20px 10px;
+    box-sizing: border-box;
+    background-color: #d44518;
+}
 
 
 
