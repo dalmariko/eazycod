@@ -7,18 +7,207 @@ body {
      margin: 0;
 }
 
-
-.header__logo{
-    display: block;
-    width: 50px;
-    margin: 10px 15px;
+.header {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 2px solid red;
 }
 
-.header__logo img {
+
+.master {
+    display: inline-block;
+}
+
+.left {
+margin-right: 60%;
+}
+
+.right {
+margin-left: 10%;
+}
+
+
+.left,.right{
+    vertical-align: middle;
+}
+
+.logo {
+    display: block;
+    width: 70px;
+}
+
+.logo img {
     width: 100%;
-    height: auto;
-    border:1px solid red;
+    border:2px solid red;
     border-radius: 50%; 
+}
+
+
+.menu{
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    display: inline-block;
 }
 
 .listReset {
@@ -27,42 +216,8 @@ body {
     margin-bottom: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.master__section {
-display: inline-block;
-width: 100%;
-}
-
-.section__logo {
-}
-
-
-.section__menu{
+.header__menu{
+    width: 50%;
     border:1px solid red;
 }
 
