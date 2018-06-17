@@ -13,6 +13,12 @@ body {
     background-color: #fff;
 }
 
+ul li a:hover {
+    color: #5fcf80; 
+    transition: color ease-out .3s ;
+}
+
+
 .logo {
     float: left;
     width: 150px;
@@ -90,7 +96,7 @@ body {
     text-align: right;
 }
 
-ul a,
+.footer ul a,
 .therd a,
 .second a {
     font-size: 1.3rem;
@@ -106,7 +112,7 @@ ul a,
     float: right;
 }
 
-.ferst a {
+.footer .ferst a {
     display: inline-block;
     font-size: .9rem;
 }
