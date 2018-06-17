@@ -1,0 +1,155 @@
+* {
+    font-family: "Gotham Rounded A", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.logo {
+    float: left;
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.listReset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.listReset a {
+    text-decoration: none;
+}
+
+.menu {
+    float: right;
+    font-size: 0;
+}
+
+.menu li {
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 3px;
+    padding: 6px 8px;
+}
+
+.menu a {
+    padding: 6px 6px;
+    color: #717f86;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.menu li:last-of-type a {
+    color: #5fcf80;
+}
+
+.menu li:last-of-type a:hover {
+    background-color: #5fcf80;
+    color: #fff;
+    border: 2px solid #5fcf80;
+    border-radius: 6px;
+    transition: border .5s,color .3s ease-out .1s, background-color .4s .2s;
+}
+
+.header:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.footer {
+    display: inline-block;
+    width: 100%;
+    font-size: 0;
+}
+
+.ferst,
+.second,
+.therd,
+.social {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    width: 25%;
+}
+
+.social {
+    text-align: right;
+}
+
+ul a,
+.therd a,
+.second a {
+    font-size: 1.3rem;
+    color: #717f86;
+    text-transform: capitalize;
+}
+
+.ferst {
+    float: left;
+}
+
+.social {
+    float: right;
+}
+
+.ferst a {
+    display: inline-block;
+    font-size: .9rem;
+}
+
+.social li {
+    display: inline;
+    margin-right: 2px;
+}
+
+.social a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #2d3339;
+}
+
+ .social i {
+    width: 100%;
+    font-size: .9rem;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+.social a:hover i {
+    transition: color .5s .2s;
+    color: #000;
+}
+
+
+.social a:hover {
+    transition: background-color .3s;
+    background-color: #5fcf80;
+}
+
+.ferst:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.social:after {
+    content: '';
+    display: table;
+    clear: both;
+}
