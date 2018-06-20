@@ -22,13 +22,13 @@ ul li a:hover {
 
 .header {
     display: block;
+    background-color: #fff;
 }
 
 .content {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 0;
-    background-color: #fff;
 }
 
 .logo {
@@ -129,7 +129,10 @@ ul li a:hover {
 
 /*-------------------------FOOTER--------------------------------------------------*/
 .footer {
+    padding-top: 80px;
+    padding-bottom: 50px;
     font-size: 0;
+    background-color: #fff;
 }
 
 .ferst,
