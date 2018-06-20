@@ -5,12 +5,11 @@
 }
 
 body {
-    width: 98%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: #fff;
+    background-color: #edeff0;
 }
 
 ul li a:hover {
@@ -18,6 +17,19 @@ ul li a:hover {
     transition: color ease-out .3s ;
 }
 
+
+/*-------------------------HEADER------------------------------------------------*/
+
+.header {
+    display: block;
+}
+
+.content {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0;
+    background-color: #fff;
+}
 
 .logo {
     float: left;
@@ -70,19 +82,52 @@ ul li a:hover {
     transition: border .5s,color .3s ease-out .1s, background-color .4s .2s;
 }
 
-.header:after {
+
+.content:after {
     display: table;
     content: '';
     clear: both;
 }
 
+/*-------------------------HEADER------------------------------------------------*/
 
-footer {
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
 
+
+
+
+
+
+
+/*--------------------------------BLOCKS-----------------------------------*/
+
+
+.midle_block {    
+    background-image: url(../images/bg.png);
+    width: 100%;
+    height: auto;
+    box-sizing: content-box;
+    font-size: 0;
 }
 
+.midle_block p {
+    font-size: 1rem;
+}
+
+/*--------------------------------BLOCKS-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------FOOTER--------------------------------------------------*/
 .footer {
     font-size: 0;
 }
@@ -153,9 +198,4 @@ text-align: right;
     background-color: #5fcf80;
 }
 
-
-.footer:after {
-    display: table;
-    content: '';
-    clear: both;
-}
+/*-------------------------FOOTER--------------------------------------------------*/
