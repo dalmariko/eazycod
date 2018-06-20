@@ -20,8 +20,9 @@ ul li a:hover {
 /*----------------------------CONTENT-------------------------------------------*/
 
 .content {
-    padding-left: 60px;
-    padding-right: 60px;
+    width: 75%;
+    margin-left:  auto;
+    margin-right: auto;
     font-size: 0;
 }
 
@@ -120,10 +121,55 @@ ul li a:hover {
 
 
 
+.box_form {
+    color: #fff;
+    background-image: url(../images/bg.png);
+    font-size: 0;  
+    height: 300px;
+}
+
+.left_box {
+    display: inline-block;
+    width: 50%;
+    font-size: 1rem; 
+}
 
 
+.right_box {
+    display: inline-block;
+    border: 2px solid;
+    width: 50%;
+    font-size: 1rem;
+}
 
+.left_box,.right_box {
+    vertical-align: top;
+}
 
+.right_box ul {
+    list-style: none; 
+    text-decoration: none;   
+}
+
+.triald_form {
+    font-size: 0;
+}
+
+.form_list {
+    display: inline-block;
+    width: 50%;
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+.trial_form_button {
+    color:#fff;
+    padding: 8px 12px;
+    background-color: #676ee0;
+    border:2px solid #676ee0;
+    border-radius: 4px;
+
+}
 
 
 
