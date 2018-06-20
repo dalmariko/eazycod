@@ -17,18 +17,27 @@ ul li a:hover {
     transition: color ease-out .3s ;
 }
 
+/*----------------------------CONTENT-------------------------------------------*/
+
+.content {
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 0;
+}
+
+
+.content:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
 
 /*-------------------------HEADER------------------------------------------------*/
 
 .header {
     display: block;
     background-color: #fff;
-}
-
-.content {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 0;
 }
 
 .logo {
@@ -82,12 +91,6 @@ ul li a:hover {
     transition: border .5s,color .3s ease-out .1s, background-color .4s .2s;
 }
 
-
-.content:after {
-    display: table;
-    content: '';
-    clear: both;
-}
 
 /*-------------------------HEADER------------------------------------------------*/
 
