@@ -145,6 +145,12 @@ ul li a:hover {
     border-radius: 8px;
 }
 
+.form_middle {
+    display: block;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
 .left_box,.right_box {
