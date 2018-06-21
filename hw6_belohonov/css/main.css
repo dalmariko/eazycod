@@ -125,27 +125,46 @@ ul li a:hover {
     color: #fff;
     background-image: url(../images/bg.png);
     font-size: 0;  
-    height: 300px;
+    padding: 40px 0;
 }
 
 .left_box {
     display: inline-block;
     width: 50%;
-    font-size: 1rem; 
+    font-size: 1rem;
+    padding-right: 20px;
 }
 
 
 .right_box {
     display: inline-block;
-    border: 2px solid;
+    border: 2px solid #edeff0;
     width: 50%;
     font-size: 1rem;
+    background-color: #edeff0;
+    border-radius: 8px;
 }
+
+
 
 .left_box,.right_box {
     vertical-align: top;
 }
 
+.header_form {
+    border-bottom:  1px solid #000;
+    padding: 10px 0; 
+    background-color: #edeff0;
+
+}
+
+.header_form span, .form_list label {
+    color: #717f86;
+}
+
+.header_form p {
+    color: #524c4c;
+}
 .right_box ul {
     list-style: none; 
     text-decoration: none;   
@@ -162,8 +181,30 @@ ul li a:hover {
     padding: 10px 10px;
 }
 
+
+.form_list input {
+    width: 90%;
+    padding:3px 0px;
+    border: 2px solid #d4d9dd;
+    border-radius: 6px;
+ }
+
+.checkbox {
+    display: block;
+    color: #40484a;
+    padding: 0 10px;
+}
+
+.button {
+    display: block;
+    border-top: 1px solid #000;
+    padding: 20px; 
+    background-color: #edeff0;
+}
+
 .trial_form_button {
     color:#fff;
+    width: 100%;
     padding: 8px 12px;
     background-color: #676ee0;
     border:2px solid #676ee0;
