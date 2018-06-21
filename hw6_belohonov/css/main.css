@@ -181,15 +181,17 @@ ul li a:hover {
 }
 
 .form_list {
-    display: inline-block;
-    width: 50%;
+    display: block;
+    width: 40%;
     font-size: 1rem;
-    padding: 10px 10px;
+    padding: 20px 0px;
 }
 
 
 .form_list input {
     width: 90%;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding:3px 0px;
     border: 2px solid #d4d9dd;
     border-radius: 6px;
@@ -198,7 +200,8 @@ ul li a:hover {
 .checkbox {
     display: block;
     color: #40484a;
-    padding: 0 10px;
+    padding:0 10px;
+    margin-bottom: 20px;
 }
 
 .button {
