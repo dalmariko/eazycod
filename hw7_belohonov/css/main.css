@@ -20,9 +20,9 @@ body {
     background-color: pink;
     border: 2px solid pink;
     border-color: pink;
-    position: relative;
-    left:20px;
-    top: 30px; 
+    position: absolute;
+    left:210px;
+    top:110px;
 }
 
 .blue {
@@ -32,8 +32,8 @@ body {
     border: 2px solid blue;
     border-color: blue;
     position: relative;
-    left: 20px;
-    top: 30px;
+    left: 50px;
+    top: 40px;
 
 }
 
@@ -44,11 +44,21 @@ body {
     border: 2px solid #652832;
     border-color: #652832;
     position: relative;
-    left:30px;
+    left:50px;
     top: 40px;
+
 }
 
 
-.accordion:hover {
-    position: absolute;
+.accordion:hover div {
+    left:0;
+    top:0;
+    transition: left,top, .4s;
+}
+
+
+.accordion:hover div.pink {
+    left:100px;
+    top:50px;
+    transition: left,top, .4s;
 }
