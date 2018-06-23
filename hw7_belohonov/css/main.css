@@ -1,64 +1,61 @@
 *{
     font-size: 16px;
     box-sizing: border-box;
-    margin:0;
 }
 
 body {
-  
+    margin:0;
 }
+
+
+button {
+    padding: 0;
+    border:none;
+}
+
 .content_center {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
+
 
 .allProgramingLangwich {
-    width: 95%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
-
+    font-size: 0;
 }
-
 
 
 .langwich {
-    display: inline-block;
-    vertical-align: top;
-    width: 150px;
+    width: 16.66666666666666666%;
     background-color: #222222;
     color: rgb(243, 243, 243);
     text-align: center;
+    margin-bottom: 5px;
+    font-size: 0;
     float: left;
-    margin-right: 10px;
 }
 
-
-.langwich:last-of-type {
-    margin-right: 0;
-}
-
-.langwich:after {
+.allProgramingLangwich:after {
     display: table;
     content: '';
     clear: both;
 }
 
 .image {
-    width: 90px;
-    height: 90px;
+    width: 5em;
+    height: 5em;
 }
 
 .image img {
-width: 100%;
-height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .named_langwich {
     width: 75%;
     text-align: center;
-    font-size: 0;
 }
 
 .named_langwich  p {
@@ -67,7 +64,6 @@ height: auto;
 
 .time {
     width: 88%;
-    font-size: 0;
     padding-bottom: 1rem;
     border-bottom: 1px solid #aaa;
 
@@ -80,7 +76,6 @@ height: auto;
 
 .skill {
     width: 68%;
-    font-size: 0;
 }
 
 .skill p {
@@ -90,25 +85,17 @@ height: auto;
 .button {
     width: 78%;
     height: 7%;
-    font-size: 0;
     background-color: transparent;
     border: 1px solid #e80a89;
     border-radius: 3px;
-}
-
-
-.in_button {
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-bottom: 6%;
+    padding: 2px;
 }
 
 
 .button a {
     text-decoration: none;
-    font-size: .75rem;
+    font-size: .8rem;
     color:#bc1632;
 }
 
