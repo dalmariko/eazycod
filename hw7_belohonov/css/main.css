@@ -1,20 +1,139 @@
 *{
+    font-size: 16px;
     box-sizing: border-box;
+      margin:0;
 }
 
 body {
-    margin:0;
+  
 }
+
+
+
+.langwich {
+    display: inline-block;
+    width: 180px;
+    background-color: #222222;
+    color: rgb(243, 243, 243);
+}
+
+.langwich p {
+    text-align: center;
+    font-size: .60rem;
+}
+
+.content_center {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    background-color: #26aba0;
+}
+
+
+.named_langwich {
+    width: 75%;
+    font-size: 0;
+}
+
+.named_langwich p {
+text-align: center;
+font-size: .9rem;
+}
+
+
+.time {
+    width: 88%;
+    font-size: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+
+}
+
+.time p {
+    font-size: .8rem;
+}
+
+
+.skill {
+    width: 68%;
+    font-size: 0;
+}
+
+.skill p {
+    font-size: .8rem;
+}
+
+.button {
+width: 78%;
+height: 7%;
+font-size: 0;
+background-color: transparent;
+border: 1px solid #e80a89;
+border-radius: 3px;
+}
+
+
+.in_button{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
+.button a {
+    vertical-align: center;
+    text-decoration: none;
+    font-size: .85rem;
+    color:#bc1632;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .accordion {
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 163px;
     background-color: #fff;
     border: 2px solid;
     font-size: 0;
 }
+
 
 .pink {
     width: 100px;
@@ -60,4 +179,10 @@ body {
     transition: left,top,margin-right,margin-left .4s;
 }
 
+.accordion:hover .pink {
+top:25px;
+} 
 
+.accordion:hover .blue {
+    top:8px;
+}
