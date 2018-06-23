@@ -12,7 +12,7 @@ body {
 
 .langwich {
     display: inline-block;
-    width: 180px;
+    width: 168px;
     background-color: #222222;
     color: rgb(243, 243, 243);
 }
@@ -38,14 +38,9 @@ body {
 
 .named_langwich {
     width: 75%;
-    font-size: 0;
+    text-align: center;
+    font-size: .9rem;
 }
-
-.named_langwich p {
-text-align: center;
-font-size: .9rem;
-}
-
 
 .time {
     width: 88%;
