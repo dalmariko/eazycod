@@ -22,58 +22,28 @@ body {
 
 .window {
     display: inline-block;
+    vertical-align: top;
     position: relative;
     text-align: center;
     width: 25%;
-    height: 50px;
-    padding: 1%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
 }
 
 .items{
-    position: absolute;
-    top: 0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin: auto;    
-    width: 80%;
-    padding: 8%;
     font-size: 0;
 }
 
 
-.items:first-of-type {
-    float: left;
-    padding-left: 0.5%;
 
-}
-
-.items:last-of-type {
-    float: right;
-    padding-right: 0.5%;
-}
-
-.phone::after{
-    display: table;
-    content: '';
-    clear: both;
-}
-
-
-.one {
-    position: absolute;
-    top: 0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin: auto;    
-    width: 50%;  
+.one {   
+    padding-top: 100%;
 }
 
 
 .images1{
     background: url("../images/1.png") no-repeat center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .images2{
