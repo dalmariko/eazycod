@@ -8,17 +8,35 @@ body {
 
 
 .box {
-    padding-top: 72px;
+    padding-top: 50px;
     padding-bottom: 76px;
     border-bottom: 1px solid #cdd1d0;
 }
 
+
 .container {
-    width: 90%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
 }
+
+.headText {
+    padding-top: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headText h1,h2,h3 {
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
 
 .gridContainer {
     display: inline-block;
@@ -39,9 +57,13 @@ body {
 }
 
 .content {
-    padding-top: 25px;
+    font-size: 14px;
+    padding-top: 20px;
 }
 
+.content p {
+    padding-top: 20px;
+} 
 
 .content span {
     font-size: 16px;
@@ -50,7 +72,7 @@ body {
 }
 
 .top .content span {
-    text-transform: lowercase;
+    text-transform: none;
 }
 
 
@@ -66,9 +88,6 @@ body {
 
 
  .middle .gridContainer {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
     width: 50%;
  }
 
@@ -77,9 +96,6 @@ body {
 }
 
 .bottom .gridContainer {
-    display: inline-block;
-    vertical-align: bottom;
-    position: relative;
     width: 25%;
  }
 
