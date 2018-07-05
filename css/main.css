@@ -38,16 +38,21 @@ body {
     border: 1px solid #cdd1d0;
 }
 
-.gridPropertis p {
-    display: block;
+.content {
     padding-top: 25px;
 }
 
-.gridPropertis span {
-    display: inline;
+
+.content span {
     font-size: 16px;
     border-bottom: 1px solid #d4d4d4;    
+    text-transform: uppercase;
 }
+
+.top .content span {
+    text-transform: lowercase;
+}
+
 
 .elements {
     font-size: 0;
@@ -67,10 +72,6 @@ body {
     width: 50%;
  }
 
-.middle .gridPropertis span {
-    text-transform: uppercase;
-}
-
 .middle .gridPropertis:hover {
     border: 1px solid rgba(0, 0, 0, 0);
 }
@@ -86,6 +87,6 @@ body {
     border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.bottom .gridPropertis span {
-    text-transform: uppercase;
+.bottom .content p {
+     text-align: center;
 }
