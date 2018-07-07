@@ -1,29 +1,26 @@
 @font-face {
     font-family: 'Beer money';
-    src: url('../fonts/beermoney-400-normal.woff2') format('woff2'), 
-    url('../fonts/beermoney-400-normal.woff') format('woff'), 
-    url('../fonts/beermoney-400-normal.ttf') format('truetype');
+    src: url('../fonts/beermoney-400-normal.woff2') format('woff2'), url('../fonts/beermoney-400-normal.woff') format('woff'), url('../fonts/beermoney-400-normal.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,cyrillic-ext');
-
 @import url('https://fonts.googleapis.com/css?family=Gabriela');
-
 @import url('https://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic-ext');
-
 * {
     box-sizing: border-box;
 }
 
-body { 
+body {
     margin: 0;
-    font-family: 'Beer money','Philosopher', sans-serif,'Gabriela', serif, 'Lobster', cursive;
+    font-family: 'Beer money', 'Philosopher', sans-serif, 'Gabriela', serif, 'Lobster', cursive;
+    color: #000;
 }
 
-
-
+a {
+    text-decoration: none;
+}
 
 
 .box {
@@ -37,7 +34,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
-    padding: 15px;
+    padding: 15px 15px 45px 15px;
 }
 
 .headText {
@@ -55,15 +52,26 @@ body {
     text-transform: uppercase;
 }
 
-
-
 .gridContainer {
     display: inline-block;
     vertical-align: top;
     width: 33.333333333333%;
-
 }
 
+/*.gridContainer:first-of-type{
+    float: left;
+}
+
+.gridContainer:last-of-type{
+    float: right;
+}*/
+
+/*.container::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+*/
 .gridPropertis {
     display: block;
     padding: 15px 15px 45px 15px;
@@ -81,11 +89,12 @@ body {
 
 .content p {
     margin-top: 20px;
-} 
+    color: #000;
+}
 
 .content span {
     font-size: 16px;
-    border-bottom: 1px solid #d4d4d4;    
+    border-bottom: 1px solid #d4d4d4;
     text-transform: uppercase;
 }
 
@@ -93,20 +102,17 @@ body {
     text-transform: none;
 }
 
-
 .elements {
     font-size: 0;
     padding-top: 76%;
-    background-repeat:  no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 
-    
-
- .middle .gridContainer {
+.middle .gridContainer {
     width: 50%;
- }
+}
 
 .middle .gridPropertis:hover {
     border: 1px solid rgba(0, 0, 0, 0);
@@ -114,12 +120,12 @@ body {
 
 .bottom .gridContainer {
     width: 25%;
- }
+}
 
- .bottom .gridPropertis:hover {
+.bottom .gridPropertis:hover {
     border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .bottom .content p {
-     text-align: center;
+    text-align: center;
 }
