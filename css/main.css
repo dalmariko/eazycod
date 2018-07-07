@@ -29,6 +29,10 @@ a {
     border-bottom: 1px solid #cdd1d0;
 }
 
+.box:last-of-type {
+    border-bottom: none;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
@@ -103,7 +107,6 @@ a {
 }
 
 .elements {
-    font-size: 0;
     padding-top: 76%;
     background-repeat: no-repeat;
     background-position: center;
