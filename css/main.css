@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,cyrillic-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Gabriela');
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic-ext');
+
 * {
     box-sizing: border-box;
 }
 
 body { 
     margin: 0;
+    font-family: 'Philosopher', sans-serif,'Gabriela', serif, 'Lobster', cursive;
 }
+
+
+
 
 
 .box {
@@ -12,7 +22,6 @@ body {
     padding-bottom: 76px;
     border-bottom: 1px solid #cdd1d0;
 }
-
 
 .container {
     width: 60%;
@@ -85,7 +94,7 @@ body {
     background-size: contain;
 }
 
-
+    
 
  .middle .gridContainer {
     width: 50%;
