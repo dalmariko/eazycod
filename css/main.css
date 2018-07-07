@@ -27,28 +27,29 @@ body {
 
 
 .box {
-    padding-top: 50px;
-    padding-bottom: 76px;
+    margin-top: 50px;
+    margin-bottom: 76px;
     border-bottom: 1px solid #cdd1d0;
 }
 
 .container {
-    width: 60%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
+    padding: 15px;
 }
 
 .headText {
     padding-top: 50px;
-    width: 50%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .headText h1,h2,h3 {
     margin: 0;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
@@ -59,7 +60,6 @@ body {
 .gridContainer {
     display: inline-block;
     vertical-align: top;
-    position: relative;
     width: 33.333333333333%;
 
 }
@@ -76,11 +76,11 @@ body {
 
 .content {
     font-size: 14px;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .content p {
-    padding-top: 20px;
+    margin-top: 20px;
 } 
 
 .content span {
@@ -97,7 +97,6 @@ body {
 .elements {
     font-size: 0;
     padding-top: 76%;
-    background-image:  url('../images/top/cover.jpeg');
     background-repeat:  no-repeat;
     background-position: center;
     background-size: contain;
