@@ -25,12 +25,12 @@
 
 * {
     box-sizing: border-box;
+    color: #000;
 }
 
 body {
     margin: 0;
     font-family: 'Gotham Pro','Beer money', 'Philosopher', sans-serif, 'Gabriela', serif, 'Lobster', cursive;
-    color: #000;
 }
 
 a {
@@ -40,7 +40,7 @@ a {
 
 .box {
     margin-top: 50px;
-    margin-bottom: 76px;
+    margin-bottom: 66px;
     border-bottom: 1px solid #cdd1d0;
 }
 
@@ -57,8 +57,10 @@ a {
 }
 
 .headText {
-    padding-top: 50px;
-    width: 90%;
+    width: 75%;
+    margin-top: 10px;
+    padding-left:  15px;
+    padding-right:  15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -77,20 +79,6 @@ a {
     width: 33.333333333333%;
 }
 
-/*.gridContainer:first-of-type{
-    float: left;
-}
-
-.gridContainer:last-of-type{
-    float: right;
-}*/
-
-/*.container::after {
-    display: table;
-    content: '';
-    clear: both;
-}
-*/
 .gridPropertis {
     display: block;
     padding: 15px 15px 45px 15px;
@@ -109,15 +97,10 @@ a {
 .content p {
     margin-top: 26px;
     margin-bottom: 0;
-    color: #000;
-
 }
 
 .content span {
     font-size: 16px;
-    /*text-decoration: underline;*/
-    /*text-decoration-color: #d4d4d4;*/
-
     border-bottom: 1px solid #d4d4d4;
     text-transform: uppercase;
 }
