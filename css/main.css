@@ -14,7 +14,7 @@
     font-family: 'Beer money';
     src: url('../fonts/beermoney-400-normal.woff2') format('woff2'), url('../fonts/beermoney-400-normal.woff') format('woff'), url('../fonts/beermoney-400-normal.ttf') format('truetype');
     font-weight: 400;
-    font-style: normal;
+    font-style:normal;
 }
 
 
@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Gabriela');
 @import url('https://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic-ext');
+
 
 * {
     box-sizing: border-box;
