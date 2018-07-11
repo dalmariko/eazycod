@@ -25,19 +25,31 @@
 
 
 * {
+    color: #000; 
     box-sizing: border-box;
-    color: #000;
 }
 
 body {
-    margin: 0;
+    margin: 0;  
     font-family: 'Gotham Pro','Beer money', 'Philosopher', sans-serif, 'Gabriela', serif, 'Lobster', cursive;
 }
+
+
 
 a {
     text-decoration: none;
 }
 
+
+input {
+    border: 0;
+    padding: 0;
+}
+
+button {
+    padding: 0;
+    border: 0;
+}
 
 .listReset {
  padding-left: 0;
@@ -59,6 +71,7 @@ a {
 
 .container {
     width: 80%;
+    /*width: 1200px;*/
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
@@ -124,9 +137,6 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
-    /*border: 1px solid red;*/
-    /*border-radius: 50%;*/
 }
 
 .middle .gridContainer {
@@ -149,28 +159,108 @@ a {
     text-align: center;
 }
 
+footer {
+    background-color: #000;
+}
+
+footer .container {
+    padding-top: 0 ;
+    padding-bottom: 0;
+}
+
+footer, footer h5,footer a,footer i,footer button {
+    color:#fff;
+}
 
 footer.gridContainer {
     width: 50%;
 }
 
-.leftBlock {
+.Block {
     display: inline-block;
+    vertical-align: top;
+    margin-top: 40px;
     width: 50%;
-    text-transform: capitalize;
     font-size: 0;
 }
 
-.leftBlock ul {
+.Block li::first-letter {
+text-transform: capitalize;
+}
+
+.Block a {
     font-size: 14px;
 }
 
-.leftBlock h5,h6 {
+.footerCaption{
+    margin-bottom: 35px;
+}
+
+.Block h5 {
     margin-top: 0;
+    margin-bottom: 0;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .footerPart {
     display: inline-block;
     width: 50%;
+}
+
+.footerRight {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.subscription {
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+.subscription form {
+display: inline;
+font-size: 0;
+} 
+
+.subscription input {
+    width: 75%;
+    border: 1px solid #00bea5;
+    border-right: none;
+    background-color: transparent;
+}
+
+.subscription input[type="email"] {
+    color:#fff;
+}
+
+ .subscription input[type="email"]::-webkit-input-placeholder { color:#fff;}
+ .subscription  input[type="email"]:-ms-input-placeholder { color:#fff; }
+ .subscription  input[type="email"]::-ms-input-placeholder { color:#fff;}
+ .subscription  input[type="email"]::placeholder { color:#fff; } 
+
+.subscription button {
+    width: 25%;
+    border: 1px solid #00bea5;
+    background-color: #00bea5;
+    text-transform: capitalize;
+}
+
+.subscription input,button {
+    font-size: 12px;
+    padding: 5px 8px;
+}
+
+
+.social {
+    margin-bottom: 115px;
+}
+
+.social li {
+    display: inline;
+    margin-right: 25px;
+}
+
+.social li:last-of-type {
+    margin-right: 0;
 }
