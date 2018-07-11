@@ -39,6 +39,14 @@ a {
 }
 
 
+.listReset {
+ padding-left: 0;
+ margin-top: 0;
+ margin-bottom: 0;
+ list-style: none;
+}
+
+
 .box {
     margin-top: 50px;
     margin-bottom: 66px;
@@ -142,17 +150,22 @@ footer.gridContainer {
     width: 50%;
 }
 
-footer .gridPropertis ul {
+.leftBlock {
+    display: inline-block;
+    width: 50%;
+    text-transform: capitalize;
+    font-size: 0;
+}
+
+.leftBlock ul {
     font-size: 14px;
 }
 
-footer h5 {
-    font-size: 18px;
+.leftBlock h5,h6 {
+    font-size: 16px;
 }
 
-.listReset {
- padding-left: 0;
- margin-top: 0;
- margin-bottom: 0;
- list-style: none;
+.one {
+    display: inline-block;
+    width: 50%;
 }
