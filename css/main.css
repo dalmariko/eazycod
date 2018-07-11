@@ -50,7 +50,7 @@ a {
 }
 
 .container {
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
@@ -135,4 +135,24 @@ a {
 
 .bottom .content p {
     text-align: center;
+}
+
+
+footer.gridContainer {
+    width: 50%;
+}
+
+footer .gridPropertis ul {
+    font-size: 14px;
+}
+
+footer h5 {
+    font-size: 18px;
+}
+
+.listReset {
+ padding-left: 0;
+ margin-top: 0;
+ margin-bottom: 0;
+ list-style: none;
 }
