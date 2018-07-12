@@ -294,7 +294,8 @@ font-size: 0;
 }
 
 .fa-instagram:hover {
-    background:linear-gradient(to right, #f9ed32,#ee2a7b);
+    /*background:linear-gradient(to right top , #f9ed32,#ee2a7b,#002aff);*/
+    background:linear-gradient(45deg, #f9ed32,#ee2a7b,#002aff);
      -webkit-background-clip: text;
      color:transparent; 
 }
