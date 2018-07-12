@@ -1,63 +1,63 @@
 @keyframes instagramHoverAnimation {
-0% {
- background:linear-gradient(45deg, #f9ed32,#ee2a7b,#002aff);
--webkit-background-clip: text;
-     color:transparent;
-  }
-10% {
- background:linear-gradient(45deg, #ee2a7b,#002aff,#f9ed32);
--webkit-background-clip: text;
-     color:transparent;
-  }
+    0% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    10% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
-20% {
- background:linear-gradient(45deg, #002aff,#f9ed32,#ee2a7b);
--webkit-background-clip: text;
-     color:transparent;
-  }
-30% {
- background:linear-gradient(45deg, #f9ed32,#ee2a7b,#002aff);
--webkit-background-clip: text;
-     color:transparent;
-  }
-40% {
- background:linear-gradient(45deg, #ee2a7b,#002aff,#f9ed32);
--webkit-background-clip: text;
-     color:transparent;
-  }
+    20% {
+        background: linear-gradient(45deg, #002aff, #f9ed32, #ee2a7b);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    30% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    40% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
-50% {
- background:linear-gradient(45deg, #002aff,#f9ed32,#ee2a7b);
--webkit-background-clip: text;
-     color:transparent;
-  }
+    50% {
+        background: linear-gradient(45deg, #002aff, #f9ed32, #ee2a7b);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
-  60% {
- background:linear-gradient(45deg, #f9ed32,#ee2a7b,#002aff);
--webkit-background-clip: text;
-     color:transparent;
-  }
-70% {
- background:linear-gradient(45deg, #ee2a7b,#002aff,#f9ed32);
--webkit-background-clip: text;
-     color:transparent;
-  }
+    60% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    70% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 
-80% {
- background:linear-gradient(45deg, #002aff,#f9ed32,#ee2a7b);
--webkit-background-clip: text;
-     color:transparent;
-  }
-90% {
- background:linear-gradient(45deg, #f9ed32,#ee2a7b,#002aff);
--webkit-background-clip: text;
-     color:transparent;
-  }
-100% {
- background:linear-gradient(45deg, #ee2a7b,#002aff,#f9ed32);
--webkit-background-clip: text;
-     color:transparent;
-  }
+    80% {
+        background: linear-gradient(45deg, #002aff, #f9ed32, #ee2a7b);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    90% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
 }
 
 
@@ -68,9 +68,9 @@
     font-family: 'Gotham Pro';
     src: url('GothamPro-Light.eot');
     src: local('Gotham Pro Light'), local('GothamPro-Light'),
-        url('../fonts/gotham/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/gotham/GothamPro-Light.woff') format('woff'),
-        url('../fonts/gotham/GothamPro-Light.ttf') format('truetype');
+    url('../fonts/gotham/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gotham/GothamPro-Light.woff') format('woff'),
+    url('../fonts/gotham/GothamPro-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
@@ -80,7 +80,7 @@
     font-family: 'Beer money';
     src: url('../fonts/beermoney-400-normal.woff2') format('woff2'), url('../fonts/beermoney-400-normal.woff') format('woff'), url('../fonts/beermoney-400-normal.ttf') format('truetype');
     font-weight: 400;
-    font-style:normal;
+    font-style: normal;
 }
 
 
@@ -91,13 +91,13 @@
 
 
 * {
-    color: #000; 
+    color: #000;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;  
-    font-family: 'Gotham Pro','Beer money', 'Philosopher', sans-serif, 'Gabriela', serif, 'Lobster', cursive;
+    margin: 0;
+    font-family: 'Gotham Pro', 'Beer money', 'Philosopher', sans-serif, 'Gabriela', serif, 'Lobster', cursive;
 }
 
 
@@ -123,10 +123,10 @@ p {
 }
 
 .listReset {
- padding-left: 0;
- margin-top: 0;
- margin-bottom: 0;
- list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 
@@ -154,7 +154,9 @@ p {
     margin-right: auto;
 }
 
-.headText h1,h2,h3 {
+.headText h1,
+h2,
+h3 {
     margin: 0;
     margin-bottom: 30px;
     font-size: 25px;
@@ -185,13 +187,13 @@ p {
 }
 
 
-.top .content { 
-margin-bottom: 0;
- }
+.top .content {
+    margin-bottom: 0;
+}
 
-.middle .content { 
-margin-bottom: 18px;
- }
+.middle .content {
+    margin-bottom: 18px;
+}
 
 
 .bottom .content {
@@ -200,7 +202,7 @@ margin-bottom: 18px;
 
 .content span {
     font-size: 16px;
-     border-bottom: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
     text-transform: uppercase;
 }
 
@@ -241,12 +243,16 @@ footer {
 }
 
 footer .container {
-    padding-top: 0 ;
+    padding-top: 0;
     padding-bottom: 0;
 }
 
-footer, footer h5,footer a,footer i,footer button {
-    color:#fff;
+footer,
+footer h5,
+footer a,
+footer i,
+footer button {
+    color: #fff;
 }
 
 footer.gridContainer {
@@ -262,14 +268,14 @@ footer.gridContainer {
 }
 
 .Block li::first-letter {
-text-transform: capitalize;
+    text-transform: capitalize;
 }
 
 .Block a {
     font-size: 14px;
 }
 
-.footerCaption{
+.footerCaption {
     margin-bottom: 35px;
 }
 
@@ -296,9 +302,9 @@ text-transform: capitalize;
 }
 
 .subscription form {
-display: inline;
-font-size: 0;
-} 
+    display: inline;
+    font-size: 0;
+}
 
 .subscription input {
     width: 75%;
@@ -310,19 +316,30 @@ font-size: 0;
 
 .subscription input[type="email"]:focus {
     background-color: #000;
-    color:#fff;
+    color: #fff;
 }
 
 
 .subscription input[type="email"] {
-    color:#fff;
+    color: #fff;
 }
 
 
- .subscription input[type="email"]::-webkit-input-placeholder { color:#fff;}
- .subscription  input[type="email"]:-ms-input-placeholder { color:#fff; }
- .subscription  input[type="email"]::-ms-input-placeholder { color:#fff;}
- .subscription  input[type="email"]::placeholder { color:#fff; } 
+.subscription input[type="email"]::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.subscription input[type="email"]:-ms-input-placeholder {
+    color: #fff;
+}
+
+.subscription input[type="email"]::-ms-input-placeholder {
+    color: #fff;
+}
+
+.subscription input[type="email"]::placeholder {
+    color: #fff;
+}
 
 
 .subscription button {
@@ -332,7 +349,8 @@ font-size: 0;
     text-transform: capitalize;
 }
 
-.subscription input,button {
+.subscription input,
+button {
     font-size: 12px;
     padding: 5px 8px;
 }
@@ -351,19 +369,25 @@ font-size: 0;
     margin-right: 0;
 }
 
-.fa-twitter:hover,.fa-facebook:hover {
-    color:blue;
+.fa-twitter:hover {
+    color: #1da1f2;
+    transition: color .8s;
+}
+
+.fa-facebook:hover {
+    color: #3B5998;
+    transition: color .8s;
 }
 
 .fa-youtube:hover {
-    color:red;
+    color: red;
+    transition: color  .8s;
 }
 
 
 .fa-instagram:hover {
-    /*background:linear-gradient(to right top , #f9ed32,#ee2a7b,#002aff);*/
-    background-image: linear-gradient(45deg, #f9ed32,#ee2a7b,#002aff);
-     -webkit-background-clip: text;
-     color:transparent; 
-     animation:instagramHoverAnimation 3.6s infinite; 
+    background-image: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: instagramHoverAnimation 3.6s infinite;
 }
