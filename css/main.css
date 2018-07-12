@@ -238,17 +238,26 @@ font-size: 0;
     width: 75%;
     border: 1px solid #00bea5;
     border-right: none;
-    background-color: transparent;
+    background-color: #000;
 }
+
+
+.subscription input[type="email"]:focus {
+    background-color: #000;
+    color:#fff;
+}
+
 
 .subscription input[type="email"] {
     color:#fff;
 }
 
+
  .subscription input[type="email"]::-webkit-input-placeholder { color:#fff;}
  .subscription  input[type="email"]:-ms-input-placeholder { color:#fff; }
  .subscription  input[type="email"]::-ms-input-placeholder { color:#fff;}
  .subscription  input[type="email"]::placeholder { color:#fff; } 
+
 
 .subscription button {
     width: 25%;
@@ -274,4 +283,18 @@ font-size: 0;
 
 .social li:last-of-type {
     margin-right: 0;
+}
+
+.fa-twitter:hover,.fa-facebook:hover {
+    color:blue;
+}
+
+.fa-youtube:hover {
+    color:red;
+}
+
+.fa-instagram:hover {
+    background:linear-gradient(to right, #f9ed32,#ee2a7b);
+     -webkit-background-clip: text;
+     color:transparent; 
 }
