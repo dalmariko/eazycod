@@ -53,11 +53,6 @@
         -webkit-background-clip: text;
         color: transparent;
     }
-    100% {
-        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
-        -webkit-background-clip: text;
-        color: transparent;
-    }
 }
 
 
@@ -374,10 +369,13 @@ button {
     transition: color .8s;
 }
 
+
 .fa-facebook:hover {
     color: #3B5998;
     transition: color .8s;
 }
+
+
 
 .fa-youtube:hover {
     color: red;
