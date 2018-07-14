@@ -56,9 +56,6 @@
 }
 
 
-
-
-
 @font-face {
     font-family: 'Gotham Pro';
     src: url('GothamPro-Light.eot');
@@ -135,8 +132,8 @@ p {
 }
 
 .container {
-    width: 80%;
-    /*width: 1200px;*/
+    min-width: 320px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
@@ -313,6 +310,13 @@ footer.gridContainer {
     background-color: #000;
     color: #fff;
 }
+
+
+.subscription input[type="email"]:active {
+    background-color: #000;
+    color: #fff;
+}
+
 
 
 .subscription input[type="email"] {
