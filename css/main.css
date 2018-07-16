@@ -131,6 +131,61 @@ p {
     border-bottom: none;
 }
 
+
+
+
+
+
+.header_ferst {
+    background-color: #f0f0f0;
+    font-size: 0;
+}
+
+.header_ferst .container {
+    padding: 5px ; 
+} 
+
+
+.ferst_left ul {
+    float: left;
+    font-size: 16px;
+}
+
+.ferst_left li {
+    display: inline-block;
+}
+
+.ferst_left li::first-letter {
+    text-transform: capitalize;
+}
+
+.ferst_right ul {
+    float:right;
+    font-size: 16px;
+}
+
+.ferst_right li {
+    display: inline-block;
+}
+
+
+.ferst_right  li:nth-of-type(2),.ferst_right li:nth-of-type(3)  {
+    text-transform: uppercase;
+}
+
+.ferst_right li::first-letter {
+text-transform: capitalize;
+}
+
+.container::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+
+
+
 .container {
     min-width: 320px;
     max-width: 1200px;
