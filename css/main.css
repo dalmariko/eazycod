@@ -307,7 +307,7 @@ vertical-align: middle;
 text-transform: capitalize;
 }
 
-.container:after {
+.container::after {
     display: table;
     content: '';
     clear: both;
@@ -324,24 +324,27 @@ text-transform: capitalize;
     vertical-align: middle;
     width: 50%;
     float: left;
-}
-
-.icon-commody:after {
-    font-size: 50px;
-  content: "\e900";
+    font-size: 0;
 }
 
 .headerSecondLeftCommody {
     display: inline-block;
     vertical-align: middle;
-    width: 30%;
+}
+
+
+.headerSecondLeftCommody i  {
+    font-size: 50px;
+ }
+
+.icon-commody::before {
+  content: "\e900";
 }
 
 
 .headerSecondLeftForm {
     display: inline-block;
     vertical-align: middle;
-    width: 70%;
     margin-left: 20px;
 }
 
@@ -401,7 +404,7 @@ text-transform: capitalize;
     font-size: 0;
 }
 
-.poccetIcons:after {
+.poccetIcons::after {
     display: table;
     content: '';
     clear: both;
