@@ -57,6 +57,36 @@
 
 
 @font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/commody/commody.eot?41i18m');
+  src:  url('../fonts/commody/commody.eot?41i18m#iefix') format('embedded-opentype'),
+    url('../fonts/commody/commody.ttf?41i18m') format('truetype'),
+    url('../fonts/commody/commody.woff?41i18m') format('woff'),
+    url('../fonts/commody/commody.svg?41i18m#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+@font-face {
     font-family: 'Gotham Pro';
     src: url('GothamPro-Light.eot');
     src: local('Gotham Pro Light'), local('GothamPro-Light'),
@@ -142,7 +172,7 @@ p {
 }
 
 .header_ferst .container {
-    padding: 5px ; 
+    padding: 10px 15px; 
 } 
 
 
@@ -153,6 +183,8 @@ p {
 
 .ferst_left li {
     display: inline-block;
+    padding-left: 9px;
+    padding-right: 9px; 
 }
 
 .ferst_left li::first-letter {
@@ -166,6 +198,8 @@ p {
 
 .ferst_right li {
     display: inline-block;
+     padding-left: 9px;
+    padding-right: 9px;
 }
 
 
@@ -183,6 +217,15 @@ text-transform: capitalize;
     clear: both;
 }
 
+
+
+
+
+.icon-output:before {
+    font-size: 100px;
+    color:red;
+  content: "\e900";
+}
 
 
 
