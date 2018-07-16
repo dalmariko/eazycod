@@ -270,7 +270,7 @@ p {
 }
 
 .headerFerst .container {
-    padding: 10px 15px; 
+    padding: 10px 30px; 
 } 
 
 
@@ -317,12 +317,14 @@ text-transform: capitalize;
 .headerSecond {
     font-size: 0;
 }
-
+.headerSecond .container {
+    padding: 10px 30px;
+}
 
 .headerSecondLeft  {
-    display: inline-block;
+      display: inline-block;
     vertical-align: middle;
-    width: 50%;
+    width: 70%;
     float: left;
     font-size: 0;
 }
@@ -334,6 +336,8 @@ text-transform: capitalize;
 
 
 .headerSecondLeftCommody i  {
+      display: inline-block;
+    vertical-align: middle;
     font-size: 50px;
  }
 
@@ -346,6 +350,7 @@ text-transform: capitalize;
     display: inline-block;
     vertical-align: middle;
     margin-left: 20px;
+    width: 70%;
 }
 
 
@@ -359,7 +364,7 @@ text-transform: capitalize;
 }
 
 .headerSecondLeftForm input[type="search"]  {
-    display: inline-block;
+  display: inline-block;
     vertical-align: middle;
     width: 90%;
     border:none; 
@@ -388,7 +393,7 @@ text-transform: capitalize;
 
 
 .headerSecondLeftForm button[type="submit"] {
-    display: inline-block;
+      display: inline-block;
     vertical-align: middle;
     width: 10%;    
     padding: 5px 8px;
@@ -399,7 +404,9 @@ text-transform: capitalize;
 
 
  .headerSecondRight {
-    width: 50%;
+      display: inline-block;
+    vertical-align:middle;
+    width: 30%;
     float: right;
     font-size: 0;
 }
@@ -416,8 +423,8 @@ text-transform: capitalize;
 }
 
 .poccetIcons a {
-    display: inline-block;
-    vertical-align:middle;
+      display: inline-block;
+    vertical-align: middle;
     font-size: 20px;
     padding: 5px 8px;
 }
