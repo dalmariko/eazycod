@@ -430,7 +430,34 @@ text-transform: capitalize;
 }
 
 
+.headerBottom {
+     border-top: 1px solid #cdd1d0;
+}
 
+
+.headerBottom .container {
+    padding: 15px 30px;
+}
+
+
+.gorizontalMenu li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 28px;
+    font-size: 16px;
+}
+
+.gorizontalMenu li :hover { 
+        border-bottom:3px solid #00bea5;
+    }
+
+.gorizontalMenu li:last-of-type {
+    padding-right: 0;
+}
+
+.gorizontalMenu li::first-letter {
+    text-transform: capitalize;
+}
 
 
 
