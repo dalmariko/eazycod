@@ -249,6 +249,7 @@ p {
 
 .ferst_left li {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .ferst_left li::first-letter {
@@ -261,7 +262,8 @@ p {
 }
 
 .ferst_right li {
-    display: inline-block;
+display: inline-block;
+vertical-align: middle;
 }
 
 
