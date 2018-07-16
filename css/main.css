@@ -151,6 +151,38 @@
 }
 
 
+@font-face {
+  font-family: 'search';
+  src:  url('../fonts/search/search.eot?uprx2l');
+  src:  url('../fonts/search/search.eot?uprx2l#iefix') format('embedded-opentype'),
+    url('../fonts/search/search.ttf?uprx2l') format('truetype'),
+    url('../fonts/search/search.woff?uprx2l') format('woff'),
+    url('../fonts/search/search.svg?uprx2l#search') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-search"], [class*=" icon-search"] {
+   /*use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'search' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+   /*Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+
+
 
 @font-face {
     font-family: 'Gotham Pro';
@@ -232,63 +264,165 @@ p {
 
 
 
-.header_ferst {
+.headerFerst {
     background-color: #f0f0f0;
     font-size: 0;
 }
 
-.header_ferst .container {
+.headerFerst .container {
     padding: 10px 15px; 
 } 
 
 
-.ferst_left ul {
+.headerFerstLeft ul {
     float: left;
     font-size: 16px;
 }
 
-.ferst_left li {
+.headerFerstLeft li {
     display: inline-block;
     vertical-align: middle;
 }
 
-.ferst_left li::first-letter {
+.headerFerstLeft li::first-letter {
     text-transform: capitalize;
 }
 
-.ferst_right ul {
+.headerFerstRight ul {
     float:right;
     font-size: 16px;
 }
 
-.ferst_right li {
+.headerFerstRight li {
 display: inline-block;
 vertical-align: middle;
 }
 
 
-.ferst_right  li:nth-of-type(2),.ferst_right li:nth-of-type(3)  {
+.headerFerstRight  li:nth-of-type(2),.headerFerstRight li:nth-of-type(3)  {
     text-transform: uppercase;
 }
 
-.ferst_right li::first-letter {
+.headerFerstRight li::first-letter {
 text-transform: capitalize;
 }
 
-.container::after {
+.container:after {
     display: table;
     content: '';
     clear: both;
 }
 
 
+.headerSecond {
+    font-size: 0;
+}
 
 
+.headerSecondLeft  {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    float: left;
+}
 
-.icon-commody:before {
-    font-size: 25px;
+.icon-commody:after {
+    font-size: 50px;
   content: "\e900";
 }
+
+.headerSecondLeftCommody {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+}
+
+
+.headerSecondLeftForm {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    margin-left: 20px;
+}
+
+
+.headerSecondLeftForm form {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    border: 1px solid #00bea5;
+    background-color: #fff;
+    font-size: 0;
+}
+
+.headerSecondLeftForm input[type="search"]  {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    border:none; 
+    outline: none;
+    -webkit-appearance:none;
+    color: #000;
+    font-size: 16px;
+    padding: 5px 8px;
+}
+
+.headerSecondLeftForm input[type="search"]::-webkit-input-placeholder {
+    color: #000;
+}
+
+.headerSecondLeftForm input[type="search"]:-ms-input-placeholder {
+    color: #000;
+}
+
+.headerSecondLeftForm input[type="search"]::-ms-input-placeholder {
+    color: #000;
+}
+
+.headerSecondLeftForm input[type="search"]::placeholder {
+    color: #000;
+}
+
+
+.headerSecondLeftForm button[type="submit"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;    
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+ .headerSecondRight {
+    width: 50%;
+    float: right;
+    font-size: 0;
+}
+
+.poccetIcons:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+
+.poccetIcons {
+    float: right;
+}
+
+.poccetIcons a {
+    display: inline-block;
+    vertical-align:middle;
+    font-size: 20px;
+    padding: 5px 8px;
+}
+
+
+
+
+
 
 
 
@@ -509,8 +643,7 @@ footer.gridContainer {
     text-transform: capitalize;
 }
 
-.subscription input,
-button {
+.subscription input,.subscription button {
     font-size: 12px;
     padding: 5px 8px;
 }
