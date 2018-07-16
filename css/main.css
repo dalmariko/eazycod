@@ -57,7 +57,7 @@
 
 
 @font-face {
-  font-family: 'icomoon';
+  font-family: 'commody';
   src:  url('../fonts/commody/commody.eot?41i18m');
   src:  url('../fonts/commody/commody.eot?41i18m#iefix') format('embedded-opentype'),
     url('../fonts/commody/commody.ttf?41i18m') format('truetype'),
@@ -68,9 +68,9 @@
 }
 
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-commody"], [class*="icon-commody"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'commody' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -83,6 +83,72 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-commody:before {
+  content: "\e900";
+}
+
+
+@font-face {
+  font-family: 'hert';
+  src:  url('../fonts/hert/hert.eot?2fgbyy');
+  src:  url('../fonts/hert/hert.eot?2fgbyy#iefix') format('embedded-opentype'),
+    url('../fonts/hert/hert.ttf?2fgbyy') format('truetype'),
+    url('../fonts/hert/hert.woff?2fgbyy') format('woff'),
+    url('../fonts/hert/hert.svg?2fgbyy#hert') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-hert"], [class*=" icon-hert"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hert' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hert:before {
+  content: "\e900";
+}
+
+
+
+@font-face {
+  font-family: 'poccet';
+  src:  url('../fonts/poccet/poccet.eot?eanmnv');
+  src:  url('../fonts/poccet/poccet.eot?eanmnv#iefix') format('embedded-opentype'),
+    url('../fonts/poccet/poccet.ttf?eanmnv') format('truetype'),
+    url('../fonts/poccet/poccet.woff?eanmnv') format('woff'),
+    url('../fonts/poccet/poccet.svg?eanmnv#poccet') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-poccet"], [class*=" icon-poccet"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'poccet' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-poccet:before {
+  content: "\e900";
+}
 
 
 
@@ -183,8 +249,6 @@ p {
 
 .ferst_left li {
     display: inline-block;
-    padding-left: 9px;
-    padding-right: 9px; 
 }
 
 .ferst_left li::first-letter {
@@ -198,8 +262,6 @@ p {
 
 .ferst_right li {
     display: inline-block;
-     padding-left: 9px;
-    padding-right: 9px;
 }
 
 
@@ -221,9 +283,8 @@ text-transform: capitalize;
 
 
 
-.icon-output:before {
-    font-size: 100px;
-    color:red;
+.icon-commody:before {
+    font-size: 25px;
   content: "\e900";
 }
 
