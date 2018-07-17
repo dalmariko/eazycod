@@ -1,0 +1,753 @@
+@keyframes instagramHoverAnimation {
+    0% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    10% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    20% {
+        background: linear-gradient(45deg, #002aff, #f9ed32, #ee2a7b);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    30% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    40% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(45deg, #002aff, #f9ed32, #ee2a7b);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    60% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    70% {
+        background: linear-gradient(45deg, #ee2a7b, #002aff, #f9ed32);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    80% {
+        background: linear-gradient(45deg, #002aff, #f9ed32, #ee2a7b);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    90% {
+        background: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+
+@font-face {
+  font-family: 'commody';
+  src:  url('../fonts/commody/commody.eot?41i18m');
+  src:  url('../fonts/commody/commody.eot?41i18m#iefix') format('embedded-opentype'),
+    url('../fonts/commody/commody.ttf?41i18m') format('truetype'),
+    url('../fonts/commody/commody.woff?41i18m') format('woff'),
+    url('../fonts/commody/commody.svg?41i18m#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-commody"], [class*="icon-commody"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'commody' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-commody:before {
+  content: "\e900";
+}
+
+
+@font-face {
+  font-family: 'hert';
+  src:  url('../fonts/hert/hert.eot?2fgbyy');
+  src:  url('../fonts/hert/hert.eot?2fgbyy#iefix') format('embedded-opentype'),
+    url('../fonts/hert/hert.ttf?2fgbyy') format('truetype'),
+    url('../fonts/hert/hert.woff?2fgbyy') format('woff'),
+    url('../fonts/hert/hert.svg?2fgbyy#hert') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-hert"], [class*=" icon-hert"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hert' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hert:before {
+  content: "\e900";
+}
+
+
+
+@font-face {
+  font-family: 'poccet';
+  src:  url('../fonts/poccet/poccet.eot?eanmnv');
+  src:  url('../fonts/poccet/poccet.eot?eanmnv#iefix') format('embedded-opentype'),
+    url('../fonts/poccet/poccet.ttf?eanmnv') format('truetype'),
+    url('../fonts/poccet/poccet.woff?eanmnv') format('woff'),
+    url('../fonts/poccet/poccet.svg?eanmnv#poccet') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-poccet"], [class*=" icon-poccet"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'poccet' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-poccet:before {
+  content: "\e900";
+}
+
+
+@font-face {
+  font-family: 'search';
+  src:  url('../fonts/search/search.eot?uprx2l');
+  src:  url('../fonts/search/search.eot?uprx2l#iefix') format('embedded-opentype'),
+    url('../fonts/search/search.ttf?uprx2l') format('truetype'),
+    url('../fonts/search/search.woff?uprx2l') format('woff'),
+    url('../fonts/search/search.svg?uprx2l#search') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class^="icon-search"], [class*=" icon-search"] {
+   /*use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'search' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+   /*Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+
+
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('GothamPro-Light.eot');
+    src: local('Gotham Pro Light'), local('GothamPro-Light'),
+    url('../fonts/gotham/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gotham/GothamPro-Light.woff') format('woff'),
+    url('../fonts/gotham/GothamPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Beer money';
+    src: url('../fonts/beermoney-400-normal.woff2') format('woff2'), url('../fonts/beermoney-400-normal.woff') format('woff'), url('../fonts/beermoney-400-normal.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Gabriela');
+@import url('https://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic-ext');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Gotham Pro', 'Beer money', 'Philosopher', sans-serif, 'Gabriela', serif, 'Lobster', cursive;
+}
+
+
+
+a {
+    text-decoration: none;
+    color:#000;
+}
+
+
+input {
+    border: 0;
+    padding: 0;
+}
+
+button {
+    padding: 0;
+    border: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.listReset {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+.box {
+    margin-bottom: 66px;
+    border-bottom: 1px solid #cdd1d0;
+}
+
+.box:last-of-type {
+    border-bottom: none;
+}
+
+
+
+
+
+
+.headerFerst {
+    background-color: #f0f0f0;
+    font-size: 0;
+}
+
+.headerFerst .container {
+    padding: 10px 30px; 
+} 
+
+
+.headerFerstLeft ul {
+    float: left;
+    font-size: 16px;
+}
+
+.headerFerstLeft li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerFerstLeft li::first-letter {
+    text-transform: capitalize;
+}
+
+.headerFerstRight ul {
+    float:right;
+    font-size: 16px;
+}
+
+.headerFerstRight li {
+display: inline-block;
+vertical-align: middle;
+}
+
+
+.headerFerstRight  li:nth-of-type(2),.headerFerstRight li:nth-of-type(3)  {
+    text-transform: uppercase;
+}
+
+.headerFerstRight li::first-letter {
+text-transform: capitalize;
+}
+
+.container::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+
+.headerSecond {
+    font-size: 0;
+}
+
+
+.headerSecond .container {
+    padding: 10px 30px;
+}
+
+.headerSecondLeft  {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    float: left;
+    font-size: 0;
+}
+
+.headerSecondLeftCommody {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    font-size: 0;
+}
+
+
+.headerSecondLeftCommody i  {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 50px;
+ }
+
+.icon-commody::before {
+  content: "\e900";
+}
+
+
+.headerSecondLeftForm {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5%;
+    width: 65%;
+    font-size: 0;
+}
+
+
+.headerSecondLeftForm form {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    border: 1px solid #00bea5;
+    background-color: #fff;
+    font-size: 0;
+}
+
+.headerSecondLeftForm input[type="search"]  {
+  display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    border:none; 
+    outline: none;
+    -webkit-appearance:none;
+    color: #000;
+    font-size: 16px;
+    padding: 5px 8px;
+}
+
+.headerSecondLeftForm input[type="search"]::-webkit-input-placeholder {
+    color: #000;
+}
+
+.headerSecondLeftForm input[type="search"]:-ms-input-placeholder {
+    color: #000;
+}
+
+.headerSecondLeftForm input[type="search"]::-ms-input-placeholder {
+    color: #000;
+}
+
+.headerSecondLeftForm input[type="search"]::placeholder {
+    color: #000;
+}
+
+
+.headerSecondLeftForm button[type="submit"] {
+      display: inline-block;
+    vertical-align: middle;
+    width: 10%;    
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+ .headerSecondRight {
+      display: inline-block;
+    vertical-align:middle;
+    width: 30%;
+    float: right;
+    font-size: 0;
+}
+
+.poccetIcons::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+
+.poccetIcons {
+    float: right;
+}
+
+.poccetIcons a {
+      display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    padding: 5px 8px;
+}
+
+
+.headerBottom {
+     border-top: 1px solid #cdd1d0;
+}
+
+
+.headerBottom .container {
+    padding: 15px 30px;
+}
+
+
+.gorizontalMenu ul {
+    display: flex;
+    flex-wrap: space-between;
+}
+
+.gorizontalMenu li {
+    flex-basis: 7.333333333333%;
+    margin-right: 1%;
+}
+
+
+.gorizontalMenu li:last-of-type {
+    margin-right: 0;
+}
+
+
+.gorizontalMenu a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    border-bottom:3px solid #fff;
+}
+
+.gorizontalMenu a:hover { 
+        border-bottom:3px solid #00bea5;
+    }
+
+
+.gorizontalMenu a::first-letter {
+    text-transform: capitalize;
+}
+
+
+
+
+
+.container {
+    min-width: 320px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0;
+    padding: 15px 15px 45px 15px;
+}
+
+.headText {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headText h1,
+h2,
+h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gridContainer {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.333333333333%;
+    padding: 15px;
+}
+
+.gridPropertis {
+    display: block;
+    padding: 15px 15px 15px 15px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.gridPropertis:hover {
+    border: 1px solid #cdd1d0;
+}
+
+.content {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+
+.top .content {
+    margin-bottom: 0;
+}
+
+.middle .content {
+    margin-bottom: 18px;
+}
+
+
+.bottom .content {
+    margin-bottom: 14px;
+}
+
+.content span {
+    font-size: 16px;
+    border-bottom: 1px solid #d4d4d4;
+    text-transform: uppercase;
+}
+
+.top .content span {
+    text-transform: none;
+}
+
+.elements {
+    padding-top: 76%;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.middle .gridContainer {
+    width: 50%;
+}
+
+.middle .gridPropertis:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.bottom .gridContainer {
+    width: 25%;
+}
+
+.bottom .gridPropertis:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.bottom .content p {
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+}
+
+footer .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+footer,
+footer h5,
+footer a,
+footer i,
+footer button {
+    color: #fff;
+}
+
+footer.gridContainer {
+    width: 50%;
+}
+
+.Block {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 40px;
+    width: 50%;
+    font-size: 0;
+}
+
+.Block li::first-letter {
+    text-transform: capitalize;
+}
+
+.Block a {
+    font-size: 14px;
+}
+
+.footerCaption {
+    margin-bottom: 35px;
+}
+
+.Block h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footerPart {
+    display: inline-block;
+    width: 50%;
+}
+
+.footerRight {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.subscription {
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+.subscription form {
+    display: inline;
+    font-size: 0;
+}
+
+.subscription input {
+    width: 75%;
+    border: 1px solid #00bea5;
+    border-right: none;
+    background-color: #000;
+}
+
+
+.subscription input[type="email"]:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.subscription input[type="email"]:active {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+.subscription input[type="email"] {
+    color: #fff;
+}
+
+
+.subscription input[type="email"]::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.subscription input[type="email"]:-ms-input-placeholder {
+    color: #fff;
+}
+
+.subscription input[type="email"]::-ms-input-placeholder {
+    color: #fff;
+}
+
+.subscription input[type="email"]::placeholder {
+    color: #fff;
+}
+
+
+.subscription button {
+    width: 25%;
+    border: 1px solid #00bea5;
+    background-color: #00bea5;
+    text-transform: capitalize;
+}
+
+.subscription input,.subscription button {
+    font-size: 16px;
+    padding: 10px 8px;
+}
+
+
+.social {
+    margin-bottom: 115px;
+}
+
+.social li {
+    display: inline;
+    margin-right: 25px;
+}
+
+.social li:last-of-type {
+    margin-right: 0;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+    transition: color .8s;
+}
+
+
+.fa-facebook:hover {
+    color: #3B5998;
+    transition: color .8s;
+}
+
+
+
+.fa-youtube:hover {
+    color: red;
+    transition: color  .8s;
+}
+
+
+.fa-instagram:hover {
+    background-image: linear-gradient(45deg, #f9ed32, #ee2a7b, #002aff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: instagramHoverAnimation 4s infinite;
+}
+
+
+.broduce {
+    padding-bottom: 60px; 
+}
+
+.broduce a {
+    border-bottom: 1px solid #d4d4d4;
+}
