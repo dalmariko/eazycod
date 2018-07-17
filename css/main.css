@@ -317,12 +317,14 @@ text-transform: capitalize;
 .headerSecond {
     font-size: 0;
 }
+
+
 .headerSecond .container {
     padding: 10px 30px;
 }
 
 .headerSecondLeft  {
-      display: inline-block;
+    display: inline-block;
     vertical-align: middle;
     width: 70%;
     float: left;
@@ -332,11 +334,13 @@ text-transform: capitalize;
 .headerSecondLeftCommody {
     display: inline-block;
     vertical-align: middle;
+    width: 30%;
+    font-size: 0;
 }
 
 
 .headerSecondLeftCommody i  {
-      display: inline-block;
+    display: inline-block;
     vertical-align: middle;
     font-size: 50px;
  }
@@ -349,8 +353,9 @@ text-transform: capitalize;
 .headerSecondLeftForm {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 20px;
-    width: 70%;
+    margin-left: 5%;
+    width: 65%;
+    font-size: 0;
 }
 
 
@@ -440,14 +445,17 @@ text-transform: capitalize;
 }
 
 
+
 .gorizontalMenu li {
     display: inline-block;
     vertical-align: middle;
-    padding-right: 28px;
     font-size: 16px;
+    padding-right: 30px;
+    border-bottom:3px solid #fff;
+
 }
 
-.gorizontalMenu li :hover { 
+.gorizontalMenu li:hover { 
         border-bottom:3px solid #00bea5;
     }
 
