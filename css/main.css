@@ -630,7 +630,12 @@ footer.gridContainer {
 
 .footerPart {
     display: inline-block;
+    vertical-align: top;
     width: 50%;
+}
+
+.footerPart  li {
+  padding-bottom: 12px;
 }
 
 .footerRight {
@@ -745,7 +750,7 @@ footer.gridContainer {
 
 
 .broduce {
-    padding-bottom: 60px; 
+    margin-bottom: 60px; 
 }
 
 .broduce a {
