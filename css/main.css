@@ -445,25 +445,35 @@ text-transform: capitalize;
 }
 
 
+.gorizontalMenu ul {
+    display: flex;
+    flex-wrap: space-between;
+}
 
 .gorizontalMenu li {
+    flex-basis: 7.333333333333%;
+    margin-right: 1%;
+}
+
+
+.gorizontalMenu li:last-of-type {
+    margin-right: 0;
+}
+
+
+.gorizontalMenu a {
     display: inline-block;
     vertical-align: middle;
     font-size: 16px;
-    padding-right: 30px;
     border-bottom:3px solid #fff;
-
 }
 
-.gorizontalMenu li:hover { 
+.gorizontalMenu a:hover { 
         border-bottom:3px solid #00bea5;
     }
 
-.gorizontalMenu li:last-of-type {
-    padding-right: 0;
-}
 
-.gorizontalMenu li::first-letter {
+.gorizontalMenu a::first-letter {
     text-transform: capitalize;
 }
 
