@@ -603,6 +603,11 @@ footer button {
     color: #fff;
 }
 
+footer {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
 footer.gridContainer {
     width: 50%;
 }
@@ -610,7 +615,6 @@ footer.gridContainer {
 .Block {
     display: inline-block;
     vertical-align: top;
-    padding-top: 40px;
     width: 50%;
     font-size: 0;
 }
@@ -754,10 +758,6 @@ footer.gridContainer {
     animation: instagramHoverAnimation 4s infinite;
 }
 
-
-.broduce {
-    margin-bottom: 60px; 
-}
 
 .broduce a {
     border-bottom: 1px solid #d4d4d4;
