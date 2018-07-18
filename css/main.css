@@ -523,23 +523,24 @@ h3 {
     border: 1px solid #cdd1d0;
 }
 
+
+
+
 .content {
     font-size: 14px;
-    margin-bottom: 40px;
+}
+
+.headText .content p {
+padding-bottom: 40px;
+}
+
+.middle .content p {
+    padding-bottom: 18px;
 }
 
 
-.top .content {
-    margin-bottom: 0;
-}
-
-.middle .content {
-    margin-bottom: 18px;
-}
-
-
-.bottom .content {
-    margin-bottom: 14px;
+.bottom .content p {
+    padding-bottom: 14px;
 }
 
 .content span {
@@ -551,6 +552,10 @@ h3 {
 .top .content span {
     text-transform: none;
 }
+
+
+
+
 
 .elements {
     padding-top: 76%;
