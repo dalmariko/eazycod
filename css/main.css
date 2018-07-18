@@ -343,7 +343,7 @@ text-transform: capitalize;
     display: inline-block;
     vertical-align: middle;
     font-size: 50px;
-    color:green;
+    color:#000;
  }
 
 .icon-commody::before {
