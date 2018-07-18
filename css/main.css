@@ -638,14 +638,19 @@ footer {
 .footerPart {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 30%;
+}
+
+.footerPart:first-of-type {
+  padding-right: 30px;
 }
 
 .footerPart  li {
   padding-bottom: 12px;
 }
 
-.footerRight {
+.footerPrivatCabinet  {
+    display: block;
     padding-bottom: 40px;
 }
 
