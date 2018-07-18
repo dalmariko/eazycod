@@ -56,6 +56,10 @@
 }
 
 
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
 @font-face {
   font-family: 'commody';
   src:  url('../fonts/commody/commody.eot?41i18m');
@@ -586,26 +590,20 @@ padding-bottom: 40px;
     text-align: center;
 }
 
-footer {
-    background-color: #000;
-}
-
-footer .container {
-    padding-top: 0;
-    padding-bottom: 0;
-}
 
 footer,
 footer h5,
 footer a,
 footer i,
 footer button {
+  /*font-family: 'Open Sans', sans-serif;*/
     color: #fff;
 }
 
 footer {
     padding-top: 40px;
     padding-bottom: 60px;
+    background-color: #000;
 }
 
 
@@ -621,8 +619,11 @@ footer {
 }
 
 .Block a {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1;
 }
+
+
 
 .footerCaption {
     padding-bottom: 35px;
@@ -631,7 +632,7 @@ footer {
 .Block h5 {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 22px;
     text-transform: uppercase;
 }
 
@@ -646,11 +647,16 @@ footer {
 }
 
 .footerPart  li {
-  padding-bottom: 12px;
+  padding-bottom: 10px;
+}
+
+.footerPart a:hover {
+  color: #7f7f7f;
+  transition: color .3s ; 
 }
 
 .footerPrivatCabinet  {
-    display: block;
+    display: inline-block;
     padding-bottom: 40px;
 }
 
@@ -659,26 +665,28 @@ footer {
 }
 
 .subscription form {
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
     font-size: 0;
 }
 
 .subscription input {
     width: 75%;
+    height: 40px;
     border: 1px solid #00bea5;
     border-right: none;
-    background-color: #000;
+    background-color: transparent;
 }
 
 
 .subscription input[type="email"]:focus {
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
 }
 
 
 .subscription input[type="email"]:active {
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
 }
 
@@ -708,16 +716,24 @@ footer {
 
 .subscription button {
     width: 25%;
+    height: 40px;
     border: 1px solid #00bea5;
     background-color: #00bea5;
     text-transform: capitalize;
-}
-
-.subscription input,.subscription button {
     font-size: 16px;
-    padding: 10px 8px;
+    padding: 0 8px;
+     cursor: pointer;
 }
 
+.subscription input {
+   font-size: 16px;
+    padding: 0 20px;
+}
+
+.subscription button:hover {
+  background-color: #02a993;
+  transition: background-color .3s;
+}
 
 .social {
     padding-bottom: 115px;
@@ -761,4 +777,12 @@ footer {
 
 .broduce {
     border-bottom: 1px solid #d4d4d4;
+    font-size: 14px;
+    color: #d4d4d4;
+}
+
+.broduce:hover {
+    border-bottom: 1px solid #7f7f7f;
+    color: #7f7f7f;
+    transition: color background-color .3s;
 }
