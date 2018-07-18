@@ -608,9 +608,6 @@ footer {
     padding-bottom: 60px;
 }
 
-footer.gridContainer {
-    width: 50%;
-}
 
 .Block {
     display: inline-block;
@@ -628,7 +625,7 @@ footer.gridContainer {
 }
 
 .footerCaption {
-    margin-bottom: 35px;
+    padding-bottom: 35px;
 }
 
 .Block h5 {
@@ -720,7 +717,7 @@ footer.gridContainer {
 
 
 .social {
-    margin-bottom: 115px;
+    padding-bottom: 115px;
 }
 
 .social li {
@@ -759,6 +756,6 @@ footer.gridContainer {
 }
 
 
-.broduce a {
+.broduce {
     border-bottom: 1px solid #d4d4d4;
 }
