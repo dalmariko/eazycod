@@ -242,26 +242,33 @@ p {
 }
 
 
+.icon-commody {
+    font-size: 40px;
+}
+
 .headerLeft form {
-    display: inline-block;
-    vertical-align: middle;
+   display: flex;
+   flex-direction: row;
+    align-items: center;
     margin-left: 20px;
-    width: 100%;
-    border: 1px solid #00bea5;
-    background-color: #fff;
+    flex-basis:  100%;
     font-size: 0;
 }
 
 
 
 .headerLeft input[type="search"]  {
-    display: inline-block;
-    vertical-align: middle;
-    width: 90%;
-    border:none; 
+    display: flex;
+    align-items: center;
+    flex-basis:  90%;
+    justify-content: flex-start;
+    border: 1px solid #00bea5;
+    border-right: none;
+    background-color: transparent;
     color: #000;
+    padding: 0 8px;
     font-size: 16px;
-    padding: 5px 8px;
+    min-height: 30px;
 }
 
 .headerLeft input[type="search"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -286,13 +293,17 @@ p {
 
 
 .headerLeft button[type="submit"] {
-    display: inline-block;
-    vertical-align: middle;
-    width: 10%;    
-    padding: 5px 0px 5px  8px;
+    display: flex;
+    align-items: center;
+    flex-basis: 10%;
+    justify-content: flex-end;    
+    border: 1px solid #00bea5;
+    border-left:  none; 
+    padding: 0 8px;
     font-size: 16px;
     cursor: pointer;
     background-color: transparent;
+    min-height: 30px;
 }
 
 
@@ -302,7 +313,7 @@ p {
 }
 
 .counterRound {
-    position: relative;
+    position: absolute;
     top: -6px;
     left: -15px;
     width: 15px;
