@@ -343,12 +343,29 @@ text-transform: capitalize;
     padding: 5px 8px;
 }
 
+.counter {
+    position: relative;
+}
 
 .counterRound {
-    width: 30px;
-    height: 30px;
+    position: relative;
+    top: -6px;
+    left: -15px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color:#00bea5; 
+}
+
+.countItems {
+    position: absolute;
+    bottom: 1px;
+    left: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    color:#fff;
+    z-index: 3;
 }
 
 
