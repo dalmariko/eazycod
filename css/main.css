@@ -170,7 +170,7 @@ p {
 
 
 
-.headerFerst {
+.headerFerst { 
     background-color: #f0f0f0;
     font-size: 0;
 }
@@ -179,7 +179,54 @@ p {
     padding: 10px 30px; 
 } 
 
+.parazit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.parazit li {
+    margin-right: 20px;
+}
+
+.parazit li:last-of-type {
+    margin-right: 0;
+} 
+
+.headerFerstLeft,.headerFerstRight  {
+    display: flex;
+  flex-direction: row;
+    font-size: 16px;
+}
+
+.headerFerstLeft {
+    justify-content: flex-start;
+    flex-basis:  70%;
+}
+
+.headerFerstRight  {
+    justify-content: flex-end;
+    flex-basis:  30%;
+}
+
+
+
+.headerFerstLeft li::first-letter {
+    text-transform: capitalize;
+}
+
+
+.headerFerstRight  li:nth-of-type(3),.headerFerstRight li:nth-of-type(4)  {
+    text-transform: uppercase;
+}
+
+.headerFerstRight li::first-letter {
+    text-transform: capitalize; 
+}
+
+
+
+/*
 .headerFerstLeft ul {
     float: left;
     font-size: 16px;
@@ -190,9 +237,7 @@ p {
     vertical-align: middle;
 }
 
-.headerFerstLeft li::first-letter {
-    text-transform: capitalize;
-}
+
 
 .headerFerstRight ul {
     float:right;
@@ -211,13 +256,13 @@ p {
     padding-right: 15px;
 }
 
-.headerFerstRight  li:nth-of-type(2),.headerFerstRight li:nth-of-type(3)  {
-    text-transform: uppercase;
-}
 
-.headerFerstRight li::first-letter {
-text-transform: capitalize;
-}
+*/
+
+
+
+
+
 
 .headerSecond {
     font-size: 0;
@@ -559,8 +604,8 @@ footer {
     width: 30%;
 }
 
-.footerPart:first-of-type {
   padding-right: 30px;
+.footerPart:first-of-type {
 }
 
 .footerPart  li {
