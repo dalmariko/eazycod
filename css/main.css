@@ -176,7 +176,7 @@ p {
     font-size: 0;
 }
 
-.headerFerst.container {
+.headerFerst .container {
     padding: 10px 30px; 
 } 
 
@@ -238,7 +238,7 @@ p {
 }
 
 
-.headerSecond.container {
+.headerSecond .container {
     padding: 22px 30px;
 }
 
@@ -358,7 +358,7 @@ p {
 }
 
 
-.headerBottom.container {
+.headerBottom .container {
     padding: 15px 30px 20px 30px;
 }
 
