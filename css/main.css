@@ -84,6 +84,7 @@
 }
 
 
+
 @font-face {
     font-family: 'Gotham Pro';
     src: url('GothamPro-Light.eot');
@@ -307,33 +308,48 @@ p {
 }
 
 
+.icon-poccet,.icon-hert {
+    display: flex;
+    align-items: center;    
+    font-size: 25px;
+}
 
-.counter {
+.round {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
-}
-
-.counterRound {
-    position: absolute;
-    top: -6px;
-    left: -15px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color:#00bea5; 
-}
-
-.countItems {
-    position: absolute;
-    bottom: 1px;
-    left: 2px;
+   
+    left: -10px;
+    right: 0;
+    top: -3px;
+    bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    font-size: 10px;
-    color:#fff;
-    z-index: 3;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00bea5
 }
 
 
+.number
+{
+    display: block;
+    position: relative;
+   
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    color: #fff;
+    font-size: 11px;
+}
 
 
 
