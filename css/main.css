@@ -176,7 +176,7 @@ p {
     font-size: 0;
 }
 
-.headerFerst .container {
+.headerFerst.container {
     padding: 10px 30px; 
 } 
 
@@ -238,7 +238,7 @@ p {
 }
 
 
-.headerSecond .container {
+.headerSecond.container {
     padding: 22px 30px;
 }
 
@@ -358,7 +358,7 @@ p {
 }
 
 
-.headerBottom .container {
+.headerBottom.container {
     padding: 15px 30px 20px 30px;
 }
 
@@ -391,6 +391,15 @@ p {
 
 .gorizontalMenu a::first-letter {
     text-transform: capitalize;
+}
+
+
+
+.main-slider__img {
+    min-height: 485px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
 
@@ -591,6 +600,8 @@ footer {
 }
 
 .subscription input {
+    display: inline-block;
+    vertical-align: middle;
     width: 75%;
     min-height: 40px;
     border: 1px solid #00bea5;
@@ -639,6 +650,8 @@ footer {
 
 
 .subscription button {
+    display: inline-block;
+    vertical-align: middle;
     width: 25%;
     min-height: 40px;
     background-color: #00bea5;
