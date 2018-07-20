@@ -720,3 +720,41 @@ footer {
     color: #7f7f7f;
     transition: color background-color .3s;
 }
+
+
+
+/*---------------------------------------------slider------------------------------------------------------*/
+
+
+
+.main-slider .slick-dots {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-size: 0; 
+}
+
+
+.main-slider .slick-dots li {
+
+position: relative;
+bottom:30px;
+
+
+ width: 13px;
+ height: 13px;
+ border-radius: 50%;
+ border: 1px solid #00bea5;
+ background-color: #00bea5;
+ margin-right: 8px;
+}
+
+
+.main-slider .slick-dots .slick-active {
+background-color: transparent;
+}
