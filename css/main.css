@@ -185,10 +185,8 @@ p {
 .headerFerst { 
     background-color: #f0f0f0;
     font-size: 0;
-}
-
-.headerFerst .container {
-    padding: 10px 30px; 
+    padding-top:  10px ; 
+    padding-bottom: 10px ; 
 } 
 
 .parazit {
@@ -207,7 +205,7 @@ p {
 
 .headerLeft,.headerRight  {
     display: flex;
-  flex-direction: row;
+    flex-direction: row;
     font-size: 16px;
 }
 
@@ -246,11 +244,8 @@ p {
 
 .headerSecond {
     font-size: 0;
-}
-
-
-.headerSecond .container {
-    padding: 22px 30px;
+    padding-top:  22px;
+    padding-bottom: 22px;
 }
 
 
@@ -365,21 +360,19 @@ p {
 
 
 .headerBottom {
-     border-top: 1px solid #cdd1d0;
-}
-
-
-.headerBottom .container {
-    padding: 15px 30px 20px 30px;
+    border-top: 1px solid #cdd1d0;
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 
 .gorizontalMenu ul {
     display: flex;
+   justify-content: space-between;
 }
 
 .gorizontalMenu li {    
-    margin-right: auto;
+    margin-right: 10px;
 }
 
 
@@ -423,7 +416,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     font-size: 0;
-    padding: 15px 15px 45px 15px;
+    padding: 15px;
 }
 
 .headText {
