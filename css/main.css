@@ -269,7 +269,7 @@ p {
     align-items: center;
     flex-basis:  90%;
     justify-content: flex-start;
-    border: 1px solid #00bea5;
+    border: 1px solid #cdd1d0;
     border-right: none;
     background-color: transparent;
     color: #000;
@@ -304,7 +304,7 @@ p {
     align-items: center;
     flex-basis: 10%;
     justify-content: flex-end;    
-    border: 1px solid #00bea5;
+    border: 1px solid #cdd1d0;
     border-left:  none; 
     padding: 0 8px;
     font-size: 16px;
