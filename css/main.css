@@ -126,19 +126,6 @@
 
 
 
-@media screen and (min-width: 768px){
-    .Block {
-        margin-bottom: 0px;
-        }
-
-    .Block a {
-        font-size: 1rem;
-    }
-}
-
-
-
-
 
 
 
@@ -538,8 +525,8 @@ padding-bottom: 40px;
 
 
 footer {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
     background-color: #000;
 }
 
@@ -549,7 +536,7 @@ footer {
     vertical-align: top;
     width: 100%;
     font-size: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .Block li::first-letter {
@@ -558,20 +545,22 @@ footer {
 
 .Block a {
     color: #fff;
-    font-size: .9rem;
+    font-size: .8rem;
     line-height: 1;
 }
 
+
 .footerCaption {
-    padding-bottom: 35px;
+    padding-bottom: 2em;
 }
 
 .Block h5 {
     color: #fff;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 22px;
+    font-size: 1rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .footerPart {
@@ -583,7 +572,7 @@ footer {
 
 
 .footerPart  li {
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 
 .footerPart  li:last-of-type {
@@ -615,7 +604,7 @@ footer {
 
 
 .subscription {
-    padding-bottom: 70px;
+    padding-bottom: 2rem;
 }
 
 
@@ -633,8 +622,8 @@ footer {
     border: 1px solid #00bea5;
     border-right: none; 
     background-color: transparent;
-    font-size: 16px; 
-    padding: 0 22px;
+    font-size: .6rem; 
+    padding: 0 1.22rem;
 }
 
 
@@ -685,8 +674,8 @@ footer {
     border-left: none;
     background-color: #00bea5;
     text-transform: capitalize;
-    font-size: 16px;
-    padding: 0 8px;
+    font-size: .6rem;
+    padding: 0 .5rem;
      cursor: pointer;
      color:#fff;
 }
@@ -699,7 +688,8 @@ footer {
 }
 
 .social {
-   padding-bottom: 115px;
+    text-align: center;
+   padding-bottom: 1.875rem;
 }
 
 .social li {
@@ -788,3 +778,87 @@ bottom:30px;
 .main-slider .slick-dots .slick-active {
 background-color: transparent;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 480px) {
+    
+    footer {
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        background-color: #000;
+    }
+
+
+    .subscription button {
+    font-size: .8rem;
+    }
+
+    .subscription input {
+    font-size: .8rem;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+    
+
+    footer {
+        padding-top: 2.5rem;
+        padding-bottom: 3.75rem;
+        background-color: #000;
+    }
+
+
+
+    .Block {
+        margin-bottom: 0px;
+    }
+
+    .Block a {
+        font-size: 1rem;
+    }
+
+    .Block h5 {
+        font-size: 1.375rem;
+        text-align: left;
+    }
+
+     .subscription button {
+    font-size: .9rem;
+    }
+
+    .subscription input {
+    font-size: .9rem;
+    }
+
+    .subscription {
+    padding-bottom: 4rem;
+    }
+
+
+    .social {
+    text-align: left;
+    padding-bottom: 7.1875rem;
+    }
+
+
+}
+
