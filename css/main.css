@@ -122,6 +122,27 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic-ext');
 
 
+
+
+
+
+@media screen and (min-width: 768px){
+    .Block {
+        margin-bottom: 0px;
+        }
+
+    .Block a {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -242,12 +263,6 @@ p {
 .headerRight li::first-letter {
     text-transform: capitalize; 
 }
-
-
-
-
-
-
 
 
 
@@ -532,8 +547,9 @@ footer {
 .Block {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    width: 100%;
     font-size: 0;
+    margin-bottom: 20px;
 }
 
 .Block li::first-letter {
@@ -542,11 +558,9 @@ footer {
 
 .Block a {
     color: #fff;
-    font-size: 16px;
+    font-size: .9rem;
     line-height: 1;
 }
-
-
 
 .footerCaption {
     padding-bottom: 35px;
@@ -563,12 +577,10 @@ footer {
 .footerPart {
     display: inline-block;
     vertical-align: top;
-    width: 35%;
+    min-width: 40%;
+    padding-right: 1rem;
 }
 
-  padding-right: 30px;
-.footerPart:first-of-type {
-}
 
 .footerPart  li {
   padding-bottom: 10px;
