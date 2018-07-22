@@ -617,7 +617,7 @@ footer {
 .subscription input {
     display: inline-block;
     vertical-align: middle;
-    width: 75%;
+    width: 70%;
     min-height: 40px;
     border: 1px solid #00bea5;
     border-right: none; 
@@ -668,14 +668,14 @@ footer {
 .subscription button {
     display: inline-block;
     vertical-align: middle;
-    width: 25%;
+    width: 30%;
     min-height: 40px;
     border: 1px solid #00bea5;
     border-left: none;
     background-color: #00bea5;
     text-transform: capitalize;
     font-size: .6rem;
-    padding: 0 .5rem;
+    padding: 0 .3rem;
      cursor: pointer;
      color:#fff;
 }
@@ -802,11 +802,11 @@ background-color: transparent;
 
 
     .subscription button {
-    font-size: .8rem;
+    font-size: .7rem;
     }
 
     .subscription input {
-    font-size: .8rem;
+    font-size: .7rem;
     }
 
 }
@@ -842,11 +842,11 @@ background-color: transparent;
     }
 
      .subscription button {
-    font-size: .9rem;
+    font-size: .75rem;
     }
 
     .subscription input {
-    font-size: .9rem;
+    font-size: .75rem;
     }
 
     .subscription {
@@ -862,3 +862,12 @@ background-color: transparent;
 
 }
 
+@media screen and (min-width: 992px) {
+         .subscription button {
+    font-size: 1rem;
+    }
+
+    .subscription input {
+    font-size: 1rem;
+    }
+}
