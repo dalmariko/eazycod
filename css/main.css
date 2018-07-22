@@ -193,9 +193,6 @@ p {
 }
 
 
-
-
-
 .headerFerst { 
     background-color: #f0f0f0;
     font-size: 0;
@@ -215,15 +212,6 @@ p {
 }
 
 
-.parazit li {
-    padding-right: 20px;
-}
-
-.parazit li:last-of-type {
-    margin-right: 0;
-} 
-
-
 
 .headerLeft,.headerRight  {
     display: flex;
@@ -231,7 +219,17 @@ p {
     align-items: center;
     flex-wrap: wrap;
     font-size: 16px;
+
 }
+
+.headerLeft li,.headerRight li{
+ padding-right: 20px;
+}
+
+.headerLeft li:last-of-type,.headerRight li:last-of-type{
+ padding-right: 0;
+}
+
 
 .headerLeft {
    justify-content: flex-start;
