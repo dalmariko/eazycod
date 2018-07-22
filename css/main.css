@@ -619,6 +619,7 @@ footer {
     width: 75%;
     min-height: 40px;
     border: 1px solid #00bea5;
+    border-right: none; 
     background-color: transparent;
     font-size: 16px; 
     padding: 0 22px;
@@ -668,6 +669,8 @@ footer {
     vertical-align: middle;
     width: 25%;
     min-height: 40px;
+    border: 1px solid #00bea5;
+    border-left: none;
     background-color: #00bea5;
     text-transform: capitalize;
     font-size: 16px;
