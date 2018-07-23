@@ -215,7 +215,7 @@ p {
 .headerLeft,.headerRight  {
     display: flex;
     flex-direction: row;
-    /*align-items: center;*/
+    align-items: center;
     flex-wrap: wrap;
     font-size: 16px;
 }
@@ -230,7 +230,7 @@ p {
 
 
 .headerLeft {
-    margin-bottom: 20px;
+   margin-bottom: 20px;
    flex-basis:  70%;
 }
 
@@ -429,11 +429,7 @@ p {
     margin-right: auto;
 }
 
-.headText {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .headText h1,
 h2,
@@ -448,7 +444,9 @@ h3 {
 
 .gridPropertis {
     display: block;
-    padding: 15px 15px 15px 15px;
+    padding: 15px;
+    padding-left: 0;
+    padding-right: 0;
     border: 1px solid rgba(0, 0, 0, 0);
 }
 
@@ -485,7 +483,7 @@ padding-bottom: 40px;
 }
 
 .elements {
-    padding-top: 76%;
+    padding-top: 65%;
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
@@ -804,24 +802,36 @@ background-color: transparent;
 
 
 @media screen and (min-width: 768px){
+   .elements {
+    padding-top: 76%;
+   }
+
+
+
     .headerLeft {
     margin-bottom: 0;
-}
+    }
+
+
+
+    .headerLeft,.headerRight  {
+        flex-wrap: nowrap;
+    }
 
     
     .headerLeft {
    justify-content: flex-start;
    flex-basis:  70%;
-}
+   }
 
-.headerRight  {
+    .headerRight  {
     justify-content: flex-end;
     flex-basis:  30%;
-}
+   }
 
-.headerLeft form {
+    .headerLeft form {
     margin-left: 20px;
-}
+   }
 
 
 
