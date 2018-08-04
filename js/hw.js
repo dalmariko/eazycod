@@ -108,3 +108,41 @@ let string = `
 // lastOfDel='0'+lastOfDel.substr(1);
 // lastOfDel = parseFloat(lastOfDel);
 // console.log( parseFloat(lastOfDel.toFixed(1)) );
+
+/*6. Создать переменную list и присвоить ей массив из нескольких строк со
+списком покупок.
+6.1 Получить длинну такого массива.
+6.2. Удалить первый элемент массива.
+6.3. Удалить последний элемент массива.
+6.4. Вставить в начало массива строку ‘start’.
+6.5. Вставить в конец массива строку ‘end’.
+6.6. Удалить центральный элемент массива и заменить его на строку
+‘center’.*/
+
+//
+// var list =['aples','bananes','iscreem'];
+// console.log(list.length);
+// list.shift();
+// list.pop();
+// list.unshift('start');
+// list.push('end');
+// list.splice(1,1,'center');
+// console.log(list);
+
+/*7. Создать объект me в свойствах которого указать name, lastname, hobby
+и присвоить им значения.*/
+
+//
+// const  me = {
+//     name:'dima',
+//         lastname:'Nagorny',
+//         hobby:'alcosport'
+// };
+
+/*8. В объект созданный по задаче 7 создать свойство с именем ‘favourite
+movie’ (любимый фильм) и присвоить значение.*/
+//
+// me['favorite movie']='titanic';
+// console.log(me);
+
+
