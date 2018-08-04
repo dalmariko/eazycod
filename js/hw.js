@@ -1,15 +1,15 @@
 let string = `
 Мишка очень любит мёд!
 Почему? Кто поймёт?
-// В самом деле, почему
+В самом деле, почему
 Мёд так нравится ему?
 `;
-// console.log(string);
-
+ console.log(string);
+//console.log(string.length);
 
 //1.1. Получить индекс второго вопросительного знака.
-// var Quest=string.indexOf('!')+1;
-// console.log(Quest);
+ var Quest=string.indexOf('?\n');
+ console.log(Quest);
 
 //1.2. Сделать второе слово «мед» с маленькой буквы.
 // var Med = string.indexOf('Мёд');
@@ -33,7 +33,7 @@ let string = `
 // console.log(copyString);
 
 //1.7. Получить индекс последнего вопросительного знака.
-// console.log(string.lastIndexOf('?'));
+ console.log(string.lastIndexOf('?'));
 
 //1.8. Получить символ, находящийся по индексу знака «!» увеличенному на 1.
 // var Wosc=string.indexOf('!')+1;
