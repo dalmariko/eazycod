@@ -6,19 +6,17 @@ let I = 0;
 
 for (I; I < words.length; I++) {
 
-    if (  words[I] === `\u0020` || I==0) {
+    if (words[I] === `\u0020` || I == 0) {
         for (words[I]; words[I] === `\u0020`; I++) {
             continue;
         }
-        bigWords +=' ';
+        bigWords += ' ';
         bigWords += words[I].toUpperCase();
-    }else {
+    } else {
         bigWords += words[I];
     }
 }
 console.log(`Задание 1 ${bigWords}\n`);
-
-
 
 
 //2 перевернуть строку
@@ -49,7 +47,7 @@ let end = 10;
 let str = '';
 
 str += `"Считаем до ${end}и:`;
-while ( x <= end) {
+while (x <= end) {
     str += x !== end ? x + ',' : x + '"';
     x++;
 }
@@ -62,12 +60,14 @@ let somString = "javaScript is a pretty good      lenguage";
 let camelCase = "";
 let i = 0;
 
-for ( i ; i < somString.length; i++) {
-    if (somString[i] === `\u0020` || i==0) {
-        for(somString[i];somString[i]===`\u0020`;i++) {continue;}
+for (i; i < somString.length; i++) {
+    if (somString[i] === `\u0020` || i == 0) {
+        for (somString[i]; somString[i] === `\u0020`; i++) {
+            continue;
+        }
         camelCase += somString[i].toUpperCase();
-    }else {
-        camelCase +=somString[i];
+    } else {
+        camelCase += somString[i];
     }
 }
 console.log(`Задание 5 ${camelCase}\n`);
