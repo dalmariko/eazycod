@@ -99,11 +99,16 @@
         }
     }
 
-    function manyTaskDel(delTasks = []) {
-        for (let id of delTasks) {
-            delTasck(id);
+    function manyTaskDel(delElements = '') {
+        let delTasks = [];
+        delTasks=delElements.split(/[\.,;\:]\s*/);
+        for (let id in delTasks) {
+            delTasck(delTasks[id]);
         }
+        console.log(delTasks);
     }
+
+
 
     function viewTasks(allTasks = []) {
         let rez = '';
