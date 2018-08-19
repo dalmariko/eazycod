@@ -29,9 +29,24 @@
 //
 
 let allTask = [
-    {'task': "ferst tasck", 'id': "0"},
-    {'task': "next tasck", 'id': "1"},
-    {'task': "therd tasck", 'id': "2"}
+    {'task': "0 tasck", 'id': 0},
+    {'task': "1 tasck", 'id': 1},
+    {'task': "2 tasck", 'id': 2},
+    {'task': "3 tasck", 'id': 3},
+    {'task': "4 tasck", 'id': 4},
+    {'task': "5 tasck", 'id': 5},
+    {'task': "6 tasck", 'id': 6},
+    {'task': "7 tasck", 'id': 7},
+    {'task': "8 tasck", 'id': 8},
+    {'task': "9 tasck", 'id': 9},
+    {'task': "10 tasck", 'id': 10},
+    {'task': "11 tasck", 'id': 11},
+    {'task': "12 tasck", 'id': 12},
+    {'task': "13 tasck", 'id': 13},
+    {'task': "14 tasck", 'id': 14},
+    {'task': "15 tasck", 'id': 15},
+    {'task': "16 tasck", 'id': 16},
+    {'task': "17 tasck", 'id': 17}
 ];
 
 
@@ -40,30 +55,44 @@ function addTask(value = '') {
 
     const task = {
         'task': `${value}`,
-        'id': `${allTask.length}`
+        'id': +allTask.length
     };
     allTask.push(task);
 }
 
-function reId(somArr) {
-
-    for (let i=0; i < somArr.length; i++){
-        somArr[i]['id'] = i + '';
-    }
-    return somArr;
-}
-
 function delTasck(id) {
-    if (id === '' ||  id === undefined) return console.log('Select tascks');
 
+    if (!id) return console.log(`Select correct tasck`);
 
-    for (let key of allTask) {
-        if (+(key['id']) === +id) {
-            allTask.splice(key, 1);
-            console.log('Tasck delete successfull');
-            reId(allTask);
+    for (let key in allTask) {
+
+        if (+allTask[+key]['id'] === +id) {
+            allTask.splice(+key, 1);
+            console.log(`Tasck ${id}, delete successfull`);
+            break;
         }
+
     }
 }
 
-console.log(allTask);
+function manyTaskDel(delTasks = []) {
+    for (let id of delTasks) {
+        delTasck(id);
+    }
+}
+
+
+
+
+var date1 = Date.now();
+
+// console.log(allTask);
+console.log('\n');
+console.log(manyTaskDel([1, 15, 10]));
+console.log('\n');
+// console.log(allTask);
+var date2 = Date.now();
+
+console.log('\n');
+
+console.log(date2, ' ', date1, ' ', (date2 - date1) / 1000);
