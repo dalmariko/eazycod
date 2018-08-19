@@ -31,7 +31,7 @@
         return Math.floor(Math.random() * (max - min) + min);
     }
 
-    var d = new Date();
+    let d = new Date();
 
 
     function monts(month = d.getMonth()) {
@@ -52,7 +52,7 @@
 
     let timeFinish = `${d.getFullYear()} ${monts()} ${d.getDay() + randomDay(32, 1)} at ${d.getHours() + randomDay(2, 8)}:${d.getMinutes() + randomDay(18, 60)}:${d.getSeconds()}`;
 
-    var timeBegin = `${d.getFullYear()} ${monts()} ${d.getDate()} at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    let timeBegin = `${d.getFullYear()} ${monts()} ${d.getDate()} at ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
 
     let allTask = [
         {
@@ -86,14 +86,14 @@
         allTask.push(task);
     }
 
-    function delTasck(id) {
+    function delTasck(delElement) {
 
-        if (!id) return console.log(`Select correct tasck`);
+        if (!delElement) return console.log(`Select correct tasck`);
 
         for (let key in allTask) {
-            if (+allTask[+key]['id'] === +id) {
+            if (+allTask[+key]['id'] === +delElement) {
                 allTask.splice(+key, 1);
-                console.log(`Tasck ${id}, delete successfull`);
+                console.log(`Tasck ${delElement}, delete successfull`);
                 break;
             }
         }
@@ -101,14 +101,12 @@
 
     function manyTaskDel(delElements = '') {
         let delTasks = [];
-        delTasks=delElements.split(/[\.,;\:]\s*/);
+        delTasks = delElements.split(/[\.,\s;\:]\s*/);
         for (let id in delTasks) {
             delTasck(delTasks[id]);
         }
         console.log(delTasks);
     }
-
-
 
     function viewTasks(allTasks = []) {
         let rez = '';
@@ -130,6 +128,14 @@
     let doc = document;
     let container = doc.getElementsByClassName('container')[0];
     container.innerHTML = viewTasks(allTask);
+
+
+    deleteTask(prompt('Введите номера тасков на удаление используя разделители ","  "."  ":"  ";"  "пробел" '));
+
+
+    function deleteTask(string = '') {
+        string.length < 2 ? delTasck(string) : manyTaskDel(string);
+    }
 
 
 })();
