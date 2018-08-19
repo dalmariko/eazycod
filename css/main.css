@@ -53,13 +53,17 @@ padding:  5px 0;
 }
 
 .exercise {
-    width: 65%;
+    width: 55%;
 }
 
 .timeBegin {
-    width: 15%;
+    width: 20%;
 }
 
 .timeFinish {
-   width: 15%;
+    width: 20%;
+}
+
+.timeBegin span,.timeFinish span {
+    font-size: .7em;
 }
