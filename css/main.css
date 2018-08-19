@@ -1,5 +1,65 @@
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.container {
+    min-width: 320px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.task {
+
+    background-color: aqua;
+    color: black;
+}
+
+.taskContent {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.taskContent li {
+    border-right: 1px solid #000;
+}
+
+.taskContent li:last-of-type {
+    border-right: none;
+}
+
+.taskContent li  {
+padding:  5px 0;
+}
+
+.id {
+    width: 5%;
+}
+
+.exercise {
+    width: 65%;
+}
+
+.timeBegin {
+    width: 15%;
+}
+
+.timeFinish {
+   width: 15%;
 }
