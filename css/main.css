@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.container {
+    min-width: 320px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.task {
+
+    background-color: aqua;
+    color: black;
+}
+
+.taskContent {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.taskContent li {
+    border-right: 1px solid #000;
+}
+
+.taskContent li:last-of-type {
+    border-right: none;
+}
+
+.taskContent li  {
+padding:  5px 0;
+}
+
+.id {
+    width: 5%;
+}
+
+.exercise {
+    width: 55%;
+}
+
+.timeBegin {
+    width: 20%;
+}
+
+.timeFinish {
+    width: 20%;
+}
+
+.timeBegin span,.timeFinish span {
+    font-size: .7em;
+}
