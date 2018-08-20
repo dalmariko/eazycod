@@ -4,6 +4,8 @@ function manager(obgect, handler) {
     }
 }
 
+let numbers = [10,20,30];
+
 let controlArray = ['camelcaseconcat', 'multiplication', 'nameandage', 'reversestring'];
 
 function camelcaseConcat(element) {
@@ -16,8 +18,12 @@ function camelcaseConcat(element) {
     return rez;
 }
 
-function multiplication() {
-
+function multiplication(element) {
+    let rez='';
+    for (let index of element){
+        rez += index*10+',';
+    }
+    return rez;
 }
 
 function nameAndage() {
@@ -29,3 +35,4 @@ function reverseString() {
 }
 
 console.log(manager(controlArray, camelcaseConcat));
+console.log(manager(numbers, multiplication));
