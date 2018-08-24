@@ -106,42 +106,25 @@
     // deleteNth([1,1,3,3,7,2,2,2,2], 3) -> результат новый массив [1, 1, 3, 3, 7, 2, 2, 2]
 
 
-    function delNum(arr, repiat) {
-        let finish = [];
+    function delNum(arr, repeat) {
+        let Count = {}, newArr = [];
         for (let i = 0; i < arr.length; i++) {
-            for (let x = 0; x < arr.length; x++) {
-                let count = 1;
-                if (arr[i] !== finish[x]) {
-                    count++;
-                    if (count <= repiat) {
-                        finish.push(i);
-                    }
-                    continue;
-                }
-            }
+            // console.log(Count, arr[i]);
+            if (Count.hasOwnProperty(arr[i]))
+                Count[arr[i]] += 1;
+            else
+                Count[arr[i]] = 1;
+
+            if (Count[arr[i]] > repeat)
+                continue;
+
+            newArr.push(arr[i]);
+
         }
-        return finish
+        return newArr;
     }
 
     console.log(delNum([21, 20, 2, 21, 21, 20, 20, 20, 56, 27], 2));
-    //
-    // function delNum(arr, repeat) {
-    //     let Count = {}, newArr = [];
-    //     for (let i = 0; i < arr.length; i ++) {
-    //         console.log(Count, arr[i]);
-    //         if (Count.hasOwnProperty(arr[i]))
-    //             Count[arr[i]] += 1;
-    //         else
-    //             Count[arr[i]] = 1;
-    //
-    //         if (Count[arr[i]] > repeat)
-    //             continue;
-    //
-    //         newArr.push(arr[i]);
-    //
-    //     }
-    //     return newArr;
-    // }
     console.log(delNum([20, 37, 20, 21], 1));
 
 
