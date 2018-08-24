@@ -99,17 +99,24 @@
 
     // console.log(avrage(arr));
 
-    function delNum(arr, repiat) {
-        let rez = arr;
-            for (let i = 0; i < rez.length; i++) {
-                for(let x =0; x<arr.length;x++){
+    // 2. создать функцию которая принимает массив чисел первым аргументом и
+    // втом аргументом число которое указывает на то сколько раз каждая из цифр в
+    // массиве может повториться. пример вызова функции
+    // deleteNth([20,37,20,21], 1) -> результат новый массив [20,37,21]
+    // deleteNth([1,1,3,3,7,2,2,2,2], 3) -> результат новый массив [1, 1, 3, 3, 7, 2, 2, 2]
 
-                }
+
+    function delNum(arr, repiat) {
+        let finish = [];
+
+        for (let x = 0; x < arr.length; x++) {
+
         }
-        return rez;
+        return finish;
     }
 
-    console.log(delNum(arr, 2));
+    console.log(delNum([20, 37, 20, 21], 1));
+
 
 
 })();
