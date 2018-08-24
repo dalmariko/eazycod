@@ -18,7 +18,7 @@
 //         }
 //     ];
 //
-//     let abs123 = ['123', 'abc'];
+//     let abs123 = ['Настя', 'с', 'днем','рожения'];
 //
 //     let fullName = ['neo,', 'my', 'name', 'trinity'];
 //
@@ -100,16 +100,41 @@
     // console.log(avrage(arr));
 
     function delNum(arr, repiat) {
-        let rez = arr;
-            for (let i = 0; i < rez.length; i++) {
-                for(let x =0; x<arr.length;x++){
-
+        let finish = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let x = 0; x < arr.length; x++) {
+                let count = 1;
+                if (arr[i] !== finish[x]) {
+                    count++;
+                    if (count <= repiat) {
+                        finish.push(i);
+                    }
+                    continue;
                 }
+            }
         }
-        return rez;
+        return finish;
     }
 
-    console.log(delNum(arr, 2));
+    console.log(delNum([21, 20, 2, 21, 21, 20, 20, 20, 56, 27], 2));
+    //
+    // function delNum(arr, repeat) {
+    //     let Count = {}, newArr = [];
+    //     for (let i = 0; i < arr.length; i ++) {
+    //         console.log(Count, arr[i]);
+    //         if (Count.hasOwnProperty(arr[i]))
+    //             Count[arr[i]] += 1;
+    //         else
+    //             Count[arr[i]] = 1;
+    //
+    //         if (Count[arr[i]] > repeat)
+    //             continue;
+    //
+    //         newArr.push(arr[i]);
+    //
+    //     }
+    //     return newArr;
+    // }
 
 
 })();
