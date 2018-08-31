@@ -55,4 +55,23 @@
 // Как можно решить эту же задачу, не используя сортировку и reduce()?
 
 
+let letters=[
+     {char:"a",index:12}, {char:"w",index:8}, {char:"Y",index:10},
+     {char:"p",index:3}, {char:"p",index:2},{char:"N",index:6},
+     {char:" ",index:5}, {char:"y",index:4}, {char:"r",index:13},
+     {char:"H",index:0},{char:"e",index:11}, {char:"a",index:1},
+     {char:" ",index:9}, {char:"!",index:14}, {char:"e",index:7}
+    ];
 
+
+let sortLetters = letters.sort((a, b) => {
+    return a['index'] > b['index'] ? 1 : -1;
+});
+
+let massege=sortLetters.reduce( (mes,cur)=>{
+    return mes+cur['char'];
+},'');
+
+
+// console.log(stringWord);
+console.log(massege);
