@@ -41,7 +41,7 @@ function filterCollection(product, min, max) {
     });
 }
 
-console.log(filterCollection(product, 20, 100));
+// console.log(filterCollection(product, 20, 100));
 
 // 2. На основе массива [1,2,3,5,8,9,10] сформировать новый массив,
 //     каждый элемент которого будет хранить информацию о числе и его
@@ -54,14 +54,14 @@ let resNumbersInfo=numbers.map((el,bool)=>
     bool = el % 2 === 0;
     return {digit:el,odd:bool};
 });
-console.log(resNumbersInfo);
+// console.log(resNumbersInfo);
 
 // 3. Проверить, содержит ли массив [12, 4, 50, 1, 0, 18, 40] элементы,
 //     равные нулю. Если да - вернуть false
 
 let zerroSome=[12, 4, 50, 1, 0, 18, 40];
 let rez=zerroSome.every(el=> el!==0);
-console.log(rez);
+// console.log(rez);
 
 
 // 4. Проверить, содержит ли массив ['yes', 'hello', 'no', 'easycode', 'what']
@@ -71,7 +71,7 @@ let words=['yes', 'hello', 'no', 'easycode', 'what'];
 
 let elementsMoreThenTreeLetter=words.some(el=>el.length>3);
 
-console.log(elementsMoreThenTreeLetter);
+// console.log(elementsMoreThenTreeLetter);
 
 // Дан массив объектов, где каждый объект содержит информацию о
 // букве и месте её положения в строке {буква: “a”, позиция_в_предложении:1}:
@@ -105,17 +105,35 @@ let letters=[
     ];
 
 
-function getMess(letters) {
+// function getMess(letters) {
+//
+//     let sortLetters = letters.sort((a, b) => {
+//         return a['index'] > b['index'] ? 1 : -1;
+//     });
+//
+//     return sortLetters.reduce((mes, cur) => {
+//         return mes + cur['char'];
+//     },'');
+//
+//
+// }
+//
+// console.log(getMess(letters));
 
-    let sortLetters = letters.sort((a, b) => {
-        return a['index'] > b['index'] ? 1 : -1;
-    });
-
-    return sortLetters.reduce((mes, cur) => {
-        return mes + cur['char'];
-    },'');
 
 
+
+function message(letters) {
+    let rez = '';
+    for (let i = 0; i < letters.length; i++) {
+        for (let letter of letters) {
+            if (letter['index'] === i) {
+                rez += letter['char'];
+            }
+            continue;
+        }
+    }
+    return rez;
 }
 
-console.log(getMess(letters));
+console.log(message(letters));
