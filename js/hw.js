@@ -105,33 +105,30 @@ let letters=[
     ];
 
 
-// function getMess(letters) {
-//
-//     let sortLetters = letters.sort((a, b) => {
-//         return a['index'] > b['index'] ? 1 : -1;
-//     });
-//
-//     return sortLetters.reduce((mes, cur) => {
-//         return mes + cur['char'];
-//     },'');
-//
-//
-// }
-//
-// console.log(getMess(letters));
+function getMess(letters) {
+
+    let sortLetters = letters.sort((a, b) => {
+        return a['index'] > b['index'] ? 1 : -1;
+    });
+
+    return sortLetters.reduce((mes, cur) => {
+        return mes + cur['char'];
+    },'');
 
 
+}
+
+console.log(getMess(letters));
 
 
 function message(letters) {
     let rez = '';
     for (let i = 0; i < letters.length; i++) {
-        for (let letter of letters) {
-            if (letter['index'] === i) {
-                rez += letter['char'];
-            }
-            continue;
-        }
+
+        letters.forEach((letter) => {
+           rez += letter['index'] === i ? letter['char'] : '';
+        });
+
     }
     return rez;
 }
