@@ -64,14 +64,17 @@ let letters=[
     ];
 
 
-let sortLetters = letters.sort((a, b) => {
-    return a['index'] > b['index'] ? 1 : -1;
-});
+function getMess(letters) {
 
-let massege=sortLetters.reduce( (mes,cur)=>{
-    return mes+cur['char'];
-},'');
+    let sortLetters = letters.sort((a, b) => {
+        return a['index'] > b['index'] ? 1 : -1;
+    });
 
+    let massege = sortLetters.reduce((mes, cur) => {
+        return mes + cur['char'];
+    }, '');
 
-// console.log(stringWord);
-console.log(massege);
+    return massege;
+}
+
+console.log(getMess(letters));
