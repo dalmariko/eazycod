@@ -124,11 +124,9 @@ console.log(getMess(letters));
 function message(letters) {
     let rez = '';
     for (let i = 0; i < letters.length; i++) {
-
         letters.forEach((letter) => {
            rez += letter['index'] === i ? letter['char'] : '';
         });
-
     }
     return rez;
 }
