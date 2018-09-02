@@ -36,3 +36,10 @@ return item;
 });
 
 console.log(div);
+
+
+function filterCollection(product, min, max) {
+    return product.filter((item) => {
+        return item['price'] >= min && item['price'] <= max;
+    });
+}
