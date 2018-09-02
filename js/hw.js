@@ -29,8 +29,10 @@ const children=body.children;
 let [... allElements]=children;
 // console.log(allElements);
 
-console.log(typeof allElements);
+console.log( allElements[0]);
 
-// let div=allElements.forEach( (div) => 0 );
-//
-// console.log(div);
+let div=allElements.forEach( (item) =>{
+return item;
+});
+
+console.log(div);
