@@ -23,23 +23,14 @@ const head=document.head;
 const body=document.body;
 // console.log(body);
 
-const children=body.children;
-// console.log(children);
-
-let [... allElements]=children;
-// console.log(allElements);
-
-console.log( allElements[0]);
-
-let div=allElements.forEach( (item) =>{
-return item;
-});
-
-console.log(div);
+const elements=body.children;
+// console.log(elements);
 
 
-function filterCollection(product, min, max) {
-    return product.filter((item) => {
-        return item['price'] >= min && item['price'] <= max;
-    });
+for (let element in elements){
+    if(elements[element].children.length > 0){
+        console.log(elements[element]);
+
+        break;
+    }
 }
