@@ -28,9 +28,15 @@ const elements=body.children;
 
 
 for (let element in elements){
-    if(elements[element].children.length > 0){
+    ferstFullElement=elements[element].children;
+    if(ferstFullElement.length > 0){
         console.log(elements[element]);
 
+       for(let i = 0; i < ferstFullElement.length;i++){
+           if(i!==0 && i!==ferstFullElement.length-1){
+            console.log(ferstFullElement[i]);
+           }
+       }
         break;
     }
 }
