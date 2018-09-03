@@ -19,3 +19,22 @@ function isParent(parent,child) {
 
 console.log(isParent('div','body'));
 
+
+let allLinks  = document.links;
+
+let  [...elementsLinks]=allLinks;
+
+let a = elementsLinks.filter(link=>{
+    return !link.closest('ul');
+});
+console.log(a);
+
+
+const ul = document.querySelector('ul');
+
+let before = ul.previousElementSibling;
+let after = ul.nextElementSibling;
+console.log (before,after);
+
+const li = ul.childElementCount;
+console.log(li);
