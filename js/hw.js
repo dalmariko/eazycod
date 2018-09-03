@@ -17,7 +17,7 @@ function isParent(parent,child) {
    return document.querySelector(child).closest(parent)!==null;
 }
 
-console.log(isParent('div','body'));
+console.log('Функция проверяет является ли первый элемент,РОДИТЕЛЕМ для второого: "isParent" ',isParent('div','body'));
 
 
 let allLinks  = document.links;
@@ -27,14 +27,15 @@ let  [...elementsLinks]=allLinks;
 let a = elementsLinks.filter(link=>{
     return !link.closest('ul');
 });
-console.log(a);
+console.log('Получить список всех ссылок, которые не находятся внутри списка ul ',a);
 
 
 const ul = document.querySelector('ul');
 
 let before = ul.previousElementSibling;
 let after = ul.nextElementSibling;
-console.log (before,after);
+console.log ('Найти элемент, который находится перед и послесписка ul ', before,after);
 
 const li = ul.childElementCount;
-console.log(li);
+console.log('Посчитать колличество элементов li в списке. ',li);
+
