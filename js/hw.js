@@ -16,27 +16,30 @@
 *
 * */
 
-
+//1
 const head = document.head;
-// console.log(head);
+console.log(head);
 
+//2
 const body = document.body;
-// console.log(body);
+console.log(body);
 
+//3
 const elements = body.children;
-// console.log(elements);
+console.log(elements);
 
+//4
+for (let i = 0; i < elements.length; i++) {
+    ferstFullElement = elements[i].children;
+    //а
+    ferstFullElement.length > 0 ? console.log(elements[i]) : '';
 
-for (let element in elements) {
-    ferstFullElement = elements[element].children;
-    if (ferstFullElement.length > 0) {
-        console.log(elements[element]);
-
-        for (let i = 0; i < ferstFullElement.length; i++) {
-            if (i !== 0 && i !== ferstFullElement.length - 1) {
-                console.log(ferstFullElement[i]);
-            }
-        }
-        break;
+    for (let i = 0; i < ferstFullElement.length; i++) {
+        //б
+        i !== 0 && i !== ferstFullElement.length - 1 ? console.log(ferstFullElement[i]) : '';
     }
 }
+
+
+
+
