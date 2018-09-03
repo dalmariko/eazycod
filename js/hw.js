@@ -17,26 +17,26 @@
 * */
 
 
-const head=document.head;
+const head = document.head;
 // console.log(head);
 
-const body=document.body;
+const body = document.body;
 // console.log(body);
 
-const elements=body.children;
+const elements = body.children;
 // console.log(elements);
 
 
-for (let element in elements){
-    ferstFullElement=elements[element].children;
-    if(ferstFullElement.length > 0){
+for (let element in elements) {
+    ferstFullElement = elements[element].children;
+    if (ferstFullElement.length > 0) {
         console.log(elements[element]);
 
-       for(let i = 0; i < ferstFullElement.length;i++){
-           if(i!==0 && i!==ferstFullElement.length-1){
-            console.log(ferstFullElement[i]);
-           }
-       }
+        for (let i = 0; i < ferstFullElement.length; i++) {
+            if (i !== 0 && i !== ferstFullElement.length - 1) {
+                console.log(ferstFullElement[i]);
+            }
+        }
         break;
     }
 }
