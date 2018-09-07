@@ -26,6 +26,8 @@ const state = {
  * UI Elements
  */
 const table = document.querySelector('.table tbody');
+const alert = document.getElementById('alerContainer');
+
 
 /**
  * Функция addItem добавляет один элемент в разметку
@@ -60,8 +62,10 @@ const deleteItem = id => {
 
     // Заново генерируем элементы
     generateItems(state.todos);
-    mess.insertAdjacentHTML('beforebegin',messageDel);
+    alert.insertAdjacentHTML('afterbegin', messageDel);
+    setTimeout(() => alert.innerHTML = '', 2000);
 };
+
 
 /**
  * Перебираем в цикле массив с задачами и передаем по одной задаче в функцию addItem
@@ -80,19 +84,18 @@ generateItems(state.todos);
 const newItem = (title, description) => {
     state.todos.unshift({id: 0, title, description});
     generateItems(state.todos);
-    mess.insertAdjacentHTML('beforebegin',messageOk);
+    alert.insertAdjacentHTML('afterbegin', messageOk);
+    setTimeout(() => alert.innerHTML = '', 2000);
 };
 
-const mess=document.querySelector('table');
 
-
-const messageOk= `
+const messageOk = `
 <div class="alert alert-success mt-5" role="alert" >
   Поздравляю задание успешно добавленно.
 </div>
 `;
 
-const messageDel= `
+const messageDel = `
 <div class="alert alert-danger mt-5" role="alert">
   Задание удалено !
 </div>
