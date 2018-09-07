@@ -32,7 +32,7 @@ const table = document.querySelector('.table tbody');
  * @param {object} item - один объект задачи
  * @returns {void}
  */
-const addItem = (item, index) => {
+const addItem = item => {
     const template = `
         <tr>
             <td>${item.id}</td>
@@ -60,7 +60,7 @@ const deleteItem = id => {
 
     // Заново генерируем элементы
     generateItems(state.todos);
-  // mess.insertAdjacentHTML('beforebegin',messageDel);
+    mess.insertAdjacentHTML('beforebegin',messageDel);
 };
 
 /**
@@ -68,7 +68,7 @@ const deleteItem = id => {
  */
 const generateItems = items => {
     table.innerHTML = '';
-    state.todos.forEach((item,index)=>item.id=index+1);
+    state.todos.forEach((item, index) => item.id = index + 1);
     items.forEach((todo, index) => addItem(todo, index));
 
 };
@@ -77,32 +77,26 @@ const generateItems = items => {
 generateItems(state.todos);
 
 
-
-
-const newItem = (title,description)=>{
-    state.todos.unshift({id:0,title,description});
+const newItem = (title, description) => {
+    state.todos.unshift({id: 0, title, description});
     generateItems(state.todos);
-    // mess.insertAdjacentHTML('beforebegin',messageOk);
+    mess.insertAdjacentHTML('beforebegin',messageOk);
 };
 
-// const mess=document.querySelector('table');
-//
-//
-// const messageOk= `
-// <div class="alert alert-success mt-5" role="alert" >
-//   Поздравляю задание успешно добавленно.
-// </div>
-// `;
-//
-// const messageDel= `
-// <div class="alert alert-danger mt-5" role="alert">
-//   Задание удалено !
-// </div>
-// `;
+const mess=document.querySelector('table');
 
 
+const messageOk= `
+<div class="alert alert-success mt-5" role="alert" >
+  Поздравляю задание успешно добавленно.
+</div>
+`;
 
-
+const messageDel= `
+<div class="alert alert-danger mt-5" role="alert">
+  Задание удалено !
+</div>
+`;
 
 
 /**
