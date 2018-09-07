@@ -35,7 +35,7 @@ const table = document.querySelector('.table tbody');
 const addItem = (item, index) => {
     const template = `
         <tr>
-            <td>${index + 1}</td>
+            <td>${item.id}</td>
             <td>${item.title}</td>
             <td>${item.description}</td>
             <td><button class="btn btn-danger">Delete</button></td>
@@ -57,18 +57,21 @@ const deleteItem = id => {
             state.todos.splice(index, 1);
         }
     });
+
     // Заново генерируем элементы
     generateItems(state.todos);
-}
+  // mess.insertAdjacentHTML('beforebegin',messageDel);
+};
 
 /**
  * Перебираем в цикле массив с задачами и передаем по одной задаче в функцию addItem
  */
 const generateItems = items => {
     table.innerHTML = '';
+    state.todos.forEach((item,index)=>item.id=index+1);
     items.forEach((todo, index) => addItem(todo, index));
 
-}
+};
 
 // Первый раз вызываем генерацию задач
 generateItems(state.todos);
@@ -78,9 +81,26 @@ generateItems(state.todos);
 
 const newItem = (title,description)=>{
     state.todos.unshift({id:0,title,description});
-    state.todos.forEach((item,index)=>item.id=index);
     generateItems(state.todos);
-}
+    // mess.insertAdjacentHTML('beforebegin',messageOk);
+};
+
+// const mess=document.querySelector('table');
+//
+//
+// const messageOk= `
+// <div class="alert alert-success mt-5" role="alert" >
+//   Поздравляю задание успешно добавленно.
+// </div>
+// `;
+//
+// const messageDel= `
+// <div class="alert alert-danger mt-5" role="alert">
+//   Задание удалено !
+// </div>
+// `;
+
+
 
 
 
