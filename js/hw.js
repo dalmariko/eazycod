@@ -162,18 +162,7 @@ const onTableClick = e => {
 *
 * @returns {void}
 * */
-const onTitlekeyUp = e =>{
-    // console.log(e);
-    // if(title.value){
-    //     // console.log(description);
-    // description.disable = false;
-    // }else{
-    //     description.disable = true;
-    // }
-    description.disable = !title.value;
-
-};
-
+const onTitlekeyUp = e => description.disabled = !title.value;
 
 /*Все события*/
 
