@@ -36,11 +36,11 @@ const alert = document.getElementById('alerContainer');
  */
 const addItem = item => {
     const template = `
-        <tr>
+        <tr data-id="${item.id}">
             <td>${item.id}</td>
             <td>${item.title}</td>
             <td>${item.description}</td>
-            <td><button class="btn btn-danger">Delete</button></td>
+            <td><button class="btn btn-danger remove-item">Delete</button></td>
         </tr>
     `;
 
@@ -55,7 +55,7 @@ const addItem = item => {
 const deleteItem = id => {
     // Удаляем задачу из массива
     state.todos.forEach((item, index) => {
-        if (item.id === id) {
+        if (item.id === Number(id)) {
             state.todos.splice(index, 1);
         }
     });
@@ -81,7 +81,16 @@ const generateItems = items => {
 generateItems(state.todos);
 
 
-const newItem = (title, description) => {
+/*
+ *Функция добавления новой задачи
+ * @param {string} e
+ *
+ * @returns {void}
+ *
+ *
+ * */
+
+const addNewItem = (title, description) => {
     state.todos.unshift({id: 0, title, description});
     generateItems(state.todos);
     alert.insertAdjacentHTML('afterbegin', messageOk);
@@ -102,13 +111,76 @@ const messageDel = `
 `;
 
 
-/**
- * Домашнее задание
- * * 1. Реализовать добавление новой задачи в массив и в разметку эта функция будет принимать два аргумента это title и description
- * * 2. Вывести уведомление об успешном добавление / удалении задачи. для уведомлений использовать alert из bootstrap, setTimeout
- */
+
+const form = document.forms['add-new-itemm'];
+
+const title = form['title'];
+const description = form['description'];
+
+/*
+*Функция обрабатывает событие формы. Добавление новой задачи
+* @param {Event} e
+*
+* @returns {void}
+*
+*
+* */
+
+const onSubmitForm = e =>{
+    e.preventDefault();
+    // console.log('submit');
+    // console.log(title.value, description.value);
+
+    if(title.value && description.value){
+        addNewItem(title.value,description.value)
+    }else{
+    //   вывести сообщение об том что данных нет.
+    }
+};
+
+/*
+ * Функция обработки события клика на таблице . Реализация шаблона делегирования сбытия. Удалние задачи из таблици.
+ *
+ *  @param {Event} e - объект
+ *
+ * @returns {void}
+ * */
+
+const onTableClick = e => {
+    // console.log(e.target);
+    if(e.target.classList.contains('remove-item')){
+            const tr = e.target.closest('tr');
+            const id = tr.dataset.id;
+            deleteItem(id);
+    }
+};
+
+/*
+* Обркботка события ввода с клавиатуры input[name=title]
+*
+*  @param {Event} e
+*
+* @returns {void}
+* */
+const onTitlekeyUp = e =>{
+    // console.log(e);
+    // if(title.value){
+    //     // console.log(description);
+    // description.disable = false;
+    // }else{
+    //     description.disable = true;
+    // }
+    description.disable = !title.value;
+
+};
 
 
-//  setTimeout(function() {
-//      console.log('timeout')
-//  }, 2000);
+/*Все события*/
+
+
+form.addEventListener('submit',onSubmitForm);
+title.addEventListener('keyup',onTitlekeyUp);
+table.addEventListener('click',onTableClick);
+
+
+
