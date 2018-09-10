@@ -47,6 +47,7 @@ const addItem = item => {
     table.insertAdjacentHTML('beforeend', template);
 };
 
+
 /**
  * Функция deleteItem удаляет элемент из массива и из разметки
  * @param {number} id - id задачи котору нужно удалить
@@ -87,11 +88,10 @@ generateItems(state.todos);
  *
  * @returns {void}
  *
- *
  * */
 
-const addNewItem = (title, description) => {
-    state.todos.unshift({id: 0, title, description});
+const addNewItem = (newtitle, newdescription) => {
+    state.todos.unshift({id: 0, title:newtitle, description:newdescription});
     generateItems(state.todos);
     alert.insertAdjacentHTML('afterbegin', messageOk);
     setTimeout(() => alert.innerHTML = '', 2000);
@@ -128,9 +128,6 @@ const description = form['description'];
 
 const onSubmitForm = e =>{
     e.preventDefault();
-    // console.log('submit');
-    // console.log(title.value, description.value);
-
     if(title.value && description.value){
         addNewItem(title.value,description.value)
     }else{
@@ -143,11 +140,11 @@ const onSubmitForm = e =>{
  *
  *  @param {Event} e - объект
  *
- * @returns {void}
+ *  @returns {void}
+ *
  * */
 
 const onTableClick = e => {
-    // console.log(e.target);
     if(e.target.classList.contains('remove-item')){
             const tr = e.target.closest('tr');
             const id = tr.dataset.id;
@@ -160,16 +157,21 @@ const onTableClick = e => {
 *
 *  @param {Event} e
 *
-* @returns {void}
+*  @returns {void}
+*
 * */
 const onTitlekeyUp = e => description.disabled = !title.value;
 
 /*Все события*/
-
 
 form.addEventListener('submit',onSubmitForm);
 title.addEventListener('keyup',onTitlekeyUp);
 table.addEventListener('click',onTableClick);
 
 
+/**
+ *
+ */
+function somFunc(begining,ending){
 
+}
