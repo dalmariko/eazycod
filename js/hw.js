@@ -4,7 +4,7 @@ const showTag = document.getElementById('tag');
 
 const btnGenerateLi = document.getElementById('btn-generate');
 
-
+const ul=document.querySelector('ul');
 
 
 /*
@@ -12,8 +12,10 @@ const btnGenerateLi = document.getElementById('btn-generate');
 *
 * */
 
-const generate=new CustomEvent('addLi',{
-    detail:{ctn:0}
+const generate=new Event('addLi',{
+        bubbles: true,
+        cancelable: true,
+        counter:ul.children.length+1
 });
 
 /*
@@ -34,9 +36,13 @@ const showTagName=(e)=>{
 };
 
 
-const liGenerate = (e)=>{
-console.log(e.detail.ctn+1);
+const liGenerate = (e,ctn)=> {
+    e.preventDefault();
+
+    ul.insertAdjacentHTML('beforeend',`<li>Item ${ctn}</li>`);
 };
+
+const calledLigenerate=(e)=>liGenerate(e,e.counter);
 
 /*
 *
@@ -50,5 +56,6 @@ buttonGenrate.addEventListener('mouseover',styleButton);
 buttonGenrate.addEventListener('mouseout',styleButtonNone);
 document.body.addEventListener('click',showTagName);
 
-btnGenerateLi.addEventListener('addLi',liGenerate,false);
-buttonGenrate.dispatchEvent(generate);
+btnGenerateLi.addEventListener('click',calledLigenerate);
+btnGenerateLi.addEventListener('addLi',liGenerate);
+btnGenerateLi.dispatchEvent(generate);
