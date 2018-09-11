@@ -12,10 +12,10 @@ const ul=document.querySelector('ul');
 *
 * */
 
-const generate=new Event('addLi',{
-        bubbles: true,
-        cancelable: true,
-        counter:ul.children.length+1
+const generate=new CustomEvent('addLi',{
+        detail:{
+            counter:ul.children.length+1
+        }
 });
 
 /*
@@ -36,13 +36,13 @@ const showTagName=(e)=>{
 };
 
 
-const liGenerate = (e,ctn)=> {
+const liGenerate = e => {
     e.preventDefault();
-
+    let ctn = e.detail.counter;
     ul.insertAdjacentHTML('beforeend',`<li>Item ${ctn}</li>`);
 };
 
-const calledLigenerate=(e)=>liGenerate(e,e.counter);
+const gli=()=>btnGenerateLi.dispatchEvent(generate);
 
 /*
 *
@@ -56,6 +56,5 @@ buttonGenrate.addEventListener('mouseover',styleButton);
 buttonGenrate.addEventListener('mouseout',styleButtonNone);
 document.body.addEventListener('click',showTagName);
 
-btnGenerateLi.addEventListener('click',calledLigenerate);
+btnGenerateLi.addEventListener('click',gli);
 btnGenerateLi.addEventListener('addLi',liGenerate);
-btnGenerateLi.dispatchEvent(generate);
