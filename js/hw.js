@@ -29,6 +29,34 @@ const table = document.querySelector('.table tbody');
 const alert = document.getElementById('alerContainer');
 
 
+
+
+/*
+ * Messages
+ *
+ * */
+
+const messageOk = `
+<div class="alert alert-success mt-5" role="alert" >
+  Поздравляю задание успешно добавленно.
+</div>
+`;
+
+const messageDel = `
+<div class="alert alert-danger mt-5" role="alert">
+  Задание удалено !
+</div>
+`;
+
+const messageWarning=`
+<div class="alert alert-warning mt-5" role="alert">
+  Данных нет!
+</div>
+`;
+
+
+
+
 /**
  * Функция addItem добавляет один элемент в разметку
  * @param {object} item - один объект задачи
@@ -47,6 +75,7 @@ const addItem = item => {
     table.insertAdjacentHTML('beforeend', template);
 };
 
+
 /**
  * Функция deleteItem удаляет элемент из массива и из разметки
  * @param {number} id - id задачи котору нужно удалить
@@ -54,16 +83,16 @@ const addItem = item => {
  */
 const deleteItem = id => {
     // Удаляем задачу из массива
+
     state.todos.forEach((item, index) => {
         if (item.id === Number(id)) {
             state.todos.splice(index, 1);
+            messController('del');
         }
     });
-
     // Заново генерируем элементы
     generateItems(state.todos);
-    alert.insertAdjacentHTML('afterbegin', messageDel);
-    setTimeout(() => alert.innerHTML = '', 2000);
+
 };
 
 
@@ -87,33 +116,58 @@ generateItems(state.todos);
  *
  * @returns {void}
  *
- *
  * */
 
-const addNewItem = (title, description) => {
-    state.todos.unshift({id: 0, title, description});
-    generateItems(state.todos);
-    alert.insertAdjacentHTML('afterbegin', messageOk);
-    setTimeout(() => alert.innerHTML = '', 2000);
+const addNewItem = (newtitle, newdescription) => {
+    if(newtitle && newdescription){
+        state.todos.unshift({id: 0, title:newtitle, description:newdescription});
+        generateItems(state.todos);
+        messController('ok');
+        title.value=description.value='';
+    }else{
+        messController('warn');
+    }
+
 };
 
 
-const messageOk = `
-<div class="alert alert-success mt-5" role="alert" >
-  Поздравляю задание успешно добавленно.
-</div>
-`;
+/*
+* Функция добавления сообщений на страницу.
+*  @param {var} messName - переменая содержащая алерт.
+*  @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
+*   @returns {void}
+* */
 
-const messageDel = `
-<div class="alert alert-danger mt-5" role="alert">
-  Задание удалено !
-</div>
-`;
+const messAdd = (messName, time=2000)=>{
+ alert.insertAdjacentHTML('afterbegin', messName);
+ setTimeout(() => alert.innerHTML = '', time);
+};
 
+/*
+*Функция управления сообщениями.
+*
+*  @param {string} status - HTML alert параметр.
+*  @returns {void}
+* */
+
+const messController = status =>{
+    switch (status){
+        case 'ok':
+            messAdd(messageOk);
+        break;
+        case 'del':
+            messAdd(messageDel);
+            break;
+        case 'warn':
+            messAdd(messageWarning);
+            break;
+        default:
+            messAdd(messageWarning);
+    }
+};
 
 
 const form = document.forms['add-new-itemm'];
-
 const title = form['title'];
 const description = form['description'];
 
@@ -128,14 +182,7 @@ const description = form['description'];
 
 const onSubmitForm = e =>{
     e.preventDefault();
-    // console.log('submit');
-    // console.log(title.value, description.value);
-
-    if(title.value && description.value){
-        addNewItem(title.value,description.value)
-    }else{
-    //   вывести сообщение об том что данных нет.
-    }
+   title.value && description.value?addNewItem(title.value,description.value):messController('warn');
 };
 
 /*
@@ -143,11 +190,11 @@ const onSubmitForm = e =>{
  *
  *  @param {Event} e - объект
  *
- * @returns {void}
+ *  @returns {void}
+ *
  * */
 
 const onTableClick = e => {
-    // console.log(e.target);
     if(e.target.classList.contains('remove-item')){
             const tr = e.target.closest('tr');
             const id = tr.dataset.id;
@@ -160,16 +207,15 @@ const onTableClick = e => {
 *
 *  @param {Event} e
 *
-* @returns {void}
+*  @returns {void}
+*
 * */
 const onTitlekeyUp = e => description.disabled = !title.value;
 
 /*Все события*/
 
-
 form.addEventListener('submit',onSubmitForm);
 title.addEventListener('keyup',onTitlekeyUp);
 table.addEventListener('click',onTableClick);
-
 
 
