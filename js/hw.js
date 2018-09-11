@@ -29,8 +29,6 @@ const table = document.querySelector('.table tbody');
 const alert = document.getElementById('alerContainer');
 
 
-
-
 /*
  * Messages
  *
@@ -48,13 +46,11 @@ const messageDel = `
 </div>
 `;
 
-const messageWarning=`
+const messageWarning = `
 <div class="alert alert-warning mt-5" role="alert">
   Данных нет!
 </div>
 `;
-
-
 
 
 /**
@@ -119,42 +115,44 @@ generateItems(state.todos);
  * */
 
 const addNewItem = (newtitle, newdescription) => {
-    if(newtitle && newdescription){
-        state.todos.unshift({id: 0, title:newtitle, description:newdescription});
+
+    if (newtitle && newdescription) {
+        state.todos.unshift({id: 0, title: newtitle, description: newdescription});
         generateItems(state.todos);
         messController('ok');
-        title.value=description.value='';
-    }else{
+        title.value = description.value = '';
+    } else {
         messController('warn');
     }
 
+
 };
 
 
 /*
-* Функция добавления сообщений на страницу.
-*  @param {var} messName - переменая содержащая алерт.
-*  @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
-*   @returns {void}
-* */
+ * Функция добавления сообщений на страницу.
+ *  @param {var} messName - переменая содержащая алерт.
+ *  @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
+ *   @returns {void}
+ * */
 
-const messAdd = (messName, time=2000)=>{
- alert.insertAdjacentHTML('afterbegin', messName);
- setTimeout(() => alert.innerHTML = '', time);
+const messAdd = (messName, time = 2000) => {
+    alert.insertAdjacentHTML('afterbegin', messName);
+    setTimeout(() => alert.innerHTML = '', time);
 };
 
 /*
-*Функция управления сообщениями.
-*
-*  @param {string} status - HTML alert параметр.
-*  @returns {void}
-* */
+ *Функция управления сообщениями.
+ *
+ *  @param {string} status - HTML alert параметр.
+ *  @returns {void}
+ * */
 
-const messController = status =>{
-    switch (status){
+const messController = status => {
+    switch (status) {
         case 'ok':
             messAdd(messageOk);
-        break;
+            break;
         case 'del':
             messAdd(messageDel);
             break;
@@ -172,17 +170,17 @@ const title = form['title'];
 const description = form['description'];
 
 /*
-*Функция обрабатывает событие формы. Добавление новой задачи
-* @param {Event} e
-*
-* @returns {void}
-*
-*
-* */
+ *Функция обрабатывает событие формы. Добавление новой задачи
+ * @param {Event} e
+ *
+ * @returns {void}
+ *
+ *
+ * */
 
-const onSubmitForm = e =>{
+const onSubmitForm = e => {
     e.preventDefault();
-   title.value && description.value?addNewItem(title.value,description.value):messController('warn');
+    title.value && description.value ? addNewItem(title.value, description.value) : messController('warn');
 };
 
 /*
@@ -195,27 +193,28 @@ const onSubmitForm = e =>{
  * */
 
 const onTableClick = e => {
-    if(e.target.classList.contains('remove-item')){
-            const tr = e.target.closest('tr');
-            const id = tr.dataset.id;
-            deleteItem(id);
+    if (e.target.classList.contains('remove-item')) {
+        const tr = e.target.closest('tr');
+        const id = tr.dataset.id;
+        deleteItem(id);
     }
 };
 
 /*
-* Обркботка события ввода с клавиатуры input[name=title]
-*
-*  @param {Event} e
-*
-*  @returns {void}
-*
-* */
+ * Обркботка события ввода с клавиатуры input[name=title]
+ *
+ *  @param {Event} e
+ *
+ *  @returns {void}
+ *
+ * */
 const onTitlekeyUp = e => description.disabled = !title.value;
 
 /*Все события*/
 
-form.addEventListener('submit',onSubmitForm);
-title.addEventListener('keyup',onTitlekeyUp);
-table.addEventListener('click',onTableClick);
+form.addEventListener('submit', onSubmitForm);
+title.addEventListener('keyup', onTitlekeyUp);
+table.addEventListener('click', onTableClick);
+
 
 
