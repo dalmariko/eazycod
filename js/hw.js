@@ -7,10 +7,6 @@ const btnGenerateLi = document.getElementById('btn-generate');
 const ul = document.querySelector('ul');
 
 
-/*
- * собственное событие
- *
- * */
 
 
 
@@ -38,6 +34,13 @@ const liGenerate = e => {
 };
 
 const gli = () => {
+
+    /*
+     * собственное событие
+     *
+     * */
+
+
     const generate = new CustomEvent('addLi', {
         detail: {
             counter: ul.children.length + 1
