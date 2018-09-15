@@ -40,7 +40,6 @@ const gli = () => {
      *
      * */
 
-
     const generate = new CustomEvent('addLi', {
         detail: {
             counter: ul.children.length + 1
@@ -56,9 +55,7 @@ const gli = () => {
  * */
 
 
-buttonGenrate.addEventListener('click', (e) => {
-    alert(buttonGenrate.textContent)
-});
+buttonGenrate.addEventListener('click', (e) => {alert(buttonGenrate.textContent)});
 buttonGenrate.addEventListener('mouseover', styleButton);
 buttonGenrate.addEventListener('mouseout', styleButtonNone);
 document.body.addEventListener('click', showTagName);
