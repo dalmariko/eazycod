@@ -181,11 +181,11 @@ function messController (status) {};
  * ## Генерация разметки  
    
    
-   Функция addItem добавляет один элемент в разметку
+   ##### Функция addItem добавляет одну задачу в разметку
     
-   @param {object} item - один объект задачи
-   
-   @returns {void}
+    @param {object} item - один объект задачи
+    
+    @returns {void}
    
    
 ```javascript
