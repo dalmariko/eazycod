@@ -24,9 +24,11 @@
 
 * #  Хранилище данных
 
-  ## Локальное Хранилище данных 
+    ## Локальное Хранилище данных 
+  ```ecmascript 6
+state={todos:[{id,title,description}]}
+  ```
   
-  state={todos:[{id,title,description}]}
      
   @param {object} state
   @param [array] todos
