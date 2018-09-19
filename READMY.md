@@ -25,7 +25,7 @@
 * #  Хранилище данных
 
     ## Локальное Хранилище данных 
-  ```ecmascript 6
+  ```javascript
 state={todos:[{id,title,description}]}
   ```
   
