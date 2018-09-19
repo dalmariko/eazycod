@@ -23,6 +23,7 @@
 <a name="Хранилище"/>
 
 * #  Хранилище данных
+```no-highlight
 
     ## Локальное Хранилище данных 
   ```javascript
@@ -40,7 +41,7 @@ const state={todos:[{id,title,description}]};
   @field todos.description - som description @type{string}
    
    ##### [Обратно к оглавлению](#home)
-
+```
 <a name="Функции"/>
 
 * ## Функции
