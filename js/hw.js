@@ -36,7 +36,7 @@ const state = {
  * @type {Element}
  */
 const table = document.querySelector('.table');
-const alert=document.querySelector('#alerContainer');
+const alert = document.getElementById('alerContainer');
 
 
 
@@ -141,7 +141,7 @@ ${mess}
 </div>
 `;
 
- table.insertAdjacentHTML('beforebegin',template);
+alert.insertAdjacentHTML('beforebegin',template);
  setTimeout(deleteAlert,5000);
 
 };
