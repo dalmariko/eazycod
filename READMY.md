@@ -1,6 +1,5 @@
-<a name="home"/>
 
-* # [Документация по задачнику](#home)
+* # [Документация по задачнику](#home) <a name="home"/>
 
 * ## [Хранилище данных](#Хранилище)
  
@@ -21,14 +20,15 @@
 <a name="Хранилище"/>
 
 * #  Хранилище данных
-```no-highlight
-
+    
     ## Локальное Хранилище данных 
+    
+    
   ```javascript
 const state={todos:[{id,title,description}]};
   ```
   
-     
+       
   @param {object} state
   @param [array] todos
      
@@ -37,9 +37,11 @@ const state={todos:[{id,title,description}]};
   @field todos.title - som title @type{string}
   
   @field todos.description - som description @type{string}
-   
+  
+  
+    
    ##### [Обратно к оглавлению](#home)
-```
+   
 <a name="Функции"/>
 
 * ## Функции
