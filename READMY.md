@@ -56,22 +56,18 @@ const description = form['description'];
 
 * #  Хранилище данных
     
-   Локальное Хранилище данных выглядит вот так: 
+  ##### Локальное Хранилище данных выглядит вот так: 
     
     
 ```javascript
 const state = { todos: [ {id,title,description} ] };
 ```
 
-     
-  @param {object} state
-  @param [array] todos
-     
-  @field todos.id - som id @type{number}
-  
-  @field todos.title - som title @type{string}
-  
-  @field todos.description - som description @type{string}
+    @param {object} state
+    @param [array] todos
+    @field todos.id - som id @type{number}
+    @field todos.title - som title @type{string}
+    @field todos.description - som description @type{string}
   
   
     
@@ -81,19 +77,13 @@ const state = { todos: [ {id,title,description} ] };
 
 * ## Функции
 
-
-
-
-
-   ##### Добавление задачи
+ ##### Добавление задачи
     
     Принимает два параметра 
-    
     @param {string}   newtitle
- 
     @param {string}   newdescription
- 
     @returns {void}
+ 
  
 ```javascript
 function addNewItem (newtitle, newdescription){};
@@ -101,25 +91,22 @@ function addNewItem (newtitle, newdescription){};
     
     
     
-   ##### Генерация задач
+ ##### Генерация задач
    
     Переберает локальное хранилище данных
-   
     Вызывается при каждом добавлении и удалении задач
-   
     @param {num} items
+   
    
  ```javascript
  function generateItems (items){};
  ```
     
 
-   ##### Удаление задачи
+ ##### Удаление задачи
    
     Функция deleteItem удаляет элемент из массива и из разметки
-     
     @param {number} id - id задачи котору нужно удалить
-    
     @returns {void}  
         
         
@@ -135,28 +122,33 @@ function addNewItem (newtitle, newdescription){};
 * ## Обработчики
  
  ##### Обработчик формы
-
-    Принимает данные из полей формы
+     Принимает данные из полей формы
      @param {Event} e - объект
      @returns {void}
-``javascript
+     
+     
+```javascript
 function onSubmitForm (e){};
-`` 
+```
 
     Пропускает если заполнено поле title
       @param {Event} e - объект
       @returns {void}
+      
+      
 ```javascript
 function onTitlekeyUp (e){ description.disabled = !title.value};
 ```
 
    ##### [Обратно к оглавлению](#home)
- 
+   
  ##### Обработчик события клика
  
     Удаление задчи по клику 
      @param {Event} e - объект
      @returns {void}
+     
+     
 ```javascript
 function onTableClick (e) {};
 ```
@@ -192,6 +184,7 @@ function onTableClick (e) {};
     @param {string} status - HTML alert параметр.
   
     @returns {void}
+
 
 ```javascript
 function messController (status) {};
