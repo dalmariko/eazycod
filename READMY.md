@@ -24,11 +24,9 @@
     ## Локальное Хранилище данных 
     
     
-  ```javascript
-const state={todos:[{id,title,description}]};
-  ```
-  
-       
+
+const state = { todos: [ {id,title,description} ] };
+     
   @param {object} state
   @param [array] todos
      
