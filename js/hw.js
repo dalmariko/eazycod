@@ -35,33 +35,9 @@ const state = {
  *
  * @type {Element}
  */
-const table = document.querySelector('.table tbody');
-const alert = document.getElementById('alerContainer');
+const table = document.querySelector('.table');
+const alert=document.querySelector('#alerContainer');
 
-
-/**
- *  Сообщения
- *
- * @type {string}
- */
-
-const messageOk = `
-<div class="alert alert-success mt-5" role="alert" >
-  Поздравляю задание успешно добавленно.
-</div>
-`;
-
-const messageDel = `
-<div class="alert alert-danger mt-5" role="alert">
-  Задание удалено !
-</div>
-`;
-
-const messageWarning = `
-<div class="alert alert-warning mt-5" role="alert">
-  Данных нет!
-</div>
-`;
 
 
 /**
@@ -94,16 +70,19 @@ const addItem = item => {
  */
 const deleteItem = id => {
     // Удаляем задачу из массива
+const status =  confirm('Вы действительно хотите удалить задачу?');
+
+if(!status) return;
 
     state.todos.forEach((item, index) => {
         if (item.id === Number(id)) {
             state.todos.splice(index, 1);
-            messController('del');
         }
     });
     // Заново генерируем элементы
     generateItems(state.todos);
 
+    showAlert('Задача удалена','warning');
 };
 
 /**
@@ -133,10 +112,10 @@ const addNewItem = (newtitle, newdescription) => {
     if (newtitle && newdescription) {
         state.todos.unshift({id: 0, title: newtitle, description: newdescription});
         generateItems(state.todos);
-        messController('ok');
-        title.value = description.value = '';
+        showAlert('Задача добавлена','success');
+        form.reset();
     } else {
-        messController('warn');
+        showAlert('Заполните поля','warning');
     }
 
 
@@ -146,39 +125,33 @@ const addNewItem = (newtitle, newdescription) => {
 /*
  * Функция добавления сообщений на страницу.
  *
- *  @param {var} messName - переменая содержащая алерт.
- *  @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
+ *  @param {string} mess - текст алерта.
+ *  @param {string} type -  тип алерт.
  *  @returns {void}
  *
  * */
 
-const messAdd = (messName, time = 2000) => {
-    alert.insertAdjacentHTML('afterbegin', messName);
-    setTimeout(() => alert.innerHTML = '', time);
+const showAlert = (mess='вы забыли передать текст',type='danger')=> {
+
+    deleteAlert();
+
+ const template = `
+<div class="alert alert-${type} mt-5" role="alert">
+${mess}
+</div>
+`;
+
+ table.insertAdjacentHTML('beforebegin',template);
+ setTimeout(deleteAlert,5000);
+
 };
 
-/*
- *Функция управления сообщениями.
- *
- *  @param {string} status - HTML alert параметр.
- *  @returns {void}
- *
- * */
+//Фукция удаления алерта
 
-const messController = status => {
-    switch (status) {
-        case 'ok':
-            messAdd(messageOk);
-            break;
-        case 'del':
-            messAdd(messageDel);
-            break;
-        case 'warn':
-            messAdd(messageWarning);
-            break;
-        default:
-            messAdd(messageWarning);
-    }
+const deleteAlert = () => {
+    const curentAlert = document.querySelector('.alert');
+    curentAlert?curentAlert.parentElement.removeChild(curentAlert):'';
+    return Boolean(curentAlert);
 };
 
 
