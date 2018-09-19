@@ -141,7 +141,7 @@ ${mess}
 </div>
 `;
 
-alert.insertAdjacentHTML('beforebegin',template);
+alert.insertAdjacentHTML('afterbegin',template);
  setTimeout(deleteAlert,5000);
 
 };
