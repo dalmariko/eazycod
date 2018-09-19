@@ -141,8 +141,6 @@ function addNewItem (newtitle, newdescription){};
 
 * ## Генерация страници с сообщениями
 
-
-
    ##### Добавление сообщений на страницу
      
     Функция добавления сообщений на страницу.
@@ -153,13 +151,12 @@ function addNewItem (newtitle, newdescription){};
        
     @returns {void}
             
-       
-       
+           
 ```javascript
  function messAdd(messName, time = 2000){};
-```       
-   
- 
+```   
+
+
    ##### Управление сообщениями
 
     Функция принимает одинпараметр
