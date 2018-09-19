@@ -85,15 +85,15 @@ const state = { todos: [ {id,title,description} ] };
 
 
 
-##### Добавление задачи
+   ##### Добавление задачи
     
-   Принимает два параметра 
+    Принимает два параметра 
     
-   @param {string}   newtitle
+    @param {string}   newtitle
  
-   @param {string}   newdescription
+    @param {string}   newdescription
  
-   @returns {void}
+    @returns {void}
  
 ```javascript
 function addNewItem (newtitle, newdescription){};
@@ -101,26 +101,26 @@ function addNewItem (newtitle, newdescription){};
     
     
     
-##### Генерация задач
+   ##### Генерация задач
    
-   Переберает локальное хранилище данных
+    Переберает локальное хранилище данных
    
-   Вызывается при каждом добавлении и удалении задач
+    Вызывается при каждом добавлении и удалении задач
    
-   @param {num} items
+    @param {num} items
    
  ```javascript
  function generateItems (items){};
  ```
     
-    
+
    ##### Удаление задачи
    
-   Функция deleteItem удаляет элемент из массива и из разметки
+    Функция deleteItem удаляет элемент из массива и из разметки
+     
+    @param {number} id - id задачи котору нужно удалить
     
-   @param {number} id - id задачи котору нужно удалить
-    
-   @returns {void}  
+    @returns {void}  
         
         
  ```javascript
@@ -133,9 +133,34 @@ function addNewItem (newtitle, newdescription){};
  <a name="Обработчики"/>
 
 * ## Обработчики
-    * ##### Обработчик формы
-    * ##### Обработчик события формы
-    * ##### Обработчик события клика
+ 
+ ##### Обработчик формы
+
+    Принимает данные из полей формы
+     @param {Event} e - объект
+     @returns {void}
+``javascript
+function onSubmitForm (e){};
+`` 
+
+    Пропускает если заполнено поле title
+      @param {Event} e - объект
+      @returns {void}
+```javascript
+function onTitlekeyUp (e){ description.disabled = !title.value};
+```
+
+   ##### [Обратно к оглавлению](#home)
+ 
+ ##### Обработчик события клика
+ 
+    Удаление задчи по клику 
+     @param {Event} e - объект
+     @returns {void}
+```javascript
+function onTableClick (e) {};
+```
+   ##### [Обратно к оглавлению](#home)
 
  <a name="Генерация"/>
 
@@ -181,12 +206,8 @@ function messController (status) {};
  * ## Генерация разметки  
    
    
-   
  ##### Функция addItem добавляет одну задачу в разметку
    
-    
-    
-    
     @param {object} item - один объект задачи
     
     @returns {void}
