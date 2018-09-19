@@ -3,6 +3,8 @@
 
 ## [Документация по задачнику](#home) 
 
+<a name="const"/>
+
 [Константы](#const)
 
 [Хранилище данных](#Хранилище)
@@ -45,6 +47,8 @@ const form = document.forms['add-new-itemm'];
 const title = form['title'];
 const description = form['description'];
 ```
+
+   ##### [Обратно к оглавлению](#home)
 
  <a name="Хранилище"/>
 
@@ -94,8 +98,11 @@ const state = { todos: [ {id,title,description} ] };
      
      
        Функция добавления сообщений на страницу.
-      
-         @param {var} messName - переменая содержащая алерт.
+       
+```javascript 
+    function messAdd(messName, time = 2000)
+```      
+         @param {var} messName - переменая содержащая алерт. [смотреть раздел Контстанты](#const)
          @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
          @returns {void}
     
