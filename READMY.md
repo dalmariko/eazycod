@@ -81,7 +81,11 @@ const state = { todos: [ {id,title,description} ] };
 
 * ## Функции
 
-     ##### Добавление задачи
+
+
+
+
+##### Добавление задачи
     
    Принимает два параметра 
     
@@ -95,7 +99,9 @@ const state = { todos: [ {id,title,description} ] };
 function addNewItem (newtitle, newdescription){};
 ```
     
-   ###### Генерация задач
+    
+    
+##### Генерация задач
    
    Переберает локальное хранилище данных
    
