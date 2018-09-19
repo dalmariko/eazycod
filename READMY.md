@@ -99,12 +99,14 @@ const state = { todos: [ {id,title,description} ] };
      
        Функция добавления сообщений на страницу.
 ```javascript
- function messAdd(messName, time = 2000)
+ function messAdd(messName, time = 2000){};
 ```       
    
     
   @param {var} messName - переменая содержащая алерт. [смотреть раздел Контстанты](#const)
+  
   @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
+  
   @returns {void}
     
      
