@@ -115,13 +115,13 @@ const state = { todos: [ {id,title,description} ] };
      
 * ##### Управление сообщениями
 
-Функция принимает одинпараметр
+    Функция принимает одинпараметр
  
-Варианты 'ok','del','warn'
+    Варианты 'ok','del','warn'
  
-@param {string} status - HTML alert параметр.
+    @param {string} status - HTML alert параметр.
   
-@returns {void}
+    @returns {void}
 
 ```javascript
 function messController (status) {};
