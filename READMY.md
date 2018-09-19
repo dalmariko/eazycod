@@ -159,10 +159,7 @@ function addNewItem (newtitle, newdescription){};
  function messAdd(messName, time = 2000){};
 ```       
    
-    
-
-     
-     
+ 
    ##### Управление сообщениями
 
     Функция принимает одинпараметр
