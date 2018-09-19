@@ -1,7 +1,7 @@
 /**
  * Локальное Хранилище данных state={todos:[{id,title,description}]}
  *
- *  @param {object} state
+ * @param {object} state
  * @param [array] todos
  *
  * @field todos.id - som id @type{number}
