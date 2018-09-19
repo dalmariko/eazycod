@@ -106,9 +106,9 @@ const deleteItem = id => {
 
 };
 
-
 /**
- * Перебираем в цикле массив с задачами и передаем по одной задаче в функцию addItem
+ *
+ * @param items
  */
 const generateItems = items => {
     table.innerHTML = '';
@@ -121,13 +121,12 @@ const generateItems = items => {
 generateItems(state.todos);
 
 
-/*
- *Функция добавления новой задачи
+/**
+ * Принимает два параметра
  *
- * @param {string} e
- * @returns {void}
- *
- * */
+ * @param {string} newtitle
+ * @param {string} newdescription
+ */
 
 const addNewItem = (newtitle, newdescription) => {
 

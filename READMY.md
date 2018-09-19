@@ -14,6 +14,8 @@
 [Обработчики](#Обработчики)   
    
 [Генерация страници с сообщениями](#Генерация)
+
+[Генерация разметки](#разметка)
      
  <a name="const"/>
 
@@ -78,10 +80,49 @@ const state = { todos: [ {id,title,description} ] };
  <a name="Функции"/>
 
 * ## Функции
-    * ##### Добавление задачи
-    * ##### Удаление задачи
+
+     ##### Добавление задачи
+    
+   Принимает два параметра 
+    
+   @param {string}   newtitle
+ 
+   @param {string}   newdescription
+ 
+   @returns {void}
+ 
+```javascript
+function addNewItem (newtitle, newdescription){};
+```
+    
+   ###### Генерация задач
+   
+   Переберает локальное хранилище данных
+   
+   Вызывается при каждом добавлении и удалении задач
+   
+   @param {num} items
+   
+ ```javascript
+ function generateItems (items){};
+ ```
+    
+    
+   ##### Удаление задачи
+   
+   Функция deleteItem удаляет элемент из массива и из разметки
+    
+   @param {number} id - id задачи котору нужно удалить
+    
+   @returns {void}  
         
-              
+        
+ ```javascript
+ function deleteItem (id) {};
+ ```              
+
+   ##### [Обратно к оглавлению](#home)
+
 
  <a name="Обработчики"/>
 
@@ -93,6 +134,9 @@ const state = { todos: [ {id,title,description} ] };
  <a name="Генерация"/>
 
 * ## Генерация страници с сообщениями
+
+
+
    ##### Добавление сообщений на страницу
      
     Функция добавления сообщений на страницу.
@@ -126,3 +170,39 @@ const state = { todos: [ {id,title,description} ] };
 ```javascript
 function messController (status) {};
 ```
+
+
+
+   ##### [Обратно к оглавлению](#home)
+   
+ <a name="разметка"/>
+ 
+ * ##Генерация разметки  
+   
+   
+   Функция addItem добавляет один элемент в разметку
+    
+   @param {object} item - один объект задачи
+   
+   @returns {void}
+   
+   
+```javascript
+
+const addItem = item => {
+    const template = `
+        <tr data-id="${item.id}">
+            <td>${item.id}</td>
+            <td>${item.title}</td>
+            <td>${item.description}</td>
+            <td><button class="btn btn-danger remove-item">Delete</button></td>
+        </tr>
+    `;
+
+    table.insertAdjacentHTML('beforeend', template);
+};
+
+```   
+   
+   
+   ##### [Обратно к оглавлению](#home)
