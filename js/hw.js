@@ -109,7 +109,6 @@ generateItems(state.todos);
 /*
  *Функция добавления новой задачи
  * @param {string} e
- *
  * @returns {void}
  *
  * */
@@ -131,9 +130,11 @@ const addNewItem = (newtitle, newdescription) => {
 
 /*
  * Функция добавления сообщений на страницу.
+ *
  *  @param {var} messName - переменая содержащая алерт.
  *  @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
- *   @returns {void}
+ *  @returns {void}
+ *
  * */
 
 const messAdd = (messName, time = 2000) => {
@@ -146,6 +147,7 @@ const messAdd = (messName, time = 2000) => {
  *
  *  @param {string} status - HTML alert параметр.
  *  @returns {void}
+ *
  * */
 
 const messController = status => {
@@ -171,10 +173,9 @@ const description = form['description'];
 
 /*
  *Функция обрабатывает событие формы. Добавление новой задачи
+ *
  * @param {Event} e
- *
  * @returns {void}
- *
  *
  * */
 
@@ -187,7 +188,6 @@ const onSubmitForm = e => {
  * Функция обработки события клика на таблице . Реализация шаблона делегирования сбытия. Удалние задачи из таблици.
  *
  *  @param {Event} e - объект
- *
  *  @returns {void}
  *
  * */
@@ -203,11 +203,11 @@ const onTableClick = e => {
 /*
  * Обркботка события ввода с клавиатуры input[name=title]
  *
- *  @param {Event} e
- *
- *  @returns {void}
+ *  @param Event e
+ *  @returns void
  *
  * */
+
 const onTitlekeyUp = e => description.disabled = !title.value;
 
 /*Все события*/
