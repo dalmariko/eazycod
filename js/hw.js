@@ -1,5 +1,13 @@
 /**
- * 1. Хранение данных
+ * Локальное Хранилище данных state={todos:[{id,title,description}]}
+ *
+ *  @param {object} state
+ * @param [array] todos
+ *
+ * @field todos.id - som id @type{number}
+ * @field todos.title - som title @type{string}
+ * @field todos.description - som description @type{string}
+ *
  */
 
 const state = {
@@ -23,16 +31,19 @@ const state = {
 };
 
 /**
- * UI Elements
+ * Константы разметки таблици и сообщения
+ *
+ * @type {Element}
  */
 const table = document.querySelector('.table tbody');
 const alert = document.getElementById('alerContainer');
 
 
-/*
- * Messages
+/**
+ *  Сообщения
  *
- * */
+ * @type {string}
+ */
 
 const messageOk = `
 <div class="alert alert-success mt-5" role="alert" >
@@ -55,8 +66,10 @@ const messageWarning = `
 
 /**
  * Функция addItem добавляет один элемент в разметку
+ *
  * @param {object} item - один объект задачи
  * @returns {void}
+ *
  */
 const addItem = item => {
     const template = `
@@ -74,8 +87,10 @@ const addItem = item => {
 
 /**
  * Функция deleteItem удаляет элемент из массива и из разметки
+ *
  * @param {number} id - id задачи котору нужно удалить
  * @returns {void}
+ *
  */
 const deleteItem = id => {
     // Удаляем задачу из массива
@@ -108,6 +123,7 @@ generateItems(state.todos);
 
 /*
  *Функция добавления новой задачи
+ *
  * @param {string} e
  * @returns {void}
  *
