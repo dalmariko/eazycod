@@ -169,7 +169,7 @@ const description = form['description'];
 
 const onSubmitForm = e => {
     e.preventDefault();
-    title.value && description.value ? addNewItem(title.value, description.value) : messController('warn');
+    title.value && description.value ? addNewItem(title.value, description.value) : showAlert('Заполните поля','warning');
 };
 
 /*
