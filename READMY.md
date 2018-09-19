@@ -96,18 +96,33 @@ const state = { todos: [ {id,title,description} ] };
 
 * ##### Добавление сообщений на страницу
      
+     Функция добавления сообщений на страницу.
      
-       Функция добавления сообщений на страницу.
+     @param {var} messName - переменая содержащая алерт. [смотреть раздел Контстанты](#const)
+      
+     @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
+      
+     @returns {void}
+           
+       
+       
 ```javascript
  function messAdd(messName, time = 2000){};
 ```       
    
     
-  @param {var} messName - переменая содержащая алерт. [смотреть раздел Контстанты](#const)
-  
-  @param {int} time - время до конца показа сообщения. По умолчанию 2000 мсек
-  
-  @returns {void}
-    
+
      
 * ##### Управление сообщениями
+
+Функция принимает одинпараметр
+ 
+Варианты 'ok','del','warn'
+ 
+@param {string} status - HTML alert параметр.
+  
+@returns {void}
+
+```javascript
+function messController (status) {};
+```
