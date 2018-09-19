@@ -26,7 +26,9 @@
 
     ## Локальное Хранилище данных 
   ```javascript
-state={todos:[{id,title,description}]}
+
+const state={todos:[{id,title,description}]}
+
   ```
   
      
