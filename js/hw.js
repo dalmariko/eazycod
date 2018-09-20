@@ -58,3 +58,30 @@ const numerator = {
 
 // console.log(numerator.double().plusOne().plusOne().minusOne());
 // console.log(numerator.value);
+
+const products = {
+    price:11.4,
+    quantity:1986,
+    allPrice:function () {
+        return this.price*this.quantity;
+    }
+};
+
+// console.log(products.allPrice());
+
+const details ={
+    price:3,
+    quantity:332
+};
+
+//  let total = products.allPrice.call( details );
+// console.log( total );
+
+
+let size = {
+    width:5,
+    heigth:10
+},
+    getSquare = function () {return this.width * this.heigth};
+
+console.log( getSquare.call(size) );
