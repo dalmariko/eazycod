@@ -1,7 +1,7 @@
 const rectangle = {
     width: 1,
     height: 1,
-    getSquare: function ()  {
+    getSquare: function () {
         return this.width * this.height;
     }
 };
@@ -31,27 +31,27 @@ const user = {
 
 // console.log(user.getName());
 
-const heigth={
-    hey:10,
+const heigth = {
+    hey: 10,
     up: function () {
-       return this.hey+=1
+        return this.hey += 1
     }
 };
 
 // console.log(heigth.up());
 
 const numerator = {
-    value:1,
+    value: 1,
     double: function () {
-        this.value*=2;
+        this.value *= 2;
         return this;
     },
     plusOne: function () {
-        this.value+=1;
+        this.value += 1;
         return this;
     },
     minusOne: function () {
-        this.value-=1;
+        this.value -= 1;
         return this;
     }
 };
@@ -60,18 +60,18 @@ const numerator = {
 // console.log(numerator.value);
 
 const products = {
-    price:11.4,
-    quantity:1986,
-    allPrice:function () {
-        return this.price*this.quantity;
+    price: 11.4,
+    quantity: 1986,
+    allPrice: function () {
+        return this.price * this.quantity;
     }
 };
 
 // console.log(products.allPrice());
 
-const details ={
-    price:3,
-    quantity:332
+const details = {
+    price: 3,
+    quantity: 332
 };
 
 //  let total = products.allPrice.call( details );
@@ -79,41 +79,43 @@ const details ={
 
 
 let size = {
-    width:5,
-    heigth:10
-},
-    getSquare = function () {return this.width * this.heigth};
+        width: 5,
+        heigth: 10
+    },
+    getSquare = function () {
+        return this.width * this.heigth
+    };
 
 // console.log( getSquare.call(size) );
 
 
-let numbers = [4,12,0,10,-2,4];
+let numbers = [4, 12, 0, 10, -2, 4];
 
 // console.log( Math.min.apply(null,numbers));
 
 
-const element ={
-    heigth:'15px',
-    marginTop:'5px',
-    marginBottom:'5px',
+const element = {
+    heigth: '15px',
+    marginTop: '5px',
+    marginBottom: '5px',
     getFullHeigth: function () {
-        return parseFloat( this.heigth )+ parseFloat( this.marginTop )+ parseFloat( this.marginBottom ) +'px';
+        return parseFloat(this.heigth) + parseFloat(this.marginTop) + parseFloat(this.marginBottom) + 'px';
     }
 };
 
 // console.log(element.getFullHeigth());
 
 const block = {
-    heigth:'5px',
-    marginTop:'3px',
-    marginBottom:'3px',
+    heigth: '5px',
+    marginTop: '3px',
+    marginBottom: '3px',
 };
 
 // console.log( element.getFullHeigth.call(block) );
 
 
 let elemt = {
-    heigth:25,
+    heigth: 25,
     getHeight: function () {
         return this.heigth
     }
