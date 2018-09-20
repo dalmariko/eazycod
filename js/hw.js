@@ -29,4 +29,14 @@ const user = {
     }
 };
 
-console.log(user.getName());
+// console.log(user.getName());
+
+const heigth={
+    hey:10,
+    up: function () {
+       return this.hey+=1
+    }
+};
+
+// console.log(heigth.up());
+
