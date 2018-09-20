@@ -22,4 +22,11 @@ const price = {
 
 // console.log(price.getPriceWithDiscount(), price.getPrice());
 
+const user = {
+    name: 'Abraham',
+    getName: function () {
+        return this.name;
+    }
+};
 
+console.log(user.getName());
