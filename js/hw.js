@@ -6,7 +6,7 @@ const rectangle = {
     }
 };
 
-// console.log(rectangle.getSquare(rectangle.width=5,rectangle.height=4));
+console.log(rectangle.getSquare(rectangle.width=5,rectangle.height=4));
 
 
 const price = {
@@ -20,7 +20,7 @@ const price = {
     }
 };
 
-// console.log(price.getPriceWithDiscount(), price.getPrice());
+console.log(price.getPriceWithDiscount(),'and fuul price - >>>', price.getPrice());
 
 const user = {
     name: 'Abraham',
@@ -29,7 +29,7 @@ const user = {
     }
 };
 
-// console.log(user.getName());
+console.log(user.getName());
 
 const heigth = {
     hey: 10,
@@ -38,7 +38,7 @@ const heigth = {
     }
 };
 
-// console.log(heigth.up());
+console.log(heigth.up());
 
 const numerator = {
     value: 1,
@@ -56,8 +56,8 @@ const numerator = {
     }
 };
 
-// console.log(numerator.double().plusOne().plusOne().minusOne());
-// console.log(numerator.value);
+numerator.double().plusOne().plusOne().minusOne();
+console.log(numerator.value);
 
 const products = {
     price: 11.4,
@@ -67,15 +67,15 @@ const products = {
     }
 };
 
-// console.log(products.allPrice());
+console.log(products.allPrice());
 
 const details = {
     price: 3,
     quantity: 332
 };
 
-//  let total = products.allPrice.call( details );
-// console.log( total );
+
+console.log( products.allPrice.call( details ) );
 
 
 let size = {
@@ -86,12 +86,12 @@ let size = {
         return this.width * this.heigth
     };
 
-// console.log( getSquare.call(size) );
+console.log( getSquare.call(size) );
 
 
 let numbers = [4, 12, 0, 10, -2, 4];
 
-// console.log( Math.min.apply(null,numbers));
+console.log( Math.min.apply(null,numbers));
 
 
 const element = {
@@ -103,7 +103,7 @@ const element = {
     }
 };
 
-// console.log(element.getFullHeigth());
+console.log(element.getFullHeigth());
 
 const block = {
     heigth: '5px',
@@ -111,7 +111,7 @@ const block = {
     marginBottom: '3px',
 };
 
-// console.log( element.getFullHeigth.call(block) );
+console.log( element.getFullHeigth.call(block) );
 
 
 let elemt = {
