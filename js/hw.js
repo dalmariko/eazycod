@@ -112,3 +112,13 @@ const block = {
 // console.log( element.getFullHeigth.call(block) );
 
 
+let elemt = {
+    heigth:25,
+    getHeight: function () {
+        return this.heigth
+    }
+};
+
+let getElementHeight = elemt.getHeight.bind(elemt);
+
+console.log(getElementHeight());
