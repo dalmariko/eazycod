@@ -84,4 +84,31 @@ let size = {
 },
     getSquare = function () {return this.width * this.heigth};
 
-console.log( getSquare.call(size) );
+// console.log( getSquare.call(size) );
+
+
+let numbers = [4,12,0,10,-2,4];
+
+// console.log( Math.min.apply(null,numbers));
+
+
+const element ={
+    heigth:'15px',
+    marginTop:'5px',
+    marginBottom:'5px',
+    getFullHeigth: function () {
+        return parseFloat( this.heigth )+ parseFloat( this.marginTop )+ parseFloat( this.marginBottom ) +'px';
+    }
+};
+
+// console.log(element.getFullHeigth());
+
+const block = {
+    heigth:'5px',
+    marginTop:'3px',
+    marginBottom:'3px',
+};
+
+// console.log( element.getFullHeigth.call(block) );
+
+
