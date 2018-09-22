@@ -20,9 +20,9 @@ function Timer(timerContainerSelector,timeEndContainerSelector) {
 
         countdown =  setInterval(()=>{
             const secondsLeft = Math.round((then - Date.now())/1000);
-            if ( secondsLeft < 0){
-                return clearInterval(countdown);
-            }
+
+                if ( secondsLeft < 0 ) return clearInterval(countdown);
+
             displayTimeLeft(secondsLeft);
         },1000);
     };
@@ -32,6 +32,9 @@ function Timer(timerContainerSelector,timeEndContainerSelector) {
      * @param {number}seconds
      * @return {void}
      *
+     * 4. В приложении таймер сделать вывод таймера с учетом часов,
+     *     т.е если передано количество секунд больше 60 минут то выводить в формате HH:MM:SS, пример "01:50:20".
+     *    Реализация вывода таймера у нас делается в displayTimeLeft.
      */
     function displayTimeLeft(seconds) {
         const minutes = Math.floor(seconds /60);
@@ -46,9 +49,17 @@ function Timer(timerContainerSelector,timeEndContainerSelector) {
 /*
 * Функция вывода времени окончания таймера в разметку
 * @param{number} timestemp -время окончания работы траймера
+*
+* 3. В приложении таймер сделать вывод даты когда таймер закончит работу,
+ *   для этого мы создали функцию displayEndTime.
+ *  Выводиться должно в формате "Be back at HH:MM" например "Be back at 14:58"
 * */
-    function displayEndTime() {
+    function displayEndTime(then) {
+        let date = new Date(then);
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
 
+        endTimeContainer.textContent = `Be back at ${hours<10?'0':''}${hours}:${minutes<10?'0':''}${minutes}`;
     }
 
 
@@ -57,4 +68,4 @@ function Timer(timerContainerSelector,timeEndContainerSelector) {
 
 const myTimer = new Timer('.display__time-left','.display__end-time');
 
-myTimer.start(3600);
+myTimer.start(60);
