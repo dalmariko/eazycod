@@ -42,12 +42,12 @@ function Timer(timerContainerSelector, timeEndContainerSelector) {
      */
     function displayTimeLeft(seconds) {
 
+            const hourse = Math.floor(seconds  / 3600);
+            const minutes = Math.floor(seconds / 60);
+            const remainderSeconds = seconds % 60;
+            const h = `${hourse < 10 ? '0' : ''}${hourse}:`;
 
-         const minutes = Math.floor(seconds / 60);
-         const remainderSeconds = seconds % 60;
-
-         const display = `${minutes < 10 ? '0' : ''}${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
-
+        const display = `${hourse?h:''}${minutes < 10 ? '0' : ''}${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
 
         document.title = display;
         timerContainer.textContent = display;
@@ -71,4 +71,4 @@ function Timer(timerContainerSelector, timeEndContainerSelector) {
 
 const myTimer = new Timer('.display__time-left', '.display__end-time');
 
-myTimer.start(10);
+myTimer.start(300);
