@@ -36,18 +36,15 @@ function Timer(timerContainerSelector, timeEndContainerSelector) {
      * @param {number}seconds
      * @return {void}
      *
-     * 4. В приложении таймер сделать вывод таймера с учетом часов,
-     *     т.е если передано количество секунд больше 60 минут то выводить в формате HH:MM:SS, пример "01:50:20".
-     *    Реализация вывода таймера у нас делается в displayTimeLeft.
      */
     function displayTimeLeft(seconds) {
 
-            const hourse = Math.floor(seconds  / 3600);
-            const minutes = Math.floor(seconds / 60);
-            const remainderSeconds = seconds % 60;
-            const h = `${hourse < 10 ? '0' : ''}${hourse}:`;
+        const h = seconds / 3600 ^ 0;
+        const m = (seconds - h * 3600) / 60 ^ 0;
+        const s = seconds - h * 3600 - m * 60;
+        const hou = `${h < 10 ? '0' : ''}${h}:`;
 
-        const display = `${hourse?h:''}${minutes < 10 ? '0' : ''}${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+        const display = `${h ? hou : ''}${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
 
         document.title = display;
         timerContainer.textContent = display;
@@ -71,4 +68,4 @@ function Timer(timerContainerSelector, timeEndContainerSelector) {
 
 const myTimer = new Timer('.display__time-left', '.display__end-time');
 
-myTimer.start(300);
+myTimer.start(3819);
