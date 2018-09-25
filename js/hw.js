@@ -1,7 +1,7 @@
 /**
  * Констроуктор для машин
- * @param name
- * @param age
+ * @param {string} name
+ * @param {num} age
  * @constructor
  *
  * @method getName {sring} return Name
@@ -26,4 +26,38 @@ this.age=age;
 // let lexus = new Car('lexus',2);
 // console.log(lexus.getName());
 // console.log(lexus.getBerdYear());
+
+
+
+function Shifr(string) {
+    let str='';
+    this.leShifr=function () {
+
+        for (let i = 0; i<string.length;i++){
+            str += i!==string.length-1 ?  string[i].charCodeAt()+' ':string[i].charCodeAt();
+            }
+        return str;
+    };
+
+    this.showString = function () {
+            let deStr='';
+            let separStr = str.split(' ');
+            console.log(separStr);
+        separStr.forEach((item)=> {
+            deStr += String.fromCharCode(item);
+        });
+        return deStr ;
+    };
+
+    this.clear=function () {
+            return string='';
+    };
+}
+
+
+let reve = new Shifr('dima');
+
+console.log (reve.leShifr());
+console.log (reve.showString());
+console.log (reve.clear());
 
