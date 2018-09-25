@@ -1,7 +1,7 @@
 /**
  * Констроуктор для машин
  * @param {string} name
- * @param {num} age
+ * @param {number} age
  * @constructor
  *
  * @method getName {sring} return Name
