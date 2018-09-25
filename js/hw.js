@@ -9,17 +9,17 @@
  *
  */
 
-function Car(name,age) {
-this.name=name;
-this.age=age;
+function Car(name, age) {
+    this.name = name;
+    this.age = age;
 
-    this.getName=function () {
-         return this.name.slice(0,1).toUpperCase()+this.name.slice(1);
+    this.getName = function () {
+        return this.name.slice(0, 1).toUpperCase() + this.name.slice(1);
     };
 
     this.getBerdYear = function () {
-        let Year =new Date().getFullYear();
-        return Year-this.age;
+        let Year = new Date().getFullYear();
+        return Year - this.age;
     }
 }
 
@@ -28,36 +28,39 @@ this.age=age;
 // console.log(lexus.getBerdYear());
 
 
-
 function Shifr(string) {
-    let str='';
-    this.leShifr=function () {
 
-        for (let i = 0; i<string.length;i++){
-            str += i!==string.length-1 ?  string[i].charCodeAt()+' ':string[i].charCodeAt();
-            }
+
+    this.leShifr = function () {
+        let str = '';
+        for (let i = 0; i < string.length; i++) {
+            str += i !== string.length - 1 ? string[i].charCodeAt() + ' ' : string[i].charCodeAt();
+        }
         return str;
     };
 
-    this.showString = function () {
-            let deStr='';
-            let separStr = str.split(' ');
-            console.log(separStr);
-        separStr.forEach((item)=> {
+    this.unShifr = function () {
+        let deStr = '';
+        let separStr = this.leShifr().split(' ');
+        separStr.forEach((item) => {
             deStr += String.fromCharCode(item);
         });
-        return deStr ;
+        return deStr;
     };
 
-    this.clear=function () {
-            return string='';
+    this.showString = function () {
+        return string;
+    };
+
+    this.clear = function () {
+        return string = '';
     };
 }
 
 
 let reve = new Shifr('dima');
-
-console.log (reve.leShifr());
-console.log (reve.showString());
-console.log (reve.clear());
+console.log(reve.leShifr());
+console.log(reve.unShifr());
+console.log(reve.showString());
+console.log(reve.clear());
 
