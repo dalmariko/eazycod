@@ -27,9 +27,20 @@ function Car(name, age) {
 // console.log(lexus.getName());
 // console.log(lexus.getBerdYear());
 
+/**
+ * Класс для шифрования и дешифрования.
+ *
+ * @param string {string}
+ * @constructor
+ *
+ * @method leShifr шифрует строку
+ * @method unShifr Дешифрует строку
+ * @method showString Показывает оригинал строки
+ * @method clear очищает все методы
+ *
+ */
 
 function Shifr(string) {
-
 
     this.leShifr = function () {
         let str = '';
@@ -41,8 +52,7 @@ function Shifr(string) {
 
     this.unShifr = function () {
         let deStr = '';
-        let separStr = this.leShifr().split(' ');
-        separStr.forEach((item) => {
+        this.leShifr().split(' ').forEach((item) => {
             deStr += String.fromCharCode(item);
         });
         return deStr;
@@ -58,9 +68,11 @@ function Shifr(string) {
 }
 
 
-let reve = new Shifr('dima');
+let reve = new Shifr('dima 11 12 1985');
 console.log(reve.leShifr());
 console.log(reve.unShifr());
 console.log(reve.showString());
 console.log(reve.clear());
+console.log(reve.leShifr());
+
 
