@@ -23,6 +23,7 @@ this.age=age;
     }
 }
 
-let lexus = new Car('lexus',2);
-console.log(lexus.getName());
-console.log(lexus.getBerdYear());
+// let lexus = new Car('lexus',2);
+// console.log(lexus.getName());
+// console.log(lexus.getBerdYear());
+
