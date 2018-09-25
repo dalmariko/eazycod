@@ -68,11 +68,12 @@ function Shifr(string) {
 }
 
 
-let reve = new Shifr('dima 11 12 1985');
-console.log(reve.leShifr());
-console.log(reve.unShifr());
-console.log(reve.showString());
-console.log(reve.clear());
-console.log(reve.leShifr());
+// let reve = new Shifr('dima 11 12 1985');
+// console.log(reve.leShifr());
+// console.log(reve.unShifr());
+// console.log(reve.showString());
+// console.log(reve.clear());
+// console.log(reve.leShifr());
+
 
 
