@@ -33,47 +33,52 @@ function Car(name, age) {
  * @param string {string}
  * @constructor
  *
- * @method leShifr шифрует строку
+ * @method Shifr шифрует строку
  * @method unShifr Дешифрует строку
- * @method showString Показывает оригинал строки
- * @method clear очищает все методы
+ * @method shifrMes Показывает оригинал строки
+ * @method clean очищает все методы
  *
  */
 
-function Shifr(string) {
+function Shifr(string, key) {
+    let res = [];
 
-    this.leShifr = function () {
-        let str = '';
+    this.Shifr = function () {
         for (let i = 0; i < string.length; i++) {
-            str += i !== string.length - 1 ? string[i].charCodeAt() + ' ' : string[i].charCodeAt();
+            res[i] = string[i].charCodeAt() ^ key[i % key.length].charCodeAt();
         }
-        return str;
+        return res;
     };
 
     this.unShifr = function () {
-        let deStr = '';
-        this.leShifr().split(' ').forEach((item) => {
-            deStr += String.fromCharCode(item);
-        });
-        return deStr;
+        let unsif = '';
+        for (let i = 0; i < res.length; i++) {
+            unsif += String.fromCharCode(res[i] ^ key[i % key.length].charCodeAt());
+        }
+        return unsif;
     };
 
-    this.showString = function () {
-        return string;
+    this.shifrMes = function () {
+        let mes = '';
+        for (let i = 0; i < res.length; i++) {
+            mes += String.fromCharCode(res[i]);
+        }
+        return mes;
     };
 
-    this.clear = function () {
-        return string = '';
+    this.clean = function () {
+        string = '';
+        key = '';
+        res = '';
     };
+
 }
 
 
-// let reve = new Shifr('dima 11 12 1985');
-// console.log(reve.leShifr());
-// console.log(reve.unShifr());
-// console.log(reve.showString());
-// console.log(reve.clear());
-// console.log(reve.leShifr());
+let reve = new Shifr('dima', 'D@%$');
 
-
-
+console.log(reve.Shifr());
+console.log(reve.shifrMes());
+console.log(reve.unShifr());
+console.log(reve.clean());
+console.log(reve.Shifr());
