@@ -108,8 +108,39 @@ let rez=1;
    };
 }
 
-const multiply = MultiplyMaker(2);
-console.log(multiply(2));
-console.log(multiply(1));
-console.log(multiply(3));
-console.log(multiply(10));
+// const multiply = MultiplyMaker(2);
+// console.log(multiply(2));
+// console.log(multiply(1));
+// console.log(multiply(3));
+// console.log(multiply(10));
+
+// Модуль
+
+const stringModule = (function () {
+let str;
+
+    function setString(value) {
+        return str = value+'';
+    }
+
+    function getSting() {
+        return str;
+    }
+
+    function reveString() {
+        return str.split('').reverse().join('');
+    }
+
+    function lengthString() {
+        return str.length;
+    }
+    return{
+        setString,getSting,reveString,lengthString
+    }
+})();
+
+
+// stringModule.setString('abcde');
+// console.log(stringModule.getSting());
+// console.log(stringModule.reveString());
+// console.log(stringModule.lengthString());
