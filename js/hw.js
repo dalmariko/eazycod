@@ -93,8 +93,23 @@ function minus(num1 = 0){
     }
 }
 
-console.log(minus(10)(6));
-console.log(minus(5)(6));
-console.log(minus(10)());
-console.log(minus()(6));
-console.log(minus()());
+// console.log(minus(10)(6));
+// console.log(minus(5)(6));
+// console.log(minus(10)());
+// console.log(minus()(6));
+// console.log(minus()());
+
+
+function MultiplyMaker(value) {
+let rez=1;
+  rez *= value;
+    return function (value) {
+       return rez *= value;
+   };
+}
+
+const multiply = MultiplyMaker(2);
+console.log(multiply(2));
+console.log(multiply(1));
+console.log(multiply(3));
+console.log(multiply(10));
