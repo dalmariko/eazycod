@@ -24,9 +24,12 @@ function Car(name, age) {
     }
 }
 
-// let lexus = new Car('lexus',2);
-// console.log(lexus.getName());
-// console.log(lexus.getBerdYear());
+let lexus = new Car('lexus', 2);
+
+console.log(`\n`);
+
+console.log(lexus.getName());
+console.log(lexus.getBerdYear());
 
 /**
  * Класс для шифрования и дешифрования.
@@ -76,51 +79,56 @@ function Shifr(string, key) {
 }
 
 
-// let reve = new Shifr('dima', 'D@%$');
-//
-// console.log(reve.Shifr());
-// console.log(reve.shifrMes());
-// console.log(reve.unShifr());
-// console.log(reve.clean());
-// console.log(reve.Shifr());
-//
+let reve = new Shifr('dima', 'D@%$');
+
+console.log(`\n`);
+
+console.log(reve.Shifr());
+console.log(reve.shifrMes());
+console.log(reve.unShifr());
+console.log(reve.clean());
+console.log(reve.Shifr());
+
 
 //Замыкание
 
-function minus(num1 = 0){
-   return function(num2 = 0) {
-        return num1-num2;
+function minus(num1 = 0) {
+    return function (num2 = 0) {
+        let rez = num1 - num2;
+        return num1 === 0 ? Math.abs(rez) : rez;
     }
 }
+console.log(`\n`);
 
-// console.log(minus(10)(6));
-// console.log(minus(5)(6));
-// console.log(minus(10)());
-// console.log(minus()(6));
-// console.log(minus()());
+console.log(minus(10)(6));
+console.log(minus(5)(6));
+console.log(minus(10)());
+console.log(minus()(6));
+console.log(minus()());
 
 
 function MultiplyMaker(value) {
-let rez=1;
-  rez *= value;
+    let rez = 1;
+    rez *= value;
     return function (value) {
-       return rez *= value;
-   };
+        return rez *= value;
+    };
 }
+console.log(`\n`);
 
-// const multiply = MultiplyMaker(2);
-// console.log(multiply(2));
-// console.log(multiply(1));
-// console.log(multiply(3));
-// console.log(multiply(10));
+const multiply = MultiplyMaker(2);
+console.log(multiply(2));
+console.log(multiply(1));
+console.log(multiply(3));
+console.log(multiply(10));
 
 // Модуль
 
 const stringModule = (function () {
-let str;
+    let str;
 
     function setString(value) {
-        return str = value+'';
+        return str = value + '';
     }
 
     function getSting() {
@@ -134,32 +142,34 @@ let str;
     function lengthString() {
         return str.length;
     }
-    return{
-        setString,getSting,reveString,lengthString
+
+    return {
+        setString, getSting, reveString, lengthString
     }
 })();
 
+console.log(`\n`);
 
-// stringModule.setString('abcde');
-// console.log(stringModule.getSting());
-// console.log(stringModule.reveString());
-// console.log(stringModule.lengthString());
+stringModule.setString('abcde');
+console.log(stringModule.getSting());
+console.log(stringModule.reveString());
+console.log(stringModule.lengthString());
 
 
 // Модуль калькулятор
 
 const calculatorModule = (function () {
-   let rez;
+    let rez;
 
     function setNum(num) {
-         rez = num*1;
-         return this;
+        rez = num * 1;
+        return this;
     }
 
     function equally() {
         return rez.toFixed(2);
     }
-    
+
     function sum(num) {
         rez += num;
         return this;
@@ -181,15 +191,16 @@ const calculatorModule = (function () {
     }
 
     function degree(num) {
-        rez = Math.pow(rez,num);
+        rez = Math.pow(rez, num);
         return this;
     }
 
-    return{
-        setNum,equally,sum,multi,minus,divide,degree
+    return {
+        setNum, equally, sum, multi, minus, divide, degree
     }
 })();
 
+console.log(`\n`);
 
 calculatorModule.setNum(5);
 calculatorModule.sum(10);
@@ -200,5 +211,5 @@ calculatorModule.multi(.1);
 console.log(calculatorModule.equally());
 
 
-let go=calculatorModule.setNum(4.3543).sum(4).equally();
+let go = calculatorModule.setNum(4.3543).sum(4).equally();
 console.log(go);
