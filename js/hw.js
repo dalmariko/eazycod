@@ -144,3 +144,61 @@ let str;
 // console.log(stringModule.getSting());
 // console.log(stringModule.reveString());
 // console.log(stringModule.lengthString());
+
+
+// Модуль калькулятор
+
+const calculatorModule = (function () {
+   let rez;
+
+    function setNum(num) {
+         this.rez = num*1;
+         return this;
+    }
+
+    function equally() {
+        return this.rez.toFixed(2);
+    }
+    
+    function sum(num) {
+         this.rez += num;
+        return this;
+    }
+
+    function multi(num) {
+        this.rez *= num;
+        return this;
+    }
+
+    function minus(num) {
+         this.rez -= num;
+        return this;
+    }
+
+    function divide(num) {
+         this.rez /= num;
+        return this;
+    }
+
+    function degree(num) {
+         this.rez = Math.pow(this.rez,num);
+        return this;
+    }
+
+    return{
+        setNum,equally,sum,multi,minus,divide,degree
+    }
+})();
+
+
+calculatorModule.setNum(5);
+calculatorModule.sum(10);
+calculatorModule.degree(4);
+calculatorModule.divide(33.4);
+calculatorModule.minus(.32);
+calculatorModule.multi(.1);
+console.log(calculatorModule.equally());
+
+
+let go=calculatorModule.setNum(4.3543).sum(4).equally();
+console.log(go);
