@@ -152,36 +152,36 @@ const calculatorModule = (function () {
    let rez;
 
     function setNum(num) {
-         this.rez = num*1;
+         rez = num*1;
          return this;
     }
 
     function equally() {
-        return this.rez.toFixed(2);
+        return rez.toFixed(2);
     }
     
     function sum(num) {
-         this.rez += num;
+        rez += num;
         return this;
     }
 
     function multi(num) {
-        this.rez *= num;
+        rez *= num;
         return this;
     }
 
     function minus(num) {
-         this.rez -= num;
+        rez -= num;
         return this;
     }
 
     function divide(num) {
-         this.rez /= num;
+        rez /= num;
         return this;
     }
 
     function degree(num) {
-         this.rez = Math.pow(this.rez,num);
+        rez = Math.pow(rez,num);
         return this;
     }
 
