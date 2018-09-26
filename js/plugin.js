@@ -1,24 +1,34 @@
-function Timer(timerContainerSelector, timeEndContainerSelector) {
+
+/*TODO обработать событие формы перевести время в секунды и отобразить дни и когда закончится таймер*/
+//Дена гитхаб dmgame
+
+function Timer(timerContainerSelector, timeEndContainerSelector,audioSrc) {
     let countdown;
 
     let timerContainer = document.querySelector(timerContainerSelector);
     let endTimeContainer = document.querySelector(timeEndContainerSelector);
-
+    let audio = new Audio(audioSrc);
 
     /*
      * Функция запуска таймера
      * @param {number} seconds
      */
     this.start = function (seconds) {
+        /*TODO проверку на число.*/
+
+        clearInterval(countdown);
+
         const now = Date.now();
         const then = now + seconds * 1000;
 
         displayTimeLeft(seconds);
+        displayEndTime(then);
 
         countdown = setInterval(() => {
             const secondsLeft = Math.round((then - Date.now()) / 1000);
 
             if (secondsLeft < 0) {
+                audio.play();
                 displayEndTime(then);
                 clearInterval(countdown);
                 return;
@@ -29,6 +39,22 @@ function Timer(timerContainerSelector, timeEndContainerSelector) {
         }, 1000);
 
 
+    };
+
+    // const testValue ='sdfldj';
+
+    /*TODO Описание*/
+    this.stop= function () {
+        clearInterval(countdown);
+        timerContainer.innerHTML = '';
+        endTimeContainer.innerHTML = '';
+        document.title = '';
+        audio.pause();
+        audio.currentTime = 0;
+
+       /*TODO подумать о коментариях*/
+        // console.log(testValue);
+        // console.log(this);
     };
 
     /*
@@ -63,9 +89,29 @@ function Timer(timerContainerSelector, timeEndContainerSelector) {
         endTimeContainer.textContent = `Be back at ${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
     }
 
+
+
 }
 
+const btns = document.querySelectorAll('[data-time]');
 
-const myTimer = new Timer('.display__time-left', '.display__end-time');
+const stopBtn = document.querySelector('.stop_timer');
 
-myTimer.start(3819);
+const myTimer = new Timer('.display__time-left', '.display__end-time','audio/bell.mp3');
+
+/*TODO Описать функцию*/
+
+function startTimerOnClick(e) {
+    const seconds = parseFloat(this.dataset.time);
+    myTimer.start(seconds);
+}
+
+//
+// function stopTimerOnclick(e) {
+// myTimer.stop();
+// }
+
+btns.forEach (btn=>btn.addEventListener('click',startTimerOnClick));
+
+/*TODO потеря контекста ВСПОМНИТЬ*/
+stopBtn.addEventListener('click',myTimer.stop.bind(myTimer));
