@@ -1,5 +1,6 @@
 /**
  * Констроуктор для машин
+ *
  * @param {string} name
  * @param {number} age
  * @constructor
@@ -75,10 +76,25 @@ function Shifr(string, key) {
 }
 
 
-let reve = new Shifr('dima', 'D@%$');
+// let reve = new Shifr('dima', 'D@%$');
+//
+// console.log(reve.Shifr());
+// console.log(reve.shifrMes());
+// console.log(reve.unShifr());
+// console.log(reve.clean());
+// console.log(reve.Shifr());
+//
 
-console.log(reve.Shifr());
-console.log(reve.shifrMes());
-console.log(reve.unShifr());
-console.log(reve.clean());
-console.log(reve.Shifr());
+//Замыкание
+
+function minus(num1 = 0){
+   return function(num2 = 0) {
+        return num1-num2;
+    }
+}
+
+console.log(minus(10)(6));
+console.log(minus(5)(6));
+console.log(minus(10)());
+console.log(minus()(6));
+console.log(minus()());
