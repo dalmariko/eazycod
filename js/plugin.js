@@ -109,7 +109,7 @@ function startTimerOnClick(e) {
 }
 
 function sendTime(e) {
-
+minutes.value
 }
 
 
