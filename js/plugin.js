@@ -110,6 +110,7 @@ function startTimerOnClick(e) {
 }
 
 function sendTime(e) {
+    e.preventDefault();
     console.log(minutes.value);
 }
 
