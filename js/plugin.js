@@ -97,7 +97,8 @@ const btns = document.querySelectorAll('[data-time]');
 
 const stopBtn = document.querySelector('.stop_timer');
 
-const formSendTime = document.forms([customForm]);
+const formSendTime = document.forms['customForm'];
+const minutes=formSendTime['minutes'];
 
 const myTimer = new Timer('.display__time-left', '.display__end-time','audio/bell.mp3');
 
@@ -109,7 +110,7 @@ function startTimerOnClick(e) {
 }
 
 function sendTime(e) {
-    console.log(formSendTime.minutes.value);
+    console.log(minutes.value);
 }
 
 
