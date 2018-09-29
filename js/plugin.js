@@ -97,7 +97,7 @@ const btns = document.querySelectorAll('[data-time]');
 
 const stopBtn = document.querySelector('.stop_timer');
 
-const send = document.querySelector('.send_timer');
+const formSendTime = document.forms('[customForm]');
 
 const myTimer = new Timer('.display__time-left', '.display__end-time','audio/bell.mp3');
 
@@ -108,8 +108,8 @@ function startTimerOnClick(e) {
     myTimer.start(seconds);
 }
 
-function sendTime() {
-    document.forms
+function sendTime(e) {
+
 }
 
 
@@ -123,7 +123,7 @@ function sendTime() {
 btns.forEach (btn=>btn.addEventListener('click',startTimerOnClick));
 
 
-send.addEventListener('click',sendTime);
+formSendTime.addEventListener('submit',sendTime);
 
 /*TODO потеря контекста ВСПОМНИТЬ*/
 stopBtn.addEventListener('click',myTimer.stop.bind(myTimer));
