@@ -111,7 +111,7 @@ function startTimerOnClick(e) {
 
 function sendTime(e) {
     e.preventDefault();
-    console.log(minutes.value);
+    console.log(minutes.value*1);
 }
 
 
