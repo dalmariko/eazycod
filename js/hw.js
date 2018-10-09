@@ -129,14 +129,16 @@ function addUserInfo(key, user) {
 }
 
 
-function getInfoUser(user) {
-    Object.keys(user).forEach((key) => {
-        typeof user[key] !== 'object' ? addUserInfo(key, user) : getInfoUser(user[key]);
-    });
+function getInfoUser(user, key) {
+console.log(key);
+        Object.keys(user).forEach((key) => {
+            typeof user[key] !== 'object' ? addUserInfo(key, user) : getInfoUser(user[key], key);
+        });
+
 }
 
 
-users.forEach(user => getInfoUser(user));
+users.forEach((user,key) => getInfoUser(user,key));
 
 
 
