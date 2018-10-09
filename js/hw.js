@@ -119,26 +119,27 @@ const users = [
     }
 ];
 
-function addUserInfo(key, user) {
+function addUserInfo(userInfo) {
     const allUsers = document.querySelector('.users');
-    let userInfo =
-        `
-         <li>${key} : ${user[key]}</li>
-            `;
-    allUsers.insertAdjacentHTML('afterbegin', userInfo);
+    allUsers.insertAdjacentHTML('beforeend', userInfo);
 }
 
 
-function getInfoUser(user, key) {
-console.log(key);
-        Object.keys(user).forEach((key) => {
-            typeof user[key] !== 'object' ? addUserInfo(key, user) : getInfoUser(user[key], key);
-        });
+
+function getInfoUser(user) {
+let userInfo =
+    `
+    <div >
+    <h2></h2>
+    
+    </div> 
+    `;
+
 
 }
 
 
-users.forEach((user,key) => getInfoUser(user,key));
+users.forEach((user) => getInfoUser(user));
 
 
 
