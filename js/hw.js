@@ -85,53 +85,146 @@
  */
 
 
-const users = [{
-    email: "Sincere@april.biz",
-    id: 1,
-    name: "Leanne Graham",
-    phone: "1-770-736-8031 x56442",
-    username: "Bret",
-    website: "hildegard.org",
-    address: {
-        city: "Gwenborough",
-        street: "Kulas Light",
-        suite: "Apt. 556",
-        zipcode: "92998-3874",
-        geo: {
-            lat: "-37.3159",
-            lng: "81.1496"
+
+
+
+
+//Пробежаться по массиву
+//
+
+
+const users = [
+    {
+        email: "Sincere@april.biz",
+        id: 1,
+        name: "Leanne Graham",
+        phone: "1-770-736-8031 x56442",
+        username: "Bret",
+        website: "hildegard.org",
+        address: {
+            city: "Gwenborough",
+            street: "Kulas Light",
+            suite: "Apt. 556",
+            zipcode: "92998-3874",
+            geo: {
+                lat: "-37.3159",
+                lng: "81.1496"
+            }
+        },
+        comopany: {
+            bs: "harness real-time e-markets",
+            catchPhrase: "Multi-layered client-server neural-net",
+            name: "Romaguera-Crona",
         }
-    },
-    comopany: {
-        bs: "harness real-time e-markets",
-        catchPhrase: "Multi-layered client-server neural-net",
-        name: "Romaguera-Crona",
     }
-}
 ];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class UserInfo {
+//     constructor(users){
+//         this.users=users;
+//     }
+//
+//     //Запускает парсинг и строит разметку
+//     init(){
+//         this.fields=this.getFields();
+//         // this.getAllUsers = document.querySelector('.users');
+//
+//     }
+//
+//     //Добавляем разметку
+//     addTemplate(){
+//         const usersInfo = this.template();
+//         this.getAllUsers.insertAdjacentHTML('afterbegin', usersInfo);
+//     }
+//
+//     // разметка
+//     template(){
+//         const userInfo =
+//             `
+//             <ul>
+//                 <li></li>
+//             </ul>
+//             `;
+//     }
+//
+//     getFields(){
+//         return Object.keys(this.users);
+//     }
+//
+//     //Получает информацию об одном юзере
+//     getOneUserInfo(){
+//        for( let prop of this.fields ){
+//            console.log(prop);
+//        }
+//     }
+//
+// }
+//
+// const oneUser = new UserInfo(users);
+// oneUser.init();
+// oneUser.getOneUserInfo();
+
+/*
+
 function recursivUserInfo(user) {
     let prop = Object.keys(user);
-    let show;
-    for (let key of prop) {
-        if (typeof  user[key] === 'object') {
-            recursivUserInfo(user[key]);
-        }else{
-            show = `${key}:${user[key]}\n`;
-        }
-        console.log(show);
+    console.log(prop);
+    const getAllUsers = document.querySelector('.users');
+
+    function addInfo() {
+
     }
-    return show;
+
+    prop.forEach((item) => {
+        const usersInfo =
+            ` 
+                <li>${item}:${user[item]}</li>
+            `;
+        getAllUsers.insertAdjacentHTML('afterbegin', usersInfo);
+    });
+
 }
 
 users.forEach(recursivUserInfo);
+*/
 
 /*
  users.forEach((item)=>{
  console.log(Object.keys(item));
  });*/
-
 /*
  let show;
  Object.keys(user).forEach((key)=>{
@@ -144,3 +237,13 @@ users.forEach(recursivUserInfo);
  console.log(show);
  });
  return show;*/
+// for (let key of prop) {
+//
+//     // console.log(key);
+//     if (typeof  user[key] === 'object') {
+//         recursivUserInfo(user[key]);
+//     }else {
+//         show = `${key} : ${user[key]}`;
+//     }
+//     console.log(show);
+// }
