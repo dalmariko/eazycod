@@ -111,7 +111,7 @@ const users = [
                 lng: "81.1496"
             }
         },
-        comopany: {
+        company: {
             bs: "harness real-time e-markets",
             catchPhrase: "Multi-layered client-server neural-net",
             name: "Romaguera-Crona",
@@ -123,8 +123,44 @@ const users = [
 
 
 
+function getInfo(users){
+    const usersInfo = document.querySelector('.users') ;
+    for(let item of users){
 
 
+        const user = `
+<h3>${item.name}</h3>
+<ul>
+<li>${item.id}</li>
+<li>${item.phone}</li>
+<li>${item.username}</li>
+<li>${item.website}</li>
+<li>address :
+<ul>
+<li>${item.address.city}</li>
+<li>${item.address.street}</li>
+<li>${item.address.suite}</li>
+<li>${item.address.zipcode}</li>
+<li>geo :</li>
+<ul>
+<li>${item.address.geo.lat}</li>
+<li>${item.address.geo.lng}</li>
+</ul>
+</ul>
+</li>
+<li>company :
+<ul>
+<li>${item.company.bs}</li>
+<li>${item.company.catchPhrase}</li>
+<li>${item.company.name}</li>
+</ul>
+</li>
+</ul>
+`;
+        usersInfo.insertAdjacentHTML('afterbegin',user);
+    };
+}
+getInfo(users);
 
 
 
