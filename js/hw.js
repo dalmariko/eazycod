@@ -120,78 +120,44 @@ const users = [
 ];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function addUserInfo(userInfo) {
     const allUsers = document.querySelector('.users');
     allUsers.insertAdjacentHTML('beforeend', userInfo);
 }
 
-function parse(keyInfo) {
-    console.log(Object.keys(keyInfo).length);
+function parseDeep(user) {
     let info='';
-   for (let key in keyInfo){
-     info+=`<li><b>${key} : </b><span>${keyInfo[key]}</span></li>`;
-    };
-   return info;
+    for (let key in user) {
+        if (typeof user[key] !== 'object') {
+            info += `<li><b>${key} :</b> <span>${user[key]}</span></li>`;
+        }else{
+            info += `<ul><li><b>${key} :</b> <span>${parseDeep(user[key])}</span></li></ul>`;
+        }
+    }
+    return info;
 }
 
 function getInfoUser(user) {
     let name;
     let id;
-    let userInfo;
-    let info = '';
-    let moreInfo = '';
+    let userInfo = '';
+    let info;
     name = user['name'];
     id = user['id'];
 
-for(let key in user){
-    if (typeof user[key] !=='object' && user[key]!==name){
-        info +=`<li><b>${key} : </b><span>${user[key]}</span></li>`;
-    }else if(typeof user[key] ==='object'){
-        moreInfo += `<li><b>${key} :</b><ul>${parse(user[key])}</ul></li>`;
-    }
-}
+    userInfo = parseDeep(user);
 
-    userInfo =
+    info =
         `
         <div data-set="${id}">
             <h2>${name}</h2>
             <ul>
-                ${info}
-                <ul>
-                    ${moreInfo}
-                </ul>                    
+                ${userInfo}
             </ul>
         </div>
     `;
-    addUserInfo(userInfo);
+
+    addUserInfo(info);
 }
 
 
