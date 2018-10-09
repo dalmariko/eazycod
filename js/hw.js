@@ -119,74 +119,149 @@ const users = [
     }
 ];
 
+function addUserInfo(key, user) {
+    const allUsers = document.querySelector('.users');
+    let userInfo =
+        `
+         <li>${key} : ${user[key]}</li>
+            `;
+    allUsers.insertAdjacentHTML('afterbegin', userInfo);
+}
+
+
+function getInfoUser(user) {
+    Object.keys(user).forEach((key) => {
+        typeof user[key] !== 'object' ? addUserInfo(key, user) : getInfoUser(user[key]);
+    });
+}
+
+
+users.forEach(user => getInfoUser(user));
 
 
 
 
-function getInfo(users){
-    const usersInfo = document.querySelector('.users') ;
-    for(let item of users){
 
 
-        const user = `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const userInfo = `
 <h3>${item.name}</h3>
 <ul>
-<li>${item.id}</li>
-<li>${item.phone}</li>
-<li>${item.username}</li>
-<li>${item.website}</li>
-<li>address :
-<ul>
-<li>${item.address.city}</li>
-<li>${item.address.street}</li>
-<li>${item.address.suite}</li>
-<li>${item.address.zipcode}</li>
-<li>geo :</li>
-<ul>
-<li>${item.address.geo.lat}</li>
-<li>${item.address.geo.lng}</li>
-</ul>
-</ul>
-</li>
-<li>company :
-<ul>
-<li>${item.company.bs}</li>
-<li>${item.company.catchPhrase}</li>
-<li>${item.company.name}</li>
-</ul>
-</li>
+    <li>${item.id}</li>
+    <li>${item.phone}</li>
+    <li>${item.username}</li>
+    <li>${item.website}</li>
+    <li>address :
+        <ul>
+            <li>${item.address.city}</li>
+            <li>${item.address.street}</li>
+            <li>${item.address.suite}</li>
+            <li>${item.address.zipcode}</li>
+            <li>geo :
+                    <ul>
+                        <li>${item.address.geo.lat}</li>
+                        <li>${item.address.geo.lng}</li>
+                    </ul>
+            </li>
+        </ul>
+    </li>
+    <li>company :
+            <ul>
+                <li>${item.company.bs}</li>
+                <li>${item.company.catchPhrase}</li>
+                <li>${item.company.name}</li>
+            </ul>
+    </li>
 </ul>
 `;
-        usersInfo.insertAdjacentHTML('afterbegin',user);
-    };
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+function getInfo(users) {
+    // const usersInfo = document.querySelector('.users');
+   const user = Object.keys(users);
+
+    // for (let item of user) {
+    user.forEach((item)=>{
+       console.log(item);
+    });
+
+//         const user = `
+// <h3>${item.name}</h3>
+// <ul>
+//     <li>${item.id}</li>
+//     <li>${item.phone}</li>
+//     <li>${item.username}</li>
+//     <li>${item.website}</li>
+//     <li>address :
+//         <ul>
+//             <li>${item.address.city}</li>
+//             <li>${item.address.street}</li>
+//             <li>${item.address.suite}</li>
+//             <li>${item.address.zipcode}</li>
+//             <li>geo :
+//                     <ul>
+//                         <li>${item.address.geo.lat}</li>
+//                         <li>${item.address.geo.lng}</li>
+//                     </ul>
+//             </li>
+//         </ul>
+//     </li>
+//     <li>company :
+//             <ul>
+//                 <li>${item.company.bs}</li>
+//                 <li>${item.company.catchPhrase}</li>
+//                 <li>${item.company.name}</li>
+//             </ul>
+//     </li>
+// <!--</ul>
+// `;
+        // usersInfo.insertAdjacentHTML('afterbegin', user);
+    // };
 }
 getInfo(users);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 // class UserInfo {
 //     constructor(users){
@@ -235,27 +310,27 @@ getInfo(users);
 
 /*
 
-function recursivUserInfo(user) {
-    let prop = Object.keys(user);
-    console.log(prop);
-    const getAllUsers = document.querySelector('.users');
+ function recursivUserInfo(user) {
+ let prop = Object.keys(user);
+ console.log(prop);
+ const getAllUsers = document.querySelector('.users');
 
-    function addInfo() {
+ function addInfo() {
 
-    }
+ }
 
-    prop.forEach((item) => {
-        const usersInfo =
-            ` 
-                <li>${item}:${user[item]}</li>
-            `;
-        getAllUsers.insertAdjacentHTML('afterbegin', usersInfo);
-    });
+ prop.forEach((item) => {
+ const usersInfo =
+ `
+ <li>${item}:${user[item]}</li>
+ `;
+ getAllUsers.insertAdjacentHTML('afterbegin', usersInfo);
+ });
 
-}
+ }
 
-users.forEach(recursivUserInfo);
-*/
+ users.forEach(recursivUserInfo);
+ */
 
 /*
  users.forEach((item)=>{
