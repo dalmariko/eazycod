@@ -119,28 +119,83 @@ const users = [
     }
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function addUserInfo(userInfo) {
     const allUsers = document.querySelector('.users');
     allUsers.insertAdjacentHTML('beforeend', userInfo);
 }
 
-
+function parse(keyInfo) {
+    console.log(Object.keys(keyInfo).length);
+    let info='';
+   for (let key in keyInfo){
+     info+=`<li><b>${key} : </b><span>${keyInfo[key]}</span></li>`;
+    };
+   return info;
+}
 
 function getInfoUser(user) {
-let userInfo =
-    `
-    <div >
-    <h2></h2>
-    
-    </div> 
+    let name;
+    let id;
+    let userInfo;
+    let info = '';
+    let moreInfo = '';
+    name = user['name'];
+    id = user['id'];
+
+for(let key in user){
+    if (typeof user[key] !=='object' && user[key]!==name){
+        info +=`<li><b>${key} : </b><span>${user[key]}</span></li>`;
+    }else if(typeof user[key] ==='object'){
+        moreInfo += `<li><b>${key} :</b><ul>${parse(user[key])}</ul></li>`;
+    }
+}
+
+    userInfo =
+        `
+        <div data-set="${id}">
+            <h2>${name}</h2>
+            <ul>
+                ${info}
+                <ul>
+                    ${moreInfo}
+                </ul>                    
+            </ul>
+        </div>
     `;
-
-
+    addUserInfo(userInfo);
 }
 
 
 users.forEach((user) => getInfoUser(user));
-
 
 
 
