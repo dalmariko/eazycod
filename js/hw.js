@@ -70,21 +70,41 @@
         }
     ];
 
-    console.time('start');
-
-console.time('for');
-    for (let callbecs of controlArray) {
-        console.log(manager(callbecs['array'], callbecs['function']));
+    function benchMarck(f){
+        let date = Date.now();
+        // let date = performance.now();
+            f;
+        return Date.now()-date;
+       // return performance.now()-date;
     }
-console.timeEnd('for');
 
-    console.time('map');
-    controlArray.map(callbecks=>{
-        console.log(manager(callbecks['array'], callbecks['function']));
-    }).reduce((pervius,next)=>{pervius;next;});
-console.timeEnd('map');
 
-console.timeEnd('start');
+const goFor=()=> {
+    for (let callbecs of controlArray) {
+       console.log(manager(callbecs['array'], callbecs['function']));
+    }
+};
+
+const goMap=()=> {
+    controlArray.map(callbecks => {console.log(manager(callbecks['array'], callbecks['function']));})
+                .reduce((pervius, next) => {pervius;next;});
+};
+
+goFor();
+console.log('\n');
+goMap();
+
+// let timeFor=0;
+// let timeMap=0;
+//     let i=0;
+// while (i<10){
+// timeMap+=benchMarck(goMap());
+// timeFor+=benchMarck(goFor());
+//     i++;
+// }
+//
+// console.log('timeMap',timeMap);
+// console.log('timeFor',timeFor);
 
 // Написьть функцию для расчета кол-ва топлива ракеты которая будет лететь на марс
 // Входные данные: 401000000км, 1000л/100км;
