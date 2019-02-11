@@ -54,14 +54,14 @@ let resNumbersInfo=numbers.map((el,bool)=>
     bool = el % 2 === 0;
     return {digit:el,odd:bool};
 });
-// console.log(resNumbersInfo);
+console.log(resNumbersInfo);
 
 // 3. Проверить, содержит ли массив [12, 4, 50, 1, 0, 18, 40] элементы,
 //     равные нулю. Если да - вернуть false
 
 let zerroSome=[12, 4, 50, 1, 0, 18, 40];
 let rez=zerroSome.every(el=> el!==0);
-// console.log(rez);
+console.log(rez);
 
 
 // 4. Проверить, содержит ли массив ['yes', 'hello', 'no', 'easycode', 'what']
@@ -107,11 +107,9 @@ let letters=[
 
 function getMess(letters) {
 
-    let sortLetters = letters.sort((a, b) => {
+    return sortLetters = letters.sort((a, b) => {
         return a['index'] > b['index'] ? 1 : -1;
-    });
-
-    return sortLetters.reduce((mes, cur) => {
+    }).reduce((mes, cur) => {
         return mes + cur['char'];
     },'');
 
