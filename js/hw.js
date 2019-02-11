@@ -70,10 +70,21 @@
         }
     ];
 
+    console.time('start');
+
+console.time('for');
     for (let callbecs of controlArray) {
         console.log(manager(callbecs['array'], callbecs['function']));
     }
+console.timeEnd('for');
 
+    console.time('map');
+    controlArray.map(callbecks=>{
+        console.log(manager(callbecks['array'], callbecks['function']));
+    }).reduce((pervius,next)=>{pervius;next;});
+console.timeEnd('map');
+
+console.timeEnd('start');
 
 // Написьть функцию для расчета кол-ва топлива ракеты которая будет лететь на марс
 // Входные данные: 401000000км, 1000л/100км;
